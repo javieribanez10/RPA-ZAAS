@@ -1,0 +1,107 @@
+# Instrucciones para GitHub Copilot:
+
+# Objetivo: Automatizar la extracción de un reporte contable desde Nubox.
+
+# Librerías requeridas:
+# - requests: Para realizar peticiones HTTP.
+# - beautifulsoup4: Para analizar el HTML.
+# - selenium: Para automatizar la interacción con el navegador (si es necesario).
+# - pandas: Para procesar los datos extraídos.
+
+
+# Paso 1: Instalar las librerías
+# pip install requests beautifulsoup4 selenium pandas
+
+# Paso 2: Importar las librerías
+import requests
+from bs4 import BeautifulSoup
+from selenium import webdriver
+import pandas as pd
+import os
+
+# Paso 3:  Configurar las credenciales de Nubox (de forma segura - NO las incluyas directamente en el código)
+#  Opción 1: Variables de entorno
+NUBOX_USERNAME = os.environ.get("NUBOX_USERNAME")
+NUBOX_PASSWORD = os.environ.get("NUBOX_PASSWORD")
+
+
+# Paso 4: URL de Nubox (reemplazar con la URL real)
+NUBOX_URL = "https://www.nubox.com/login" #  Reemplazar con la URL de login
+
+
+# Paso 5:  Función para iniciar sesión en Nubox (Si requiere interacción con el navegador - usar Selenium)
+def login_nubox(driver, username, password):
+
+    driver.get(NUBOX_URL)
+
+    #  Localizar los campos de usuario y contraseña (inspeccionar la página web de Nubox)
+    username_field = driver.find_element("id", "username") # Reemplazar con el ID real del campo de usuario
+    password_field = driver.find_element("id", "password") # Reemplazar con el ID real del campo de contraseña
+
+    username_field.send_keys(username)
+    password_field.send_keys(password)
+
+    # Localizar y hacer clic en el botón de inicio de sesión
+    login_button = driver.find_element("id", "login-button") # Reemplazar con el ID real del botón
+    login_button.click()
+
+
+
+# Paso 6: Función para navegar al reporte (Si requiere interacción con el navegador - usar Selenium)
+
+def navigate_to_report(driver):
+    # Ejemplo: Navegar a Contabilidad > Reportes > Libros Contables > Mayor (adaptar a la estructura real de Nubox)
+    #  Utilizar driver.find_element y click() para navegar por los menús
+
+    # Esperar a que la página cargue (Selenium)
+    #  from selenium.webdriver.support.ui import WebDriverWait
+    #  from selenium.webdriver.support import expected_conditions as EC
+    #  wait = WebDriverWait(driver, 10)  # Esperar hasta 10 segundos
+    #  element = wait.until(EC.presence_of_element_located(("id", "element_id"))) # Reemplazar "element_id"
+
+
+# Paso 7: Función para extraer el reporte (BeautifulSoup o Selenium)
+def extract_report(driver):
+
+    # Obtener el HTML de la página del reporte
+
+    html_content = driver.page_source
+    soup = BeautifulSoup(html_content, "html.parser")
+
+
+    #  Localizar la tabla del reporte (inspeccionar el HTML)
+    table = soup.find("table", {"id": "report-table"}) # Reemplazar con el ID o clase de la tabla
+
+    # Extraer los datos de la tabla (BeautifulSoup)
+    data = []
+    for row in table.find_all("tr"):
+        columns = row.find_all("td")
+        row_data = [column.text.strip() for column in columns]
+        data.append(row_data)
+
+    # Crear un DataFrame con pandas
+    df = pd.DataFrame(data)
+
+    return df
+
+# Paso 8: Función principal
+def main():
+
+    # Inicializar el driver de Selenium (Si se usa Selenium)
+    driver = webdriver.Chrome() # Reemplazar con el driver adecuado (Firefox, Edge, etc.)
+    try:
+        login_nubox(driver, NUBOX_USERNAME, NUBOX_PASSWORD)
+        navigate_to_report(driver)
+        report_df = extract_report(driver)
+
+        # Guardar el reporte (ej. CSV)
+        report_df.to_csv("reporte_nubox.csv", index=False)
+        print("Reporte extraído y guardado correctamente.")
+
+    finally:
+        driver.quit() # Cerrar el navegador al finalizar
+
+
+# Ejecutar la función principal
+if __name__ == "__main__":
+    main()

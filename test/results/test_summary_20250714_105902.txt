@@ -1,0 +1,21 @@
+REPORTE DE PRUEBA - PARSER HTML-EXCEL
+==================================================
+
+Fecha de prueba: 2025-07-14 10:59:02
+Archivo fuente: LIBRO MAYOR DESDE 01_01_2025 A 01_02_2025.xls
+
+RESULTADOS:
+- Filas extraídas: 2
+- Columnas extraídas: 7
+- Columnas: FECHA, COMPROBANTE, GLOSA, DEBE, HABER, SALDO, C.C.
+
+INFORMACIÓN DE EMPRESA:
+- Nombre: SELYT SPA
+- Rut: 77.081.534-7
+- Representante Legal: PAULO ALEJANDRO SUBIABRE CEPEDA
+- Giro Comercial: SERVICIOS TECNOLOGICOS
+
+ESTADÍSTICAS BÁSICAS:
+- DEBE: min=0.0, max=2133631.0, sum=2133631.0
+- HABER: min=0.0, max=114731103.0, sum=114731103.0
+- SALDO: min=-2133631, max=112597472, sum=110463841

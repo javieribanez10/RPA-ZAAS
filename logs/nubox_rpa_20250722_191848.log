@@ -1,0 +1,29 @@
+2025-07-22 19:18:49 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2024-01-01 hasta 2025-07-01
+2025-07-22 19:18:49 | INFO     | nubox_rpa.date_utils | Se generaron 18 rangos mensuales
+2025-07-22 19:18:58 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-22
+2025-07-22 19:18:58 | INFO     | nubox_rpa.date_utils | Se generaron 7 rangos mensuales
+2025-07-22 19:19:03 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-22
+2025-07-22 19:19:03 | INFO     | nubox_rpa.date_utils | Se generaron 7 rangos mensuales
+2025-07-22 19:19:06 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:19:06 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:19:10 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:19:10 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:19:10 | INFO     | nubox_rpa.service | 🚀 NuboxService inicializado en MODO ULTRA RÁPIDO
+2025-07-22 19:19:10 | INFO     | nubox_rpa.browser_manager | 🚀 BrowserManager inicializado en MODO ULTRA RÁPIDO
+2025-07-22 19:19:12 | INFO     | nubox_rpa.speed_manager | 🚀 SpeedManager inicializado - Modo ULTRA RÁPIDO activado
+2025-07-22 19:19:12 | INFO     | nubox_rpa.speed_manager | ⚡ Configuraciones de velocidad aplicadas al navegador
+2025-07-22 19:19:12 | INFO     | nubox_rpa.browser_manager | ⚡ Driver ultra-optimizado inicializado exitosamente
+2025-07-22 19:19:12 | INFO     | nubox_rpa.login | ⚡ LoginService en modo ULTRA RÁPIDO
+2025-07-22 19:19:12 | INFO     | nubox_rpa.navigation | ⚡ NavigationService en modo ULTRA RÁPIDO
+2025-07-22 19:19:12 | INFO     | nubox_rpa.parameter_config | ⚡ ParameterConfigService en modo ULTRA RÁPIDO
+2025-07-22 19:19:12 | INFO     | nubox_rpa.report_extractor | ⚡ ReportExtractorService en modo ULTRA RÁPIDO
+2025-07-22 19:19:12 | INFO     | nubox_rpa.ui_elements | ⚡ UIElementService en modo ULTRA RÁPIDO
+2025-07-22 19:19:12 | INFO     | nubox_rpa.service | ⚡ Todos los servicios ultra-optimizados inicializados
+2025-07-22 19:19:14 | INFO     | nubox_rpa.browser_manager | ⚡ Navegación completada en 2.11s: https://web.nubox.com/Login/Account/Login?ReturnUrl=%2FSistemaLogin
+2025-07-22 19:19:33 | WARNING  | nubox_rpa.speed_manager | ⏰ Timeout buscando elemento después de 19.25s
+2025-07-22 19:19:52 | WARNING  | nubox_rpa.speed_manager | ⏰ Timeout buscando elemento después de 19.28s
+2025-07-22 19:20:12 | WARNING  | nubox_rpa.speed_manager | ⏰ Timeout buscando elemento después de 19.29s
+2025-07-22 19:20:31 | WARNING  | nubox_rpa.speed_manager | ⏰ Timeout buscando elemento después de 19.15s
+2025-07-22 19:20:50 | WARNING  | nubox_rpa.speed_manager | ⏰ Timeout buscando elemento después de 19.05s
+2025-07-22 19:20:50 | ERROR    | nubox_rpa.login | ⚡ Campo de usuario no encontrado
+2025-07-22 19:20:50 | ERROR    | nubox_rpa.login | ⚡ Login falló después de 98.13s

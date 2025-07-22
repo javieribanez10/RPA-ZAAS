@@ -1,0 +1,62 @@
+2025-07-22 18:44:01 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-22
+2025-07-22 18:44:01 | INFO     | nubox_rpa.date_utils | Se generaron 7 rangos mensuales
+2025-07-22 18:44:09 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-22
+2025-07-22 18:44:09 | INFO     | nubox_rpa.date_utils | Se generaron 7 rangos mensuales
+2025-07-22 18:44:17 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2023-01-01 hasta 2025-07-22
+2025-07-22 18:44:17 | INFO     | nubox_rpa.date_utils | Se generaron 31 rangos mensuales
+2025-07-22 18:44:20 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2023-01-01 hasta 2025-07-01
+2025-07-22 18:44:20 | INFO     | nubox_rpa.date_utils | Se generaron 30 rangos mensuales
+2025-07-22 18:44:30 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2023-01-01 hasta 2025-07-01
+2025-07-22 18:44:30 | INFO     | nubox_rpa.date_utils | Se generaron 30 rangos mensuales
+2025-07-22 18:44:31 | INFO     | nubox_rpa.service | NuboxService inicializado con arquitectura modular
+2025-07-22 18:44:31 | INFO     | nubox_rpa.authentication | Iniciando proceso de autenticación
+2025-07-22 18:44:31 | INFO     | nubox_rpa.browser_manager | Navegando a https://web.nubox.com/Login/Account/Login?ReturnUrl=%2FSistemaLogin
+2025-07-22 18:44:37 | INFO     | nubox_rpa.authentication | Ingresando credenciales
+2025-07-22 18:44:38 | INFO     | nubox_rpa.authentication | Botón de login encontrado con selector: input[value='Ingresar'][class*='nbx-form_btn_login']
+2025-07-22 18:44:38 | INFO     | nubox_rpa.authentication | Haciendo clic en el botón Ingresar
+2025-07-22 18:44:41 | INFO     | nubox_rpa.authentication | URL actual después del login: https://web.nubox.com/SistemaLogin/
+2025-07-22 18:44:51 | INFO     | nubox_rpa.authentication | Login exitoso: URL cambió
+2025-07-22 18:44:51 | INFO     | nubox_rpa.navigation | Iniciando navegación a reportes contables
+2025-07-22 18:44:53 | INFO     | nubox_rpa.navigation | Navegando al módulo de Contabilidad
+2025-07-22 18:44:53 | INFO     | nubox_rpa.navigation | Intentando selector: //td[contains(@class, 'jqx-cell') and contains(@class, 'jqx-grid-cell')]//span[contains(text(), 'Contabilidad')]
+2025-07-22 18:44:53 | INFO     | nubox_rpa.navigation | Elementos encontrados: 1
+2025-07-22 18:44:53 | INFO     | nubox_rpa.navigation | Elemento de Contabilidad encontrado y visible
+2025-07-22 18:44:54 | INFO     | nubox_rpa.navigation | Clic exitoso en Contabilidad
+2025-07-22 18:44:56 | INFO     | nubox_rpa.navigation | Buscando el menú de Reportes
+2025-07-22 18:44:56 | INFO     | nubox_rpa.navigation | Buscando Reportes con selector: //a[@tabindex='-1' and contains(@onfocus, 'p_MenuEnfocar') and text()='Reportes']
+2025-07-22 18:44:56 | INFO     | nubox_rpa.navigation | Elementos de Reportes encontrados: 1
+2025-07-22 18:44:56 | INFO     | nubox_rpa.navigation | Elemento de Reportes encontrado y visible
+2025-07-22 18:44:56 | INFO     | nubox_rpa.navigation | Clic exitoso en Reportes
+2025-07-22 18:44:56 | INFO     | nubox_rpa.navigation | Buscando el menú de Libros Contables
+2025-07-22 18:44:57 | INFO     | nubox_rpa.navigation | Buscando Libros Contables con selector: //a[@tabindex='-1' and contains(@onfocus, 'p_SubMenuEnfocar') and contains(text(), 'Libros Contables')]
+2025-07-22 18:44:57 | INFO     | nubox_rpa.navigation | Elementos de Libros Contables encontrados: 1
+2025-07-22 18:44:57 | INFO     | nubox_rpa.navigation | Elemento de Libros Contables encontrado y visible
+2025-07-22 18:44:58 | INFO     | nubox_rpa.navigation | Clic exitoso en Libros Contables
+2025-07-22 18:44:58 | INFO     | nubox_rpa.navigation | Buscando el reporte Mayor
+2025-07-22 18:44:59 | INFO     | nubox_rpa.navigation | Buscando Mayor con selector: //a[@onclick="NbxAnalyticsTrackMenu('Mayor')" and @href='conReportesLibroMayorGenerar.asp']
+2025-07-22 18:44:59 | INFO     | nubox_rpa.navigation | Elementos de Mayor encontrados: 1
+2025-07-22 18:44:59 | INFO     | nubox_rpa.navigation | Elemento de Mayor encontrado y visible
+2025-07-22 18:44:59 | INFO     | nubox_rpa.navigation | Clic exitoso en Mayor
+2025-07-22 18:44:59 | INFO     | nubox_rpa.navigation | Navegación completada exitosamente
+2025-07-22 18:44:59 | INFO     | nubox_rpa | Extrayendo opciones de dropdowns de la página de Nubox
+2025-07-22 18:44:59 | INFO     | nubox_rpa.ui_elements | Extrayendo opciones de dropdowns disponibles
+2025-07-22 18:45:40 | INFO     | nubox_rpa.ui_elements | Encontrados 7 elementos select
+2025-07-22 18:45:40 | INFO     | nubox_rpa.ui_elements | Dropdown 'Empresa': 19 opciones, seleccionado: '051,  VERSE CONSULTORES LTDA'
+2025-07-22 18:45:40 | INFO     | nubox_rpa.ui_elements | Dropdown 'Tipo de Reporte': 4 opciones, seleccionado: 'ANALISIS POR CUENTA'
+2025-07-22 18:45:40 | INFO     | nubox_rpa.ui_elements | Dropdown 'Formato de Salida': 2 opciones, seleccionado: 'PDF'
+2025-07-22 18:45:40 | INFO     | nubox_rpa.ui_elements | Dropdown 'Cuenta Contable': 158 opciones, seleccionado: '1101-01 CUENTA CAJA'
+2025-07-22 18:45:40 | INFO     | nubox_rpa.ui_elements | Dropdown 'Incluir Subcuentas': 2 opciones, seleccionado: 'NO'
+2025-07-22 18:45:40 | INFO     | nubox_rpa.ui_elements | Extraídas opciones de 5 dropdowns
+2025-07-22 18:45:40 | INFO     | nubox_rpa | Opciones de dropdowns extraídas exitosamente: 5 dropdowns
+2025-07-22 18:45:41 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2023-01-01 hasta 2025-07-01
+2025-07-22 18:45:41 | INFO     | nubox_rpa.date_utils | Se generaron 30 rangos mensuales
+2025-07-22 18:45:58 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2023-01-01 hasta 2025-07-01
+2025-07-22 18:45:58 | INFO     | nubox_rpa.date_utils | Se generaron 30 rangos mensuales
+2025-07-22 18:45:58 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2023-01-01 hasta 2025-07-01
+2025-07-22 18:45:58 | INFO     | nubox_rpa.date_utils | Se generaron 30 rangos mensuales
+2025-07-22 18:47:40 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-22
+2025-07-22 18:47:40 | INFO     | nubox_rpa.date_utils | Se generaron 7 rangos mensuales
+2025-07-22 18:47:46 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-22
+2025-07-22 18:47:46 | INFO     | nubox_rpa.date_utils | Se generaron 7 rangos mensuales
+2025-07-22 18:48:17 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-22
+2025-07-22 18:48:17 | INFO     | nubox_rpa.date_utils | Se generaron 7 rangos mensuales

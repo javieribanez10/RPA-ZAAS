@@ -1,0 +1,15 @@
+python3 -m venv .venv
+
+source .venv/bin/activate 
+
+pip install -r requirements.txt
+
+export NUBOX_USERNAME="20.361.400-4"
+export NUBOX_PASSWORD="Zaaslocura2024"
+
+streamlit run streamlit_app_refactored.py
+
+
+#SUPABASE
+user: Selyt-Nubox
+pass: Zaaslocura2024@

@@ -1,0 +1,71 @@
+2025-07-17 16:53:55 | INFO     | nubox_rpa.service | NuboxService inicializado con arquitectura modular
+2025-07-17 16:53:55 | INFO     | nubox_rpa.authentication | Iniciando proceso de autenticación
+2025-07-17 16:53:55 | INFO     | nubox_rpa.browser_manager | Navegando a https://web.nubox.com/Login/Account/Login?ReturnUrl=%2FSistemaLogin
+2025-07-17 16:54:00 | INFO     | nubox_rpa.authentication | Ingresando credenciales
+2025-07-17 16:54:01 | INFO     | nubox_rpa.authentication | Botón de login encontrado con selector: input[value='Ingresar'][class*='nbx-form_btn_login']
+2025-07-17 16:54:01 | INFO     | nubox_rpa.authentication | Haciendo clic en el botón Ingresar
+2025-07-17 16:54:04 | INFO     | nubox_rpa.authentication | URL actual después del login: https://web.nubox.com/SistemaLogin/
+2025-07-17 16:54:14 | INFO     | nubox_rpa.authentication | Login exitoso: URL cambió
+2025-07-17 16:54:14 | INFO     | nubox_rpa.navigation | Iniciando navegación a reportes contables
+2025-07-17 16:54:17 | INFO     | nubox_rpa.navigation | Navegando al módulo de Contabilidad
+2025-07-17 16:54:17 | INFO     | nubox_rpa.navigation | Intentando selector: //td[contains(@class, 'jqx-cell') and contains(@class, 'jqx-grid-cell')]//span[contains(text(), 'Contabilidad')]
+2025-07-17 16:54:17 | INFO     | nubox_rpa.navigation | Elementos encontrados: 1
+2025-07-17 16:54:17 | INFO     | nubox_rpa.navigation | Elemento de Contabilidad encontrado y visible
+2025-07-17 16:54:17 | INFO     | nubox_rpa.navigation | Clic exitoso en Contabilidad
+2025-07-17 16:54:19 | INFO     | nubox_rpa.navigation | Buscando el menú de Reportes
+2025-07-17 16:54:19 | INFO     | nubox_rpa.navigation | Buscando Reportes con selector: //a[@tabindex='-1' and contains(@onfocus, 'p_MenuEnfocar') and text()='Reportes']
+2025-07-17 16:54:19 | INFO     | nubox_rpa.navigation | Elementos de Reportes encontrados: 1
+2025-07-17 16:54:19 | INFO     | nubox_rpa.navigation | Elemento de Reportes encontrado y visible
+2025-07-17 16:54:20 | INFO     | nubox_rpa.navigation | Clic exitoso en Reportes
+2025-07-17 16:54:20 | INFO     | nubox_rpa.navigation | Buscando el menú de Libros Contables
+2025-07-17 16:54:21 | INFO     | nubox_rpa.navigation | Buscando Libros Contables con selector: //a[@tabindex='-1' and contains(@onfocus, 'p_SubMenuEnfocar') and contains(text(), 'Libros Contables')]
+2025-07-17 16:54:21 | INFO     | nubox_rpa.navigation | Elementos de Libros Contables encontrados: 1
+2025-07-17 16:54:21 | INFO     | nubox_rpa.navigation | Elemento de Libros Contables encontrado y visible
+2025-07-17 16:54:21 | INFO     | nubox_rpa.navigation | Clic exitoso en Libros Contables
+2025-07-17 16:54:21 | INFO     | nubox_rpa.navigation | Buscando el reporte Mayor
+2025-07-17 16:54:22 | INFO     | nubox_rpa.navigation | Buscando Mayor con selector: //a[@onclick="NbxAnalyticsTrackMenu('Mayor')" and @href='conReportesLibroMayorGenerar.asp']
+2025-07-17 16:54:22 | INFO     | nubox_rpa.navigation | Elementos de Mayor encontrados: 1
+2025-07-17 16:54:22 | INFO     | nubox_rpa.navigation | Elemento de Mayor encontrado y visible
+2025-07-17 16:54:23 | INFO     | nubox_rpa.navigation | Clic exitoso en Mayor
+2025-07-17 16:54:23 | INFO     | nubox_rpa.navigation | Navegación completada exitosamente
+2025-07-17 16:54:23 | INFO     | nubox_rpa.streamlit | Extrayendo opciones de dropdowns de la página de Nubox
+2025-07-17 16:54:23 | INFO     | nubox_rpa.ui_elements | Extrayendo opciones de dropdowns disponibles
+2025-07-17 16:55:03 | INFO     | nubox_rpa.ui_elements | Encontrados 7 elementos select
+2025-07-17 16:55:03 | INFO     | nubox_rpa.ui_elements | Dropdown 'Empresa': 19 opciones, seleccionado: '051,  VERSE CONSULTORES LTDA'
+2025-07-17 16:55:03 | INFO     | nubox_rpa.ui_elements | Dropdown 'Tipo de Reporte': 4 opciones, seleccionado: 'ANALISIS POR CUENTA'
+2025-07-17 16:55:03 | INFO     | nubox_rpa.ui_elements | Dropdown 'Formato de Salida': 2 opciones, seleccionado: 'PDF'
+2025-07-17 16:55:04 | INFO     | nubox_rpa.ui_elements | Dropdown 'Cuenta Contable': 158 opciones, seleccionado: '1101-01 CUENTA CAJA'
+2025-07-17 16:55:04 | INFO     | nubox_rpa.ui_elements | Dropdown 'Incluir Subcuentas': 2 opciones, seleccionado: 'NO'
+2025-07-17 16:55:04 | INFO     | nubox_rpa.ui_elements | Extraídas opciones de 5 dropdowns
+2025-07-17 16:55:04 | INFO     | nubox_rpa.streamlit | Opciones de dropdowns extraídas exitosamente: 5 dropdowns
+2025-07-17 16:55:28 | INFO     | nubox_rpa.parameter_config | Iniciando configuración programática de parámetros
+2025-07-17 16:55:38 | INFO     | nubox_rpa.parameter_config | iframes encontrados en la página: 0
+2025-07-17 16:55:38 | INFO     | nubox_rpa.parameter_config | Configurando dropdowns antes que las fechas para evitar reversión
+2025-07-17 16:55:38 | INFO     | nubox_rpa.parameter_config | Configurando selecciones de dropdowns
+2025-07-17 16:55:38 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Empresa'
+2025-07-17 16:55:49 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Empresa' configurado exitosamente
+2025-07-17 16:55:49 | INFO     | nubox_rpa.parameter_config | Dropdown 'Empresa' configurado: 906,  SELYT SPA
+2025-07-17 16:55:49 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Tipo de Reporte'
+2025-07-17 16:55:50 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Tipo de Reporte' configurado exitosamente
+2025-07-17 16:55:50 | INFO     | nubox_rpa.parameter_config | Dropdown 'Tipo de Reporte' configurado: ANALISIS POR CUENTA
+2025-07-17 16:55:50 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Formato de Salida'
+2025-07-17 16:55:50 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Formato de Salida' configurado exitosamente
+2025-07-17 16:55:50 | INFO     | nubox_rpa.parameter_config | Dropdown 'Formato de Salida' configurado: EXCEL
+2025-07-17 16:55:51 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Cuenta Contable'
+2025-07-17 16:56:03 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Cuenta Contable' configurado con método alternativo
+2025-07-17 16:56:03 | INFO     | nubox_rpa.parameter_config | Dropdown 'Cuenta Contable' configurado: 5101-01 VENTAS POR SERVICIO
+2025-07-17 16:56:04 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Incluir Subcuentas'
+2025-07-17 16:56:04 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Incluir Subcuentas' configurado exitosamente
+2025-07-17 16:56:04 | INFO     | nubox_rpa.parameter_config | Dropdown 'Incluir Subcuentas' configurado: SI
+2025-07-17 16:56:04 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde' al final: 01/01/2025
+2025-07-17 16:56:04 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde': 01/01/2025
+2025-07-17 16:56:05 | INFO     | nubox_rpa.parameter_config | Fecha 'Desde' configurada: 01/01/2025
+2025-07-17 16:56:05 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta' al final: 01/02/2025
+2025-07-17 16:56:05 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta': 01/02/2025
+2025-07-17 16:56:06 | INFO     | nubox_rpa.parameter_config | Fecha 'Hasta' configurada: 01/02/2025
+2025-07-17 16:56:06 | INFO     | nubox_rpa.parameter_config | Buscando botón para generar el reporte
+2025-07-17 16:56:07 | INFO     | nubox_rpa.parameter_config | Haciendo clic en el botón Aceptar para generar el reporte
+2025-07-17 16:56:11 | INFO     | nubox_rpa.parameter_config | Clic con JavaScript en botón Aceptar exitoso
+2025-07-17 16:56:11 | INFO     | nubox_rpa.parameter_config | Esperando a que se genere el reporte...
+2025-07-17 16:56:16 | INFO     | nubox_rpa.report_extractor | Iniciando extracción de reporte
+2025-07-17 16:56:33 | ERROR    | nubox_rpa.report_extractor | Error al extraer reporte: HTTPConnectionPool(host='localhost', port=56748): Max retries exceeded with url: /session/dbb9a6239ac0d6e8eb011703c06398bb/screenshot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1220df130>: Failed to establish a new connection: [Errno 61] Connection refused'))

@@ -1,0 +1,736 @@
+2025-07-22 19:26:25 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-22
+2025-07-22 19:26:25 | INFO     | nubox_rpa.date_utils | Se generaron 7 rangos mensuales
+2025-07-22 19:26:30 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-22
+2025-07-22 19:26:30 | INFO     | nubox_rpa.date_utils | Se generaron 7 rangos mensuales
+2025-07-22 19:26:35 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:26:35 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:26:37 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:26:37 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:26:38 | INFO     | nubox_rpa.service | NuboxService inicializado con arquitectura modular
+2025-07-22 19:26:38 | INFO     | nubox_rpa.authentication | Iniciando proceso de autenticación
+2025-07-22 19:26:38 | INFO     | nubox_rpa.browser_manager | Navegando a https://web.nubox.com/Login/Account/Login?ReturnUrl=%2FSistemaLogin
+2025-07-22 19:26:43 | INFO     | nubox_rpa.authentication | Ingresando credenciales
+2025-07-22 19:26:44 | INFO     | nubox_rpa.authentication | Botón de login encontrado con selector: input[value='Ingresar'][class*='nbx-form_btn_login']
+2025-07-22 19:26:44 | INFO     | nubox_rpa.authentication | Haciendo clic en el botón Ingresar
+2025-07-22 19:26:47 | INFO     | nubox_rpa.authentication | URL actual después del login: https://web.nubox.com/SistemaLogin/
+2025-07-22 19:26:57 | INFO     | nubox_rpa.authentication | Login exitoso: URL cambió
+2025-07-22 19:26:57 | INFO     | nubox_rpa.navigation | Iniciando navegación a reportes contables
+2025-07-22 19:26:59 | INFO     | nubox_rpa.navigation | Navegando al módulo de Contabilidad
+2025-07-22 19:26:59 | INFO     | nubox_rpa.navigation | Intentando selector: //td[contains(@class, 'jqx-cell') and contains(@class, 'jqx-grid-cell')]//span[contains(text(), 'Contabilidad')]
+2025-07-22 19:26:59 | INFO     | nubox_rpa.navigation | Elementos encontrados: 1
+2025-07-22 19:26:59 | INFO     | nubox_rpa.navigation | Elemento de Contabilidad encontrado y visible
+2025-07-22 19:27:00 | INFO     | nubox_rpa.navigation | Clic exitoso en Contabilidad
+2025-07-22 19:27:02 | INFO     | nubox_rpa.navigation | Buscando el menú de Reportes
+2025-07-22 19:27:02 | INFO     | nubox_rpa.navigation | Buscando Reportes con selector: //a[@tabindex='-1' and contains(@onfocus, 'p_MenuEnfocar') and text()='Reportes']
+2025-07-22 19:27:02 | INFO     | nubox_rpa.navigation | Elementos de Reportes encontrados: 1
+2025-07-22 19:27:02 | INFO     | nubox_rpa.navigation | Elemento de Reportes encontrado y visible
+2025-07-22 19:27:02 | INFO     | nubox_rpa.navigation | Clic exitoso en Reportes
+2025-07-22 19:27:02 | INFO     | nubox_rpa.navigation | Buscando el menú de Libros Contables
+2025-07-22 19:27:03 | INFO     | nubox_rpa.navigation | Buscando Libros Contables con selector: //a[@tabindex='-1' and contains(@onfocus, 'p_SubMenuEnfocar') and contains(text(), 'Libros Contables')]
+2025-07-22 19:27:03 | INFO     | nubox_rpa.navigation | Elementos de Libros Contables encontrados: 1
+2025-07-22 19:27:03 | INFO     | nubox_rpa.navigation | Elemento de Libros Contables encontrado y visible
+2025-07-22 19:27:04 | INFO     | nubox_rpa.navigation | Clic exitoso en Libros Contables
+2025-07-22 19:27:04 | INFO     | nubox_rpa.navigation | Buscando el reporte Mayor
+2025-07-22 19:27:05 | INFO     | nubox_rpa.navigation | Buscando Mayor con selector: //a[@onclick="NbxAnalyticsTrackMenu('Mayor')" and @href='conReportesLibroMayorGenerar.asp']
+2025-07-22 19:27:05 | INFO     | nubox_rpa.navigation | Elementos de Mayor encontrados: 1
+2025-07-22 19:27:05 | INFO     | nubox_rpa.navigation | Elemento de Mayor encontrado y visible
+2025-07-22 19:27:05 | INFO     | nubox_rpa.navigation | Clic exitoso en Mayor
+2025-07-22 19:27:05 | INFO     | nubox_rpa.navigation | Navegación completada exitosamente
+2025-07-22 19:27:05 | INFO     | nubox_rpa | Extrayendo opciones de dropdowns de la página de Nubox
+2025-07-22 19:27:05 | INFO     | nubox_rpa.ui_elements | Extrayendo opciones de dropdowns disponibles
+2025-07-22 19:27:46 | INFO     | nubox_rpa.ui_elements | Encontrados 7 elementos select
+2025-07-22 19:27:46 | INFO     | nubox_rpa.ui_elements | Dropdown 'Empresa': 19 opciones, seleccionado: '051,  VERSE CONSULTORES LTDA'
+2025-07-22 19:27:46 | INFO     | nubox_rpa.ui_elements | Dropdown 'Tipo de Reporte': 4 opciones, seleccionado: 'ANALISIS POR CUENTA'
+2025-07-22 19:27:46 | INFO     | nubox_rpa.ui_elements | Dropdown 'Formato de Salida': 2 opciones, seleccionado: 'PDF'
+2025-07-22 19:27:46 | INFO     | nubox_rpa.ui_elements | Dropdown 'Cuenta Contable': 158 opciones, seleccionado: '1101-01 CUENTA CAJA'
+2025-07-22 19:27:46 | INFO     | nubox_rpa.ui_elements | Dropdown 'Incluir Subcuentas': 2 opciones, seleccionado: 'NO'
+2025-07-22 19:27:46 | INFO     | nubox_rpa.ui_elements | Extraídas opciones de 5 dropdowns
+2025-07-22 19:27:46 | INFO     | nubox_rpa | Opciones de dropdowns extraídas exitosamente: 5 dropdowns
+2025-07-22 19:27:46 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:27:46 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:27:46 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:27:46 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:27:57 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:27:57 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:28:09 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:28:09 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:28:09 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:28:09 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:28:16 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:28:16 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:28:16 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:28:16 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:28:18 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:28:18 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:28:18 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:28:18 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:28:20 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:28:20 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:28:20 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:28:20 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:28:21 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:28:21 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:28:24 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:28:24 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:28:24 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:28:24 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:28:43 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:28:43 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:28:43 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:28:43 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:28:47 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:28:47 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:28:47 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:28:47 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:28:59 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:28:59 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:28:59 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:28:59 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:28:59 | INFO     | nubox_rpa.date_utils | Generando rangos mensuales desde 2025-01-01 hasta 2025-07-01
+2025-07-22 19:28:59 | INFO     | nubox_rpa.date_utils | Se generaron 6 rangos mensuales
+2025-07-22 19:28:59 | INFO     | nubox_rpa.report_extractor | Iniciando extracción múltiple para 4 combinaciones (2 empresas × 2 cuentas)
+2025-07-22 19:28:59 | INFO     | nubox_rpa.report_extractor | 🏢 Procesando empresa 1/2: 906,  SELYT SPA
+2025-07-22 19:28:59 | INFO     | nubox_rpa.report_extractor | 💰 Procesando combinación 1/4: 906,  SELYT SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 19:28:59 | INFO     | nubox_rpa.report_extractor | Configurando parámetros para: 906,  SELYT SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 19:28:59 | INFO     | nubox_rpa.parameter_config | Iniciando configuración programática de parámetros
+2025-07-22 19:29:09 | INFO     | nubox_rpa.parameter_config | iframes encontrados en la página: 0
+2025-07-22 19:29:09 | INFO     | nubox_rpa.parameter_config | Configurando dropdowns antes que las fechas para evitar reversión
+2025-07-22 19:29:09 | INFO     | nubox_rpa.parameter_config | Configurando selecciones de dropdowns
+2025-07-22 19:29:09 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Empresa'
+2025-07-22 19:29:20 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Empresa' configurado exitosamente
+2025-07-22 19:29:20 | INFO     | nubox_rpa.parameter_config | Dropdown 'Empresa' configurado: 906,  SELYT SPA
+2025-07-22 19:29:20 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Tipo de Reporte'
+2025-07-22 19:29:21 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Tipo de Reporte' configurado exitosamente
+2025-07-22 19:29:21 | INFO     | nubox_rpa.parameter_config | Dropdown 'Tipo de Reporte' configurado: ANALISIS POR CUENTA
+2025-07-22 19:29:21 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Formato de Salida'
+2025-07-22 19:29:21 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Formato de Salida' configurado exitosamente
+2025-07-22 19:29:21 | INFO     | nubox_rpa.parameter_config | Dropdown 'Formato de Salida' configurado: EXCEL
+2025-07-22 19:29:22 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Cuenta Contable'
+2025-07-22 19:29:34 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Cuenta Contable' configurado con método alternativo
+2025-07-22 19:29:34 | INFO     | nubox_rpa.parameter_config | Dropdown 'Cuenta Contable' configurado: 5101-01 VENTAS POR SERVICIO
+2025-07-22 19:29:35 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Incluir Subcuentas'
+2025-07-22 19:29:35 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Incluir Subcuentas' configurado exitosamente
+2025-07-22 19:29:35 | INFO     | nubox_rpa.parameter_config | Dropdown 'Incluir Subcuentas' configurado: NO
+2025-07-22 19:29:35 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde' al final: 01/01/2025
+2025-07-22 19:29:35 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde': 01/01/2025
+2025-07-22 19:29:36 | INFO     | nubox_rpa.parameter_config | Fecha 'Desde' configurada: 01/01/2025
+2025-07-22 19:29:36 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta' al final: 01/02/2025
+2025-07-22 19:29:36 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta': 01/02/2025
+2025-07-22 19:29:37 | INFO     | nubox_rpa.parameter_config | Fecha 'Hasta' configurada: 01/02/2025
+2025-07-22 19:29:37 | INFO     | nubox_rpa.parameter_config | Buscando botón para generar el reporte
+2025-07-22 19:29:37 | INFO     | nubox_rpa.parameter_config | Haciendo clic en el botón Aceptar para generar el reporte
+2025-07-22 19:29:40 | INFO     | nubox_rpa.parameter_config | Clic con JavaScript en botón Aceptar exitoso
+2025-07-22 19:29:40 | INFO     | nubox_rpa.parameter_config | Esperando a que se genere el reporte...
+2025-07-22 19:29:48 | INFO     | nubox_rpa.report_extractor | Extrayendo datos para: 906,  SELYT SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 19:29:48 | INFO     | nubox_rpa.report_extractor | Iniciando extracción de reporte
+2025-07-22 19:30:28 | INFO     | nubox_rpa.report_extractor | Esperando a que se complete la descarga...
+2025-07-22 19:30:38 | INFO     | nubox_rpa.report_extractor | Archivo descargado encontrado: /Users/javie/Downloads/LIBRO MAYOR DESDE 01_01_2025 A 01_02_2025.xls
+2025-07-22 19:30:38 | INFO     | nubox_rpa.report_extractor | Validando archivo: /Users/javie/Downloads/LIBRO MAYOR DESDE 01_01_2025 A 01_02_2025.xls (tamaño: 2074 bytes)
+2025-07-22 19:30:38 | INFO     | nubox_rpa.report_extractor | Primeros 100 caracteres del archivo: <html xmlns:x="urn:schemas-microsoft-com:office:excel"><head><!--[if gte mso 9]><xml><x:ExcelWorkboo
+2025-07-22 19:30:38 | INFO     | nubox_rpa.report_extractor | ✅ DETECTADO: Archivo HTML-Excel válido de Nubox
+2025-07-22 19:30:38 | INFO     | nubox_rpa.report_extractor | ✅ Descarga exitosa. Preparando para siguiente cuenta...
+2025-07-22 19:30:38 | INFO     | nubox_rpa.report_extractor | 📋 Detectado formato HTML-Excel de Microsoft Office (Nubox)
+2025-07-22 19:30:38 | INFO     | nubox_rpa.report_extractor | 📋 Iniciando extracción de datos HTML-Excel...
+2025-07-22 19:30:38 | INFO     | nubox_rpa.report_extractor | 📋 Información de empresa extraída: {'Nombre': 'SELYT SPA', 'Rut': '77.081.534-7', 'Representante Legal': 'PAULO ALEJANDRO SUBIABRE CEPEDA', 'Giro Comercial': 'SERVICIOS TECNOLOGICOS'}
+2025-07-22 19:30:38 | INFO     | nubox_rpa.report_extractor | 📋 Encabezados encontrados: ['FECHA', 'COMPROBANTE', 'GLOSA', 'DEBE', 'HABER', 'SALDO', 'C.C.']
+2025-07-22 19:30:38 | INFO     | nubox_rpa.report_extractor | 📊 Se extrajeron 2 filas de datos
+2025-07-22 19:30:38 | INFO     | nubox_rpa.report_extractor | ✅ Datos contables limpiados: 2 filas resultantes
+2025-07-22 19:30:38 | INFO     | nubox_rpa.report_extractor | ✅ DataFrame HTML-Excel creado exitosamente: 2 filas, 7 columnas
+2025-07-22 19:30:38 | INFO     | nubox_rpa.report_extractor | Columnas: ['FECHA', 'COMPROBANTE', 'GLOSA', 'DEBE', 'HABER', 'SALDO', 'C.C.']
+2025-07-22 19:30:38 | INFO     | nubox_rpa.report_extractor | ✅ Descarga exitosa para: 906,  SELYT SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 19:30:38 | INFO     | nubox_rpa.report_extractor | Navegando al formulario Mayor para siguiente combinación (2/4)
+2025-07-22 19:30:38 | INFO     | nubox_rpa.navigation | Navegando intencionalmente a SistemaLogin para empezar proceso limpio
+2025-07-22 19:30:38 | INFO     | nubox_rpa.navigation | 🔄 Navegando a https://web.nubox.com/SistemaLogin
+2025-07-22 19:30:41 | INFO     | nubox_rpa.navigation | URL actual después de navegación: https://web.nubox.com/SistemaLogin
+2025-07-22 19:30:41 | INFO     | nubox_rpa.navigation | 🚀 Iniciando navegación completa desde SistemaLogin para siguiente cuenta
+2025-07-22 19:30:41 | INFO     | nubox_rpa.navigation | Ejecutando proceso completo de navegación desde SistemaLogin
+2025-07-22 19:30:43 | INFO     | nubox_rpa.navigation | Navegando al módulo de Contabilidad
+2025-07-22 19:30:43 | INFO     | nubox_rpa.navigation | Intentando selector: //td[contains(@class, 'jqx-cell') and contains(@class, 'jqx-grid-cell')]//span[contains(text(), 'Contabilidad')]
+2025-07-22 19:30:43 | INFO     | nubox_rpa.navigation | Elementos encontrados: 1
+2025-07-22 19:30:43 | INFO     | nubox_rpa.navigation | Elemento de Contabilidad encontrado y visible
+2025-07-22 19:30:44 | INFO     | nubox_rpa.navigation | Clic exitoso en Contabilidad
+2025-07-22 19:30:46 | INFO     | nubox_rpa.navigation | Buscando el menú de Reportes
+2025-07-22 19:30:46 | INFO     | nubox_rpa.navigation | Buscando Reportes con selector: //a[@tabindex='-1' and contains(@onfocus, 'p_MenuEnfocar') and text()='Reportes']
+2025-07-22 19:30:46 | INFO     | nubox_rpa.navigation | Elementos de Reportes encontrados: 1
+2025-07-22 19:30:46 | INFO     | nubox_rpa.navigation | Elemento de Reportes encontrado y visible
+2025-07-22 19:30:47 | INFO     | nubox_rpa.navigation | Clic exitoso en Reportes
+2025-07-22 19:30:47 | INFO     | nubox_rpa.navigation | Buscando el menú de Libros Contables
+2025-07-22 19:30:48 | INFO     | nubox_rpa.navigation | Buscando Libros Contables con selector: //a[@tabindex='-1' and contains(@onfocus, 'p_SubMenuEnfocar') and contains(text(), 'Libros Contables')]
+2025-07-22 19:30:48 | INFO     | nubox_rpa.navigation | Elementos de Libros Contables encontrados: 1
+2025-07-22 19:30:48 | INFO     | nubox_rpa.navigation | Elemento de Libros Contables encontrado y visible
+2025-07-22 19:30:48 | INFO     | nubox_rpa.navigation | Clic exitoso en Libros Contables
+2025-07-22 19:30:48 | INFO     | nubox_rpa.navigation | Buscando el reporte Mayor
+2025-07-22 19:30:49 | INFO     | nubox_rpa.navigation | Buscando Mayor con selector: //a[@onclick="NbxAnalyticsTrackMenu('Mayor')" and @href='conReportesLibroMayorGenerar.asp']
+2025-07-22 19:30:49 | INFO     | nubox_rpa.navigation | Elementos de Mayor encontrados: 1
+2025-07-22 19:30:49 | INFO     | nubox_rpa.navigation | Elemento de Mayor encontrado y visible
+2025-07-22 19:30:50 | INFO     | nubox_rpa.navigation | Clic exitoso en Mayor
+2025-07-22 19:30:50 | INFO     | nubox_rpa.navigation | ✅ Navegación completa desde SistemaLogin exitosa
+2025-07-22 19:30:50 | INFO     | nubox_rpa.report_extractor | 💰 Procesando combinación 2/4: 906,  SELYT SPA - 4101-01 REMUNERACIONES
+2025-07-22 19:30:50 | INFO     | nubox_rpa.report_extractor | Configurando parámetros para: 906,  SELYT SPA - 4101-01 REMUNERACIONES
+2025-07-22 19:30:50 | INFO     | nubox_rpa.parameter_config | Iniciando configuración programática de parámetros
+2025-07-22 19:30:50 | INFO     | nubox_rpa.parameter_config | iframes encontrados en la página: 11
+2025-07-22 19:30:50 | INFO     | nubox_rpa.parameter_config | iframe 0: name='iframe_0', src='sin_src'
+2025-07-22 19:31:00 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 0: 0
+2025-07-22 19:31:00 | INFO     | nubox_rpa.parameter_config | iframe 1: name='iframe_1', src='sin_src'
+2025-07-22 19:31:10 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 1: 0
+2025-07-22 19:31:10 | INFO     | nubox_rpa.parameter_config | iframe 2: name='iframe_2', src='sin_src'
+2025-07-22 19:31:20 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 2: 0
+2025-07-22 19:31:20 | INFO     | nubox_rpa.parameter_config | iframe 3: name='iframe_3', src='sin_src'
+2025-07-22 19:31:30 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 3: 0
+2025-07-22 19:31:30 | INFO     | nubox_rpa.parameter_config | iframe 4: name='Contenido', src='https://app.nubox.com/ServicontPlus/Asp/conPortadaContenido.asp'
+2025-07-22 19:31:30 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 4: 14
+2025-07-22 19:31:30 | INFO     | nubox_rpa.parameter_config | Usando iframe 4 que contiene 14 inputs
+2025-07-22 19:31:30 | INFO     | nubox_rpa.parameter_config | Configurando dropdowns antes que las fechas para evitar reversión
+2025-07-22 19:31:30 | INFO     | nubox_rpa.parameter_config | Configurando selecciones de dropdowns
+2025-07-22 19:31:30 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Empresa'
+2025-07-22 19:31:41 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Empresa' configurado exitosamente
+2025-07-22 19:31:41 | INFO     | nubox_rpa.parameter_config | Dropdown 'Empresa' configurado: 906,  SELYT SPA
+2025-07-22 19:31:41 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Tipo de Reporte'
+2025-07-22 19:31:42 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Tipo de Reporte' configurado exitosamente
+2025-07-22 19:31:42 | INFO     | nubox_rpa.parameter_config | Dropdown 'Tipo de Reporte' configurado: ANALISIS POR CUENTA
+2025-07-22 19:31:42 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Formato de Salida'
+2025-07-22 19:31:43 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Formato de Salida' configurado exitosamente
+2025-07-22 19:31:43 | INFO     | nubox_rpa.parameter_config | Dropdown 'Formato de Salida' configurado: EXCEL
+2025-07-22 19:31:44 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Cuenta Contable'
+2025-07-22 19:31:44 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Cuenta Contable' configurado exitosamente
+2025-07-22 19:31:44 | INFO     | nubox_rpa.parameter_config | Dropdown 'Cuenta Contable' configurado: 4101-01 REMUNERACIONES
+2025-07-22 19:31:45 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Incluir Subcuentas'
+2025-07-22 19:31:46 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Incluir Subcuentas' configurado exitosamente
+2025-07-22 19:31:46 | INFO     | nubox_rpa.parameter_config | Dropdown 'Incluir Subcuentas' configurado: NO
+2025-07-22 19:31:46 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde' al final: 01/01/2025
+2025-07-22 19:31:46 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde': 01/01/2025
+2025-07-22 19:31:47 | INFO     | nubox_rpa.parameter_config | Fecha 'Desde' configurada: 01/01/2025
+2025-07-22 19:31:47 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta' al final: 01/02/2025
+2025-07-22 19:31:47 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta': 01/02/2025
+2025-07-22 19:31:48 | INFO     | nubox_rpa.parameter_config | Fecha 'Hasta' configurada: 01/02/2025
+2025-07-22 19:31:48 | INFO     | nubox_rpa.parameter_config | Buscando botón para generar el reporte
+2025-07-22 19:31:48 | INFO     | nubox_rpa.parameter_config | Haciendo clic en el botón Aceptar para generar el reporte
+2025-07-22 19:31:50 | INFO     | nubox_rpa.parameter_config | Clic con JavaScript en botón Aceptar exitoso
+2025-07-22 19:31:50 | INFO     | nubox_rpa.parameter_config | Esperando a que se genere el reporte...
+2025-07-22 19:31:58 | INFO     | nubox_rpa.report_extractor | Extrayendo datos para: 906,  SELYT SPA - 4101-01 REMUNERACIONES
+2025-07-22 19:31:58 | INFO     | nubox_rpa.report_extractor | Iniciando extracción de reporte
+2025-07-22 19:32:38 | INFO     | nubox_rpa.report_extractor | Esperando a que se complete la descarga...
+2025-07-22 19:32:48 | INFO     | nubox_rpa.report_extractor | Archivo descargado encontrado: /Users/javie/Downloads/LIBRO MAYOR DESDE 01_01_2025 A 01_02_2025 (1).xls
+2025-07-22 19:32:48 | INFO     | nubox_rpa.report_extractor | Validando archivo: /Users/javie/Downloads/LIBRO MAYOR DESDE 01_01_2025 A 01_02_2025 (1).xls (tamaño: 2072 bytes)
+2025-07-22 19:32:48 | INFO     | nubox_rpa.report_extractor | Primeros 100 caracteres del archivo: <html xmlns:x="urn:schemas-microsoft-com:office:excel"><head><!--[if gte mso 9]><xml><x:ExcelWorkboo
+2025-07-22 19:32:48 | INFO     | nubox_rpa.report_extractor | ✅ DETECTADO: Archivo HTML-Excel válido de Nubox
+2025-07-22 19:32:48 | INFO     | nubox_rpa.report_extractor | ✅ Descarga exitosa. Preparando para siguiente cuenta...
+2025-07-22 19:32:48 | INFO     | nubox_rpa.report_extractor | 📋 Detectado formato HTML-Excel de Microsoft Office (Nubox)
+2025-07-22 19:32:48 | INFO     | nubox_rpa.report_extractor | 📋 Iniciando extracción de datos HTML-Excel...
+2025-07-22 19:32:48 | INFO     | nubox_rpa.report_extractor | 📋 Información de empresa extraída: {'Nombre': 'SELYT SPA', 'Rut': '77.081.534-7', 'Representante Legal': 'PAULO ALEJANDRO SUBIABRE CEPEDA', 'Giro Comercial': 'SERVICIOS TECNOLOGICOS'}
+2025-07-22 19:32:48 | INFO     | nubox_rpa.report_extractor | 📋 Encabezados encontrados: ['FECHA', 'COMPROBANTE', 'GLOSA', 'DEBE', 'HABER', 'SALDO', 'C.C.']
+2025-07-22 19:32:48 | INFO     | nubox_rpa.report_extractor | 📊 Se extrajeron 2 filas de datos
+2025-07-22 19:32:48 | INFO     | nubox_rpa.report_extractor | ✅ Datos contables limpiados: 2 filas resultantes
+2025-07-22 19:32:48 | INFO     | nubox_rpa.report_extractor | ✅ DataFrame HTML-Excel creado exitosamente: 2 filas, 7 columnas
+2025-07-22 19:32:48 | INFO     | nubox_rpa.report_extractor | Columnas: ['FECHA', 'COMPROBANTE', 'GLOSA', 'DEBE', 'HABER', 'SALDO', 'C.C.']
+2025-07-22 19:32:48 | INFO     | nubox_rpa.report_extractor | ✅ Descarga exitosa para: 906,  SELYT SPA - 4101-01 REMUNERACIONES
+2025-07-22 19:32:48 | INFO     | nubox_rpa.report_extractor | Navegando al formulario Mayor para siguiente combinación (3/4)
+2025-07-22 19:32:48 | INFO     | nubox_rpa.navigation | Navegando intencionalmente a SistemaLogin para empezar proceso limpio
+2025-07-22 19:32:48 | INFO     | nubox_rpa.navigation | 🔄 Navegando a https://web.nubox.com/SistemaLogin
+2025-07-22 19:32:52 | INFO     | nubox_rpa.navigation | URL actual después de navegación: https://web.nubox.com/SistemaLogin
+2025-07-22 19:32:52 | INFO     | nubox_rpa.navigation | 🚀 Iniciando navegación completa desde SistemaLogin para siguiente cuenta
+2025-07-22 19:32:52 | INFO     | nubox_rpa.navigation | Ejecutando proceso completo de navegación desde SistemaLogin
+2025-07-22 19:32:54 | INFO     | nubox_rpa.navigation | Navegando al módulo de Contabilidad
+2025-07-22 19:32:54 | INFO     | nubox_rpa.navigation | Intentando selector: //td[contains(@class, 'jqx-cell') and contains(@class, 'jqx-grid-cell')]//span[contains(text(), 'Contabilidad')]
+2025-07-22 19:32:54 | INFO     | nubox_rpa.navigation | Elementos encontrados: 1
+2025-07-22 19:32:54 | INFO     | nubox_rpa.navigation | Elemento de Contabilidad encontrado y visible
+2025-07-22 19:32:54 | INFO     | nubox_rpa.navigation | Clic exitoso en Contabilidad
+2025-07-22 19:32:56 | INFO     | nubox_rpa.navigation | Buscando el menú de Reportes
+2025-07-22 19:32:56 | INFO     | nubox_rpa.navigation | Buscando Reportes con selector: //a[@tabindex='-1' and contains(@onfocus, 'p_MenuEnfocar') and text()='Reportes']
+2025-07-22 19:32:56 | INFO     | nubox_rpa.navigation | Elementos de Reportes encontrados: 1
+2025-07-22 19:32:56 | INFO     | nubox_rpa.navigation | Elemento de Reportes encontrado y visible
+2025-07-22 19:32:56 | INFO     | nubox_rpa.navigation | Clic exitoso en Reportes
+2025-07-22 19:32:56 | INFO     | nubox_rpa.navigation | Buscando el menú de Libros Contables
+2025-07-22 19:32:58 | INFO     | nubox_rpa.navigation | Buscando Libros Contables con selector: //a[@tabindex='-1' and contains(@onfocus, 'p_SubMenuEnfocar') and contains(text(), 'Libros Contables')]
+2025-07-22 19:32:58 | INFO     | nubox_rpa.navigation | Elementos de Libros Contables encontrados: 1
+2025-07-22 19:32:58 | INFO     | nubox_rpa.navigation | Elemento de Libros Contables encontrado y visible
+2025-07-22 19:32:58 | INFO     | nubox_rpa.navigation | Clic exitoso en Libros Contables
+2025-07-22 19:32:58 | INFO     | nubox_rpa.navigation | Buscando el reporte Mayor
+2025-07-22 19:32:59 | INFO     | nubox_rpa.navigation | Buscando Mayor con selector: //a[@onclick="NbxAnalyticsTrackMenu('Mayor')" and @href='conReportesLibroMayorGenerar.asp']
+2025-07-22 19:32:59 | INFO     | nubox_rpa.navigation | Elementos de Mayor encontrados: 1
+2025-07-22 19:32:59 | INFO     | nubox_rpa.navigation | Elemento de Mayor encontrado y visible
+2025-07-22 19:33:00 | INFO     | nubox_rpa.navigation | Clic exitoso en Mayor
+2025-07-22 19:33:00 | INFO     | nubox_rpa.navigation | ✅ Navegación completa desde SistemaLogin exitosa
+2025-07-22 19:33:00 | INFO     | nubox_rpa.report_extractor | 🏢 Procesando empresa 2/2: 903,  COMERCIALIZADORA INSERT S.A.
+2025-07-22 19:33:00 | INFO     | nubox_rpa.report_extractor | 💰 Procesando combinación 3/4: 903,  COMERCIALIZADORA INSERT S.A. - 5101-01 VENTAS POR SERVICIO
+2025-07-22 19:33:00 | INFO     | nubox_rpa.report_extractor | Configurando parámetros para: 903,  COMERCIALIZADORA INSERT S.A. - 5101-01 VENTAS POR SERVICIO
+2025-07-22 19:33:00 | INFO     | nubox_rpa.parameter_config | Iniciando configuración programática de parámetros
+2025-07-22 19:33:00 | INFO     | nubox_rpa.parameter_config | iframes encontrados en la página: 11
+2025-07-22 19:33:00 | INFO     | nubox_rpa.parameter_config | iframe 0: name='iframe_0', src='sin_src'
+2025-07-22 19:33:10 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 0: 0
+2025-07-22 19:33:10 | INFO     | nubox_rpa.parameter_config | iframe 1: name='iframe_1', src='sin_src'
+2025-07-22 19:33:20 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 1: 0
+2025-07-22 19:33:20 | INFO     | nubox_rpa.parameter_config | iframe 2: name='iframe_2', src='sin_src'
+2025-07-22 19:33:30 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 2: 0
+2025-07-22 19:33:30 | INFO     | nubox_rpa.parameter_config | iframe 3: name='iframe_3', src='sin_src'
+2025-07-22 19:33:40 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 3: 0
+2025-07-22 19:33:40 | INFO     | nubox_rpa.parameter_config | iframe 4: name='Contenido', src='https://app.nubox.com/ServicontPlus/Asp/conPortadaContenido.asp'
+2025-07-22 19:33:40 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 4: 14
+2025-07-22 19:33:40 | INFO     | nubox_rpa.parameter_config | Usando iframe 4 que contiene 14 inputs
+2025-07-22 19:33:40 | INFO     | nubox_rpa.parameter_config | Configurando dropdowns antes que las fechas para evitar reversión
+2025-07-22 19:33:40 | INFO     | nubox_rpa.parameter_config | Configurando selecciones de dropdowns
+2025-07-22 19:33:40 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Empresa'
+2025-07-22 19:33:51 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Empresa' configurado exitosamente
+2025-07-22 19:33:51 | INFO     | nubox_rpa.parameter_config | Dropdown 'Empresa' configurado: 903,  COMERCIALIZADORA INSERT S.A.
+2025-07-22 19:33:51 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Tipo de Reporte'
+2025-07-22 19:33:52 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Tipo de Reporte' configurado exitosamente
+2025-07-22 19:33:52 | INFO     | nubox_rpa.parameter_config | Dropdown 'Tipo de Reporte' configurado: ANALISIS POR CUENTA
+2025-07-22 19:33:52 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Formato de Salida'
+2025-07-22 19:33:52 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Formato de Salida' configurado exitosamente
+2025-07-22 19:33:52 | INFO     | nubox_rpa.parameter_config | Dropdown 'Formato de Salida' configurado: EXCEL
+2025-07-22 19:33:53 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Cuenta Contable'
+2025-07-22 19:34:05 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Cuenta Contable' configurado con método alternativo
+2025-07-22 19:34:05 | INFO     | nubox_rpa.parameter_config | Dropdown 'Cuenta Contable' configurado: 5101-01 VENTAS POR SERVICIO
+2025-07-22 19:34:06 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Incluir Subcuentas'
+2025-07-22 19:34:06 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Incluir Subcuentas' configurado exitosamente
+2025-07-22 19:34:06 | INFO     | nubox_rpa.parameter_config | Dropdown 'Incluir Subcuentas' configurado: NO
+2025-07-22 19:34:06 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde' al final: 01/01/2025
+2025-07-22 19:34:06 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde': 01/01/2025
+2025-07-22 19:34:07 | INFO     | nubox_rpa.parameter_config | Fecha 'Desde' configurada: 01/01/2025
+2025-07-22 19:34:07 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta' al final: 01/02/2025
+2025-07-22 19:34:07 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta': 01/02/2025
+2025-07-22 19:34:08 | INFO     | nubox_rpa.parameter_config | Fecha 'Hasta' configurada: 01/02/2025
+2025-07-22 19:34:08 | INFO     | nubox_rpa.parameter_config | Buscando botón para generar el reporte
+2025-07-22 19:34:08 | INFO     | nubox_rpa.parameter_config | Haciendo clic en el botón Aceptar para generar el reporte
+2025-07-22 19:34:11 | INFO     | nubox_rpa.parameter_config | Clic con JavaScript en botón Aceptar exitoso
+2025-07-22 19:34:11 | INFO     | nubox_rpa.parameter_config | Esperando a que se genere el reporte...
+2025-07-22 19:34:19 | INFO     | nubox_rpa.report_extractor | Extrayendo datos para: 903,  COMERCIALIZADORA INSERT S.A. - 5101-01 VENTAS POR SERVICIO
+2025-07-22 19:34:19 | INFO     | nubox_rpa.report_extractor | Iniciando extracción de reporte
+2025-07-22 19:34:59 | INFO     | nubox_rpa.report_extractor | Esperando a que se complete la descarga...
+2025-07-22 19:35:09 | INFO     | nubox_rpa.report_extractor | Archivo descargado encontrado: /Users/javie/Downloads/LIBRO MAYOR DESDE 01_01_2025 A 01_02_2025 (2).xls
+2025-07-22 19:35:09 | INFO     | nubox_rpa.report_extractor | Validando archivo: /Users/javie/Downloads/LIBRO MAYOR DESDE 01_01_2025 A 01_02_2025 (2).xls (tamaño: 2283 bytes)
+2025-07-22 19:35:09 | INFO     | nubox_rpa.report_extractor | Primeros 100 caracteres del archivo: <html xmlns:x="urn:schemas-microsoft-com:office:excel"><head><!--[if gte mso 9]><xml><x:ExcelWorkboo
+2025-07-22 19:35:09 | INFO     | nubox_rpa.report_extractor | ✅ DETECTADO: Archivo HTML-Excel válido de Nubox
+2025-07-22 19:35:09 | INFO     | nubox_rpa.report_extractor | ✅ Descarga exitosa. Preparando para siguiente cuenta...
+2025-07-22 19:35:09 | INFO     | nubox_rpa.report_extractor | 📋 Detectado formato HTML-Excel de Microsoft Office (Nubox)
+2025-07-22 19:35:09 | INFO     | nubox_rpa.report_extractor | 📋 Iniciando extracción de datos HTML-Excel...
+2025-07-22 19:35:09 | INFO     | nubox_rpa.report_extractor | 📋 Información de empresa extraída: {'Nombre': 'COMERCIALIZADORA INSERT S.A.', 'Rut': '76.129.903-4', 'Representante Legal': 'PAULO ALEJANDRO SUBIABRE CEPEDA', 'Giro Comercial': 'VENTAS AL POR MENOR A CAMBIO DE'}
+2025-07-22 19:35:09 | INFO     | nubox_rpa.report_extractor | 📋 Encabezados encontrados: ['FECHA', 'COMPROBANTE', 'GLOSA', 'DEBE', 'HABER', 'SALDO', 'C.C.']
+2025-07-22 19:35:09 | INFO     | nubox_rpa.report_extractor | 📊 Se extrajeron 3 filas de datos
+2025-07-22 19:35:09 | INFO     | nubox_rpa.report_extractor | ✅ Datos contables limpiados: 3 filas resultantes
+2025-07-22 19:35:09 | INFO     | nubox_rpa.report_extractor | ✅ DataFrame HTML-Excel creado exitosamente: 3 filas, 7 columnas
+2025-07-22 19:35:09 | INFO     | nubox_rpa.report_extractor | Columnas: ['FECHA', 'COMPROBANTE', 'GLOSA', 'DEBE', 'HABER', 'SALDO', 'C.C.']
+2025-07-22 19:35:09 | INFO     | nubox_rpa.report_extractor | ✅ Descarga exitosa para: 903,  COMERCIALIZADORA INSERT S.A. - 5101-01 VENTAS POR SERVICIO
+2025-07-22 19:35:09 | INFO     | nubox_rpa.report_extractor | Navegando al formulario Mayor para siguiente combinación (4/4)
+2025-07-22 19:35:09 | INFO     | nubox_rpa.navigation | Navegando intencionalmente a SistemaLogin para empezar proceso limpio
+2025-07-22 19:35:09 | INFO     | nubox_rpa.navigation | 🔄 Navegando a https://web.nubox.com/SistemaLogin
+2025-07-22 19:35:12 | INFO     | nubox_rpa.navigation | URL actual después de navegación: https://web.nubox.com/SistemaLogin
+2025-07-22 19:35:12 | INFO     | nubox_rpa.navigation | 🚀 Iniciando navegación completa desde SistemaLogin para siguiente cuenta
+2025-07-22 19:35:12 | INFO     | nubox_rpa.navigation | Ejecutando proceso completo de navegación desde SistemaLogin
+2025-07-22 19:35:14 | INFO     | nubox_rpa.navigation | Navegando al módulo de Contabilidad
+2025-07-22 19:35:14 | INFO     | nubox_rpa.navigation | Intentando selector: //td[contains(@class, 'jqx-cell') and contains(@class, 'jqx-grid-cell')]//span[contains(text(), 'Contabilidad')]
+2025-07-22 19:35:14 | INFO     | nubox_rpa.navigation | Elementos encontrados: 1
+2025-07-22 19:35:14 | INFO     | nubox_rpa.navigation | Elemento de Contabilidad encontrado y visible
+2025-07-22 19:35:15 | INFO     | nubox_rpa.navigation | Clic exitoso en Contabilidad
+2025-07-22 19:35:17 | INFO     | nubox_rpa.navigation | Buscando el menú de Reportes
+2025-07-22 19:35:17 | INFO     | nubox_rpa.navigation | Buscando Reportes con selector: //a[@tabindex='-1' and contains(@onfocus, 'p_MenuEnfocar') and text()='Reportes']
+2025-07-22 19:35:17 | INFO     | nubox_rpa.navigation | Elementos de Reportes encontrados: 1
+2025-07-22 19:35:17 | INFO     | nubox_rpa.navigation | Elemento de Reportes encontrado y visible
+2025-07-22 19:35:18 | INFO     | nubox_rpa.navigation | Clic exitoso en Reportes
+2025-07-22 19:35:18 | INFO     | nubox_rpa.navigation | Buscando el menú de Libros Contables
+2025-07-22 19:35:19 | INFO     | nubox_rpa.navigation | Buscando Libros Contables con selector: //a[@tabindex='-1' and contains(@onfocus, 'p_SubMenuEnfocar') and contains(text(), 'Libros Contables')]
+2025-07-22 19:35:19 | INFO     | nubox_rpa.navigation | Elementos de Libros Contables encontrados: 1
+2025-07-22 19:35:19 | INFO     | nubox_rpa.navigation | Elemento de Libros Contables encontrado y visible
+2025-07-22 19:35:19 | INFO     | nubox_rpa.navigation | Clic exitoso en Libros Contables
+2025-07-22 19:35:19 | INFO     | nubox_rpa.navigation | Buscando el reporte Mayor
+2025-07-22 19:35:20 | INFO     | nubox_rpa.navigation | Buscando Mayor con selector: //a[@onclick="NbxAnalyticsTrackMenu('Mayor')" and @href='conReportesLibroMayorGenerar.asp']
+2025-07-22 19:35:20 | INFO     | nubox_rpa.navigation | Elementos de Mayor encontrados: 1
+2025-07-22 19:35:20 | INFO     | nubox_rpa.navigation | Elemento de Mayor encontrado y visible
+2025-07-22 19:35:21 | INFO     | nubox_rpa.navigation | Clic exitoso en Mayor
+2025-07-22 19:35:21 | INFO     | nubox_rpa.navigation | ✅ Navegación completa desde SistemaLogin exitosa
+2025-07-22 19:35:21 | INFO     | nubox_rpa.report_extractor | 💰 Procesando combinación 4/4: 903,  COMERCIALIZADORA INSERT S.A. - 4101-01 REMUNERACIONES
+2025-07-22 19:35:21 | INFO     | nubox_rpa.report_extractor | Configurando parámetros para: 903,  COMERCIALIZADORA INSERT S.A. - 4101-01 REMUNERACIONES
+2025-07-22 19:35:21 | INFO     | nubox_rpa.parameter_config | Iniciando configuración programática de parámetros
+2025-07-22 19:35:21 | INFO     | nubox_rpa.parameter_config | iframes encontrados en la página: 11
+2025-07-22 19:35:21 | INFO     | nubox_rpa.parameter_config | iframe 0: name='iframe_0', src='sin_src'
+2025-07-22 19:35:31 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 0: 0
+2025-07-22 19:35:31 | INFO     | nubox_rpa.parameter_config | iframe 1: name='iframe_1', src='sin_src'
+2025-07-22 19:35:41 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 1: 0
+2025-07-22 19:35:41 | INFO     | nubox_rpa.parameter_config | iframe 2: name='iframe_2', src='sin_src'
+2025-07-22 19:35:51 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 2: 0
+2025-07-22 19:35:51 | INFO     | nubox_rpa.parameter_config | iframe 3: name='iframe_3', src='sin_src'
+2025-07-22 19:36:01 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 3: 0
+2025-07-22 19:36:01 | INFO     | nubox_rpa.parameter_config | iframe 4: name='Contenido', src='https://app.nubox.com/ServicontPlus/Asp/conPortadaContenido.asp'
+2025-07-22 19:36:01 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 4: 14
+2025-07-22 19:36:01 | INFO     | nubox_rpa.parameter_config | Usando iframe 4 que contiene 14 inputs
+2025-07-22 19:36:01 | INFO     | nubox_rpa.parameter_config | Configurando dropdowns antes que las fechas para evitar reversión
+2025-07-22 19:36:01 | INFO     | nubox_rpa.parameter_config | Configurando selecciones de dropdowns
+2025-07-22 19:36:01 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Empresa'
+2025-07-22 19:36:12 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Empresa' configurado exitosamente
+2025-07-22 19:36:12 | INFO     | nubox_rpa.parameter_config | Dropdown 'Empresa' configurado: 903,  COMERCIALIZADORA INSERT S.A.
+2025-07-22 19:36:12 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Tipo de Reporte'
+2025-07-22 19:36:13 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Tipo de Reporte' configurado exitosamente
+2025-07-22 19:36:13 | INFO     | nubox_rpa.parameter_config | Dropdown 'Tipo de Reporte' configurado: ANALISIS POR CUENTA
+2025-07-22 19:36:13 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Formato de Salida'
+2025-07-22 19:36:13 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Formato de Salida' configurado exitosamente
+2025-07-22 19:36:13 | INFO     | nubox_rpa.parameter_config | Dropdown 'Formato de Salida' configurado: EXCEL
+2025-07-22 19:36:14 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Cuenta Contable'
+2025-07-22 19:36:15 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Cuenta Contable' configurado exitosamente
+2025-07-22 19:36:15 | INFO     | nubox_rpa.parameter_config | Dropdown 'Cuenta Contable' configurado: 4101-01 REMUNERACIONES
+2025-07-22 19:36:16 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Incluir Subcuentas'
+2025-07-22 19:36:17 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Incluir Subcuentas' configurado exitosamente
+2025-07-22 19:36:17 | INFO     | nubox_rpa.parameter_config | Dropdown 'Incluir Subcuentas' configurado: NO
+2025-07-22 19:36:17 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde' al final: 01/01/2025
+2025-07-22 19:36:17 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde': 01/01/2025
+2025-07-22 19:36:18 | INFO     | nubox_rpa.parameter_config | Fecha 'Desde' configurada: 01/01/2025
+2025-07-22 19:36:18 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta' al final: 01/02/2025
+2025-07-22 19:36:18 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta': 01/02/2025
+2025-07-22 19:36:19 | INFO     | nubox_rpa.parameter_config | Fecha 'Hasta' configurada: 01/02/2025
+2025-07-22 19:36:19 | INFO     | nubox_rpa.parameter_config | Buscando botón para generar el reporte
+2025-07-22 19:36:19 | INFO     | nubox_rpa.parameter_config | Haciendo clic en el botón Aceptar para generar el reporte
+2025-07-22 19:36:21 | INFO     | nubox_rpa.parameter_config | Clic con JavaScript en botón Aceptar exitoso
+2025-07-22 19:36:21 | INFO     | nubox_rpa.parameter_config | Esperando a que se genere el reporte...
+2025-07-22 19:36:29 | INFO     | nubox_rpa.report_extractor | Extrayendo datos para: 903,  COMERCIALIZADORA INSERT S.A. - 4101-01 REMUNERACIONES
+2025-07-22 19:36:29 | INFO     | nubox_rpa.report_extractor | Iniciando extracción de reporte
+2025-07-22 19:37:09 | INFO     | nubox_rpa.report_extractor | Esperando a que se complete la descarga...
+2025-07-22 19:37:19 | INFO     | nubox_rpa.report_extractor | Archivo descargado encontrado: /Users/javie/Downloads/LIBRO MAYOR DESDE 01_01_2025 A 01_02_2025 (3).xls
+2025-07-22 19:37:19 | INFO     | nubox_rpa.report_extractor | Validando archivo: /Users/javie/Downloads/LIBRO MAYOR DESDE 01_01_2025 A 01_02_2025 (3).xls (tamaño: 2073 bytes)
+2025-07-22 19:37:19 | INFO     | nubox_rpa.report_extractor | Primeros 100 caracteres del archivo: <html xmlns:x="urn:schemas-microsoft-com:office:excel"><head><!--[if gte mso 9]><xml><x:ExcelWorkboo
+2025-07-22 19:37:19 | INFO     | nubox_rpa.report_extractor | ✅ DETECTADO: Archivo HTML-Excel válido de Nubox
+2025-07-22 19:37:19 | INFO     | nubox_rpa.report_extractor | ✅ Descarga exitosa. Preparando para siguiente cuenta...
+2025-07-22 19:37:19 | INFO     | nubox_rpa.report_extractor | 📋 Detectado formato HTML-Excel de Microsoft Office (Nubox)
+2025-07-22 19:37:19 | INFO     | nubox_rpa.report_extractor | 📋 Iniciando extracción de datos HTML-Excel...
+2025-07-22 19:37:19 | INFO     | nubox_rpa.report_extractor | 📋 Información de empresa extraída: {'Nombre': 'COMERCIALIZADORA INSERT S.A.', 'Rut': '76.129.903-4', 'Representante Legal': 'PAULO ALEJANDRO SUBIABRE CEPEDA', 'Giro Comercial': 'VENTAS AL POR MENOR A CAMBIO DE'}
+2025-07-22 19:37:19 | INFO     | nubox_rpa.report_extractor | 📋 Encabezados encontrados: ['FECHA', 'COMPROBANTE', 'GLOSA', 'DEBE', 'HABER', 'SALDO', 'C.C.']
+2025-07-22 19:37:19 | INFO     | nubox_rpa.report_extractor | 📊 Se extrajeron 2 filas de datos
+2025-07-22 19:37:19 | INFO     | nubox_rpa.report_extractor | ✅ Datos contables limpiados: 2 filas resultantes
+2025-07-22 19:37:19 | INFO     | nubox_rpa.report_extractor | ✅ DataFrame HTML-Excel creado exitosamente: 2 filas, 7 columnas
+2025-07-22 19:37:19 | INFO     | nubox_rpa.report_extractor | Columnas: ['FECHA', 'COMPROBANTE', 'GLOSA', 'DEBE', 'HABER', 'SALDO', 'C.C.']
+2025-07-22 19:37:19 | INFO     | nubox_rpa.report_extractor | ✅ Descarga exitosa para: 903,  COMERCIALIZADORA INSERT S.A. - 4101-01 REMUNERACIONES
+2025-07-22 19:37:19 | INFO     | nubox_rpa.report_extractor | 🎯 Extracción múltiple completada: 4 exitosas, 0 fallidas de 4 combinaciones
+2025-07-22 19:37:19 | INFO     | nubox_rpa.report_extractor | Iniciando extracción múltiple para 4 combinaciones (2 empresas × 2 cuentas)
+2025-07-22 19:37:19 | INFO     | nubox_rpa.report_extractor | 🏢 Procesando empresa 1/2: 906,  SELYT SPA
+2025-07-22 19:37:19 | INFO     | nubox_rpa.report_extractor | 💰 Procesando combinación 1/4: 906,  SELYT SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 19:37:19 | INFO     | nubox_rpa.report_extractor | Configurando parámetros para: 906,  SELYT SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 19:37:19 | INFO     | nubox_rpa.parameter_config | Iniciando configuración programática de parámetros
+2025-07-22 19:37:29 | INFO     | nubox_rpa.parameter_config | iframes encontrados en la página: 0
+2025-07-22 19:37:29 | INFO     | nubox_rpa.parameter_config | Configurando dropdowns antes que las fechas para evitar reversión
+2025-07-22 19:37:29 | INFO     | nubox_rpa.parameter_config | Configurando selecciones de dropdowns
+2025-07-22 19:37:39 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Empresa'
+2025-07-22 19:37:39 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Empresa'
+2025-07-22 19:37:49 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Tipo de Reporte'
+2025-07-22 19:37:49 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Tipo de Reporte'
+2025-07-22 19:37:59 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Formato de Salida'
+2025-07-22 19:37:59 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Formato de Salida'
+2025-07-22 19:38:09 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Cuenta Contable'
+2025-07-22 19:38:09 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Cuenta Contable'
+2025-07-22 19:38:19 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Incluir Subcuentas'
+2025-07-22 19:38:19 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Incluir Subcuentas'
+2025-07-22 19:38:19 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde' al final: 01/02/2025
+2025-07-22 19:38:29 | WARNING  | nubox_rpa.parameter_config | Error configurando fecha 'Desde': Message: no such element: Unable to locate element: {"method":"css selector","selector":"input[name='Desde']"}
+  (Session info: chrome=138.0.7204.158); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001050ef570 cxxbridge1$str$ptr + 2731064
+1   chromedriver                        0x00000001050e7468 cxxbridge1$str$ptr + 2698032
+2   chromedriver                        0x0000000104c363f8 cxxbridge1$string$len + 90664
+3   chromedriver                        0x0000000104c7d71c cxxbridge1$string$len + 382284
+4   chromedriver                        0x0000000104cbeb1c cxxbridge1$string$len + 649548
+5   chromedriver                        0x0000000104c71a0c cxxbridge1$string$len + 333884
+6   chromedriver                        0x00000001050b25f4 cxxbridge1$str$ptr + 2481340
+7   chromedriver                        0x00000001050b585c cxxbridge1$str$ptr + 2494244
+8   chromedriver                        0x0000000105093248 cxxbridge1$str$ptr + 2353424
+9   chromedriver                        0x00000001050b6118 cxxbridge1$str$ptr + 2496480
+10  chromedriver                        0x00000001050842f8 cxxbridge1$str$ptr + 2292160
+11  chromedriver                        0x00000001050d600c cxxbridge1$str$ptr + 2627284
+12  chromedriver                        0x00000001050d6198 cxxbridge1$str$ptr + 2627680
+13  chromedriver                        0x00000001050e70a4 cxxbridge1$str$ptr + 2697068
+14  libsystem_pthread.dylib             0x0000000190292c0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019028db80 thread_start + 8
+
+2025-07-22 19:38:29 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta' al final: 01/03/2025
+2025-07-22 19:38:39 | WARNING  | nubox_rpa.parameter_config | Error configurando fecha 'Hasta': Message: no such element: Unable to locate element: {"method":"css selector","selector":"input[name='Hasta']"}
+  (Session info: chrome=138.0.7204.158); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001050ef570 cxxbridge1$str$ptr + 2731064
+1   chromedriver                        0x00000001050e7468 cxxbridge1$str$ptr + 2698032
+2   chromedriver                        0x0000000104c363f8 cxxbridge1$string$len + 90664
+3   chromedriver                        0x0000000104c7d71c cxxbridge1$string$len + 382284
+4   chromedriver                        0x0000000104cbeb1c cxxbridge1$string$len + 649548
+5   chromedriver                        0x0000000104c71a0c cxxbridge1$string$len + 333884
+6   chromedriver                        0x00000001050b25f4 cxxbridge1$str$ptr + 2481340
+7   chromedriver                        0x00000001050b585c cxxbridge1$str$ptr + 2494244
+8   chromedriver                        0x0000000105093248 cxxbridge1$str$ptr + 2353424
+9   chromedriver                        0x00000001050b6118 cxxbridge1$str$ptr + 2496480
+10  chromedriver                        0x00000001050842f8 cxxbridge1$str$ptr + 2292160
+11  chromedriver                        0x00000001050d600c cxxbridge1$str$ptr + 2627284
+12  chromedriver                        0x00000001050d6198 cxxbridge1$str$ptr + 2627680
+13  chromedriver                        0x00000001050e70a4 cxxbridge1$str$ptr + 2697068
+14  libsystem_pthread.dylib             0x0000000190292c0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019028db80 thread_start + 8
+
+2025-07-22 19:38:39 | INFO     | nubox_rpa.parameter_config | Buscando botón para generar el reporte
+2025-07-22 19:39:50 | WARNING  | nubox_rpa.parameter_config | No se encontró botón Aceptar para generar el reporte
+2025-07-22 19:39:50 | WARNING  | nubox_rpa.report_extractor | Error configurando parámetros para 906,  SELYT SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 19:39:50 | INFO     | nubox_rpa.report_extractor | 💰 Procesando combinación 2/4: 906,  SELYT SPA - 4101-01 REMUNERACIONES
+2025-07-22 19:39:50 | INFO     | nubox_rpa.report_extractor | Configurando parámetros para: 906,  SELYT SPA - 4101-01 REMUNERACIONES
+2025-07-22 19:39:50 | INFO     | nubox_rpa.parameter_config | Iniciando configuración programática de parámetros
+2025-07-22 19:40:00 | INFO     | nubox_rpa.parameter_config | iframes encontrados en la página: 0
+2025-07-22 19:40:00 | INFO     | nubox_rpa.parameter_config | Configurando dropdowns antes que las fechas para evitar reversión
+2025-07-22 19:40:00 | INFO     | nubox_rpa.parameter_config | Configurando selecciones de dropdowns
+2025-07-22 19:40:10 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Empresa'
+2025-07-22 19:40:10 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Empresa'
+2025-07-22 19:40:20 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Tipo de Reporte'
+2025-07-22 19:40:20 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Tipo de Reporte'
+2025-07-22 19:40:30 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Formato de Salida'
+2025-07-22 19:40:30 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Formato de Salida'
+2025-07-22 19:40:40 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Cuenta Contable'
+2025-07-22 19:40:40 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Cuenta Contable'
+2025-07-22 19:40:50 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Incluir Subcuentas'
+2025-07-22 19:40:50 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Incluir Subcuentas'
+2025-07-22 19:40:50 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde' al final: 01/02/2025
+2025-07-22 19:41:00 | WARNING  | nubox_rpa.parameter_config | Error configurando fecha 'Desde': Message: no such element: Unable to locate element: {"method":"css selector","selector":"input[name='Desde']"}
+  (Session info: chrome=138.0.7204.158); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001050ef570 cxxbridge1$str$ptr + 2731064
+1   chromedriver                        0x00000001050e7468 cxxbridge1$str$ptr + 2698032
+2   chromedriver                        0x0000000104c363f8 cxxbridge1$string$len + 90664
+3   chromedriver                        0x0000000104c7d71c cxxbridge1$string$len + 382284
+4   chromedriver                        0x0000000104cbeb1c cxxbridge1$string$len + 649548
+5   chromedriver                        0x0000000104c71a0c cxxbridge1$string$len + 333884
+6   chromedriver                        0x00000001050b25f4 cxxbridge1$str$ptr + 2481340
+7   chromedriver                        0x00000001050b585c cxxbridge1$str$ptr + 2494244
+8   chromedriver                        0x0000000105093248 cxxbridge1$str$ptr + 2353424
+9   chromedriver                        0x00000001050b6118 cxxbridge1$str$ptr + 2496480
+10  chromedriver                        0x00000001050842f8 cxxbridge1$str$ptr + 2292160
+11  chromedriver                        0x00000001050d600c cxxbridge1$str$ptr + 2627284
+12  chromedriver                        0x00000001050d6198 cxxbridge1$str$ptr + 2627680
+13  chromedriver                        0x00000001050e70a4 cxxbridge1$str$ptr + 2697068
+14  libsystem_pthread.dylib             0x0000000190292c0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019028db80 thread_start + 8
+
+2025-07-22 19:41:00 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta' al final: 01/03/2025
+2025-07-22 19:41:10 | WARNING  | nubox_rpa.parameter_config | Error configurando fecha 'Hasta': Message: no such element: Unable to locate element: {"method":"css selector","selector":"input[name='Hasta']"}
+  (Session info: chrome=138.0.7204.158); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001050ef570 cxxbridge1$str$ptr + 2731064
+1   chromedriver                        0x00000001050e7468 cxxbridge1$str$ptr + 2698032
+2   chromedriver                        0x0000000104c363f8 cxxbridge1$string$len + 90664
+3   chromedriver                        0x0000000104c7d71c cxxbridge1$string$len + 382284
+4   chromedriver                        0x0000000104cbeb1c cxxbridge1$string$len + 649548
+5   chromedriver                        0x0000000104c71a0c cxxbridge1$string$len + 333884
+6   chromedriver                        0x00000001050b25f4 cxxbridge1$str$ptr + 2481340
+7   chromedriver                        0x00000001050b585c cxxbridge1$str$ptr + 2494244
+8   chromedriver                        0x0000000105093248 cxxbridge1$str$ptr + 2353424
+9   chromedriver                        0x00000001050b6118 cxxbridge1$str$ptr + 2496480
+10  chromedriver                        0x00000001050842f8 cxxbridge1$str$ptr + 2292160
+11  chromedriver                        0x00000001050d600c cxxbridge1$str$ptr + 2627284
+12  chromedriver                        0x00000001050d6198 cxxbridge1$str$ptr + 2627680
+13  chromedriver                        0x00000001050e70a4 cxxbridge1$str$ptr + 2697068
+14  libsystem_pthread.dylib             0x0000000190292c0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019028db80 thread_start + 8
+
+2025-07-22 19:41:10 | INFO     | nubox_rpa.parameter_config | Buscando botón para generar el reporte
+2025-07-22 19:42:20 | WARNING  | nubox_rpa.parameter_config | No se encontró botón Aceptar para generar el reporte
+2025-07-22 19:42:20 | WARNING  | nubox_rpa.report_extractor | Error configurando parámetros para 906,  SELYT SPA - 4101-01 REMUNERACIONES
+2025-07-22 19:42:20 | INFO     | nubox_rpa.report_extractor | 🎯 Extracción múltiple completada: 0 exitosas, 2 fallidas de 4 combinaciones
+2025-07-22 19:42:20 | INFO     | nubox_rpa.report_extractor | Iniciando extracción múltiple para 4 combinaciones (2 empresas × 2 cuentas)
+2025-07-22 19:42:20 | INFO     | nubox_rpa.report_extractor | 🏢 Procesando empresa 1/2: 906,  SELYT SPA
+2025-07-22 19:42:20 | INFO     | nubox_rpa.report_extractor | 💰 Procesando combinación 1/4: 906,  SELYT SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 19:42:20 | INFO     | nubox_rpa.report_extractor | Configurando parámetros para: 906,  SELYT SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 19:42:20 | INFO     | nubox_rpa.parameter_config | Iniciando configuración programática de parámetros
+2025-07-22 19:42:30 | INFO     | nubox_rpa.parameter_config | iframes encontrados en la página: 0
+2025-07-22 19:42:30 | INFO     | nubox_rpa.parameter_config | Configurando dropdowns antes que las fechas para evitar reversión
+2025-07-22 19:42:30 | INFO     | nubox_rpa.parameter_config | Configurando selecciones de dropdowns
+2025-07-22 19:42:40 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Empresa'
+2025-07-22 19:42:40 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Empresa'
+2025-07-22 19:42:50 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Tipo de Reporte'
+2025-07-22 19:42:50 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Tipo de Reporte'
+2025-07-22 19:43:01 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Formato de Salida'
+2025-07-22 19:43:01 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Formato de Salida'
+2025-07-22 19:43:11 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Cuenta Contable'
+2025-07-22 19:43:11 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Cuenta Contable'
+2025-07-22 19:43:21 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Incluir Subcuentas'
+2025-07-22 19:43:21 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Incluir Subcuentas'
+2025-07-22 19:43:21 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde' al final: 01/03/2025
+2025-07-22 19:43:31 | WARNING  | nubox_rpa.parameter_config | Error configurando fecha 'Desde': Message: no such element: Unable to locate element: {"method":"css selector","selector":"input[name='Desde']"}
+  (Session info: chrome=138.0.7204.158); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001050ef570 cxxbridge1$str$ptr + 2731064
+1   chromedriver                        0x00000001050e7468 cxxbridge1$str$ptr + 2698032
+2   chromedriver                        0x0000000104c363f8 cxxbridge1$string$len + 90664
+3   chromedriver                        0x0000000104c7d71c cxxbridge1$string$len + 382284
+4   chromedriver                        0x0000000104cbeb1c cxxbridge1$string$len + 649548
+5   chromedriver                        0x0000000104c71a0c cxxbridge1$string$len + 333884
+6   chromedriver                        0x00000001050b25f4 cxxbridge1$str$ptr + 2481340
+7   chromedriver                        0x00000001050b585c cxxbridge1$str$ptr + 2494244
+8   chromedriver                        0x0000000105093248 cxxbridge1$str$ptr + 2353424
+9   chromedriver                        0x00000001050b6118 cxxbridge1$str$ptr + 2496480
+10  chromedriver                        0x00000001050842f8 cxxbridge1$str$ptr + 2292160
+11  chromedriver                        0x00000001050d600c cxxbridge1$str$ptr + 2627284
+12  chromedriver                        0x00000001050d6198 cxxbridge1$str$ptr + 2627680
+13  chromedriver                        0x00000001050e70a4 cxxbridge1$str$ptr + 2697068
+14  libsystem_pthread.dylib             0x0000000190292c0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019028db80 thread_start + 8
+
+2025-07-22 19:43:31 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta' al final: 01/04/2025
+2025-07-22 19:43:41 | WARNING  | nubox_rpa.parameter_config | Error configurando fecha 'Hasta': Message: no such element: Unable to locate element: {"method":"css selector","selector":"input[name='Hasta']"}
+  (Session info: chrome=138.0.7204.158); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001050ef570 cxxbridge1$str$ptr + 2731064
+1   chromedriver                        0x00000001050e7468 cxxbridge1$str$ptr + 2698032
+2   chromedriver                        0x0000000104c363f8 cxxbridge1$string$len + 90664
+3   chromedriver                        0x0000000104c7d71c cxxbridge1$string$len + 382284
+4   chromedriver                        0x0000000104cbeb1c cxxbridge1$string$len + 649548
+5   chromedriver                        0x0000000104c71a0c cxxbridge1$string$len + 333884
+6   chromedriver                        0x00000001050b25f4 cxxbridge1$str$ptr + 2481340
+7   chromedriver                        0x00000001050b585c cxxbridge1$str$ptr + 2494244
+8   chromedriver                        0x0000000105093248 cxxbridge1$str$ptr + 2353424
+9   chromedriver                        0x00000001050b6118 cxxbridge1$str$ptr + 2496480
+10  chromedriver                        0x00000001050842f8 cxxbridge1$str$ptr + 2292160
+11  chromedriver                        0x00000001050d600c cxxbridge1$str$ptr + 2627284
+12  chromedriver                        0x00000001050d6198 cxxbridge1$str$ptr + 2627680
+13  chromedriver                        0x00000001050e70a4 cxxbridge1$str$ptr + 2697068
+14  libsystem_pthread.dylib             0x0000000190292c0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019028db80 thread_start + 8
+
+2025-07-22 19:43:41 | INFO     | nubox_rpa.parameter_config | Buscando botón para generar el reporte
+2025-07-22 19:44:51 | WARNING  | nubox_rpa.parameter_config | No se encontró botón Aceptar para generar el reporte
+2025-07-22 19:44:51 | WARNING  | nubox_rpa.report_extractor | Error configurando parámetros para 906,  SELYT SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 19:44:51 | INFO     | nubox_rpa.report_extractor | 💰 Procesando combinación 2/4: 906,  SELYT SPA - 4101-01 REMUNERACIONES
+2025-07-22 19:44:51 | INFO     | nubox_rpa.report_extractor | Configurando parámetros para: 906,  SELYT SPA - 4101-01 REMUNERACIONES
+2025-07-22 19:44:51 | INFO     | nubox_rpa.parameter_config | Iniciando configuración programática de parámetros
+2025-07-22 19:45:01 | INFO     | nubox_rpa.parameter_config | iframes encontrados en la página: 0
+2025-07-22 19:45:01 | INFO     | nubox_rpa.parameter_config | Configurando dropdowns antes que las fechas para evitar reversión
+2025-07-22 19:45:01 | INFO     | nubox_rpa.parameter_config | Configurando selecciones de dropdowns
+2025-07-22 19:45:11 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Empresa'
+2025-07-22 19:45:11 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Empresa'
+2025-07-22 19:45:21 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Tipo de Reporte'
+2025-07-22 19:45:21 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Tipo de Reporte'
+2025-07-22 19:45:31 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Formato de Salida'
+2025-07-22 19:45:31 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Formato de Salida'
+2025-07-22 19:45:41 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Cuenta Contable'
+2025-07-22 19:45:41 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Cuenta Contable'
+2025-07-22 19:45:51 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Incluir Subcuentas'
+2025-07-22 19:45:51 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Incluir Subcuentas'
+2025-07-22 19:45:51 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde' al final: 01/03/2025
+2025-07-22 19:46:01 | WARNING  | nubox_rpa.parameter_config | Error configurando fecha 'Desde': Message: no such element: Unable to locate element: {"method":"css selector","selector":"input[name='Desde']"}
+  (Session info: chrome=138.0.7204.158); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001050ef570 cxxbridge1$str$ptr + 2731064
+1   chromedriver                        0x00000001050e7468 cxxbridge1$str$ptr + 2698032
+2   chromedriver                        0x0000000104c363f8 cxxbridge1$string$len + 90664
+3   chromedriver                        0x0000000104c7d71c cxxbridge1$string$len + 382284
+4   chromedriver                        0x0000000104cbeb1c cxxbridge1$string$len + 649548
+5   chromedriver                        0x0000000104c71a0c cxxbridge1$string$len + 333884
+6   chromedriver                        0x00000001050b25f4 cxxbridge1$str$ptr + 2481340
+7   chromedriver                        0x00000001050b585c cxxbridge1$str$ptr + 2494244
+8   chromedriver                        0x0000000105093248 cxxbridge1$str$ptr + 2353424
+9   chromedriver                        0x00000001050b6118 cxxbridge1$str$ptr + 2496480
+10  chromedriver                        0x00000001050842f8 cxxbridge1$str$ptr + 2292160
+11  chromedriver                        0x00000001050d600c cxxbridge1$str$ptr + 2627284
+12  chromedriver                        0x00000001050d6198 cxxbridge1$str$ptr + 2627680
+13  chromedriver                        0x00000001050e70a4 cxxbridge1$str$ptr + 2697068
+14  libsystem_pthread.dylib             0x0000000190292c0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019028db80 thread_start + 8
+
+2025-07-22 19:46:01 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta' al final: 01/04/2025
+2025-07-22 19:46:11 | WARNING  | nubox_rpa.parameter_config | Error configurando fecha 'Hasta': Message: no such element: Unable to locate element: {"method":"css selector","selector":"input[name='Hasta']"}
+  (Session info: chrome=138.0.7204.158); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001050ef570 cxxbridge1$str$ptr + 2731064
+1   chromedriver                        0x00000001050e7468 cxxbridge1$str$ptr + 2698032
+2   chromedriver                        0x0000000104c363f8 cxxbridge1$string$len + 90664
+3   chromedriver                        0x0000000104c7d71c cxxbridge1$string$len + 382284
+4   chromedriver                        0x0000000104cbeb1c cxxbridge1$string$len + 649548
+5   chromedriver                        0x0000000104c71a0c cxxbridge1$string$len + 333884
+6   chromedriver                        0x00000001050b25f4 cxxbridge1$str$ptr + 2481340
+7   chromedriver                        0x00000001050b585c cxxbridge1$str$ptr + 2494244
+8   chromedriver                        0x0000000105093248 cxxbridge1$str$ptr + 2353424
+9   chromedriver                        0x00000001050b6118 cxxbridge1$str$ptr + 2496480
+10  chromedriver                        0x00000001050842f8 cxxbridge1$str$ptr + 2292160
+11  chromedriver                        0x00000001050d600c cxxbridge1$str$ptr + 2627284
+12  chromedriver                        0x00000001050d6198 cxxbridge1$str$ptr + 2627680
+13  chromedriver                        0x00000001050e70a4 cxxbridge1$str$ptr + 2697068
+14  libsystem_pthread.dylib             0x0000000190292c0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019028db80 thread_start + 8
+
+2025-07-22 19:46:11 | INFO     | nubox_rpa.parameter_config | Buscando botón para generar el reporte
+2025-07-22 19:47:21 | WARNING  | nubox_rpa.parameter_config | No se encontró botón Aceptar para generar el reporte
+2025-07-22 19:47:21 | WARNING  | nubox_rpa.report_extractor | Error configurando parámetros para 906,  SELYT SPA - 4101-01 REMUNERACIONES
+2025-07-22 19:47:21 | INFO     | nubox_rpa.report_extractor | 🎯 Extracción múltiple completada: 0 exitosas, 2 fallidas de 4 combinaciones
+2025-07-22 19:47:21 | INFO     | nubox_rpa.report_extractor | Iniciando extracción múltiple para 4 combinaciones (2 empresas × 2 cuentas)
+2025-07-22 19:47:21 | INFO     | nubox_rpa.report_extractor | 🏢 Procesando empresa 1/2: 906,  SELYT SPA
+2025-07-22 19:47:21 | INFO     | nubox_rpa.report_extractor | 💰 Procesando combinación 1/4: 906,  SELYT SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 19:47:21 | INFO     | nubox_rpa.report_extractor | Configurando parámetros para: 906,  SELYT SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 19:47:21 | INFO     | nubox_rpa.parameter_config | Iniciando configuración programática de parámetros
+2025-07-22 19:47:31 | INFO     | nubox_rpa.parameter_config | iframes encontrados en la página: 0
+2025-07-22 19:47:31 | INFO     | nubox_rpa.parameter_config | Configurando dropdowns antes que las fechas para evitar reversión
+2025-07-22 19:47:31 | INFO     | nubox_rpa.parameter_config | Configurando selecciones de dropdowns
+2025-07-22 19:47:41 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Empresa'
+2025-07-22 19:47:41 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Empresa'
+2025-07-22 19:47:52 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Tipo de Reporte'
+2025-07-22 19:47:52 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Tipo de Reporte'
+2025-07-22 19:48:02 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Formato de Salida'
+2025-07-22 19:48:02 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Formato de Salida'
+2025-07-22 19:48:12 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Cuenta Contable'
+2025-07-22 19:48:12 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Cuenta Contable'
+2025-07-22 19:48:22 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Incluir Subcuentas'
+2025-07-22 19:48:22 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Incluir Subcuentas'
+2025-07-22 19:48:22 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde' al final: 01/04/2025
+2025-07-22 19:48:32 | WARNING  | nubox_rpa.parameter_config | Error configurando fecha 'Desde': Message: no such element: Unable to locate element: {"method":"css selector","selector":"input[name='Desde']"}
+  (Session info: chrome=138.0.7204.158); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001050ef570 cxxbridge1$str$ptr + 2731064
+1   chromedriver                        0x00000001050e7468 cxxbridge1$str$ptr + 2698032
+2   chromedriver                        0x0000000104c363f8 cxxbridge1$string$len + 90664
+3   chromedriver                        0x0000000104c7d71c cxxbridge1$string$len + 382284
+4   chromedriver                        0x0000000104cbeb1c cxxbridge1$string$len + 649548
+5   chromedriver                        0x0000000104c71a0c cxxbridge1$string$len + 333884
+6   chromedriver                        0x00000001050b25f4 cxxbridge1$str$ptr + 2481340
+7   chromedriver                        0x00000001050b585c cxxbridge1$str$ptr + 2494244
+8   chromedriver                        0x0000000105093248 cxxbridge1$str$ptr + 2353424
+9   chromedriver                        0x00000001050b6118 cxxbridge1$str$ptr + 2496480
+10  chromedriver                        0x00000001050842f8 cxxbridge1$str$ptr + 2292160
+11  chromedriver                        0x00000001050d600c cxxbridge1$str$ptr + 2627284
+12  chromedriver                        0x00000001050d6198 cxxbridge1$str$ptr + 2627680
+13  chromedriver                        0x00000001050e70a4 cxxbridge1$str$ptr + 2697068
+14  libsystem_pthread.dylib             0x0000000190292c0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019028db80 thread_start + 8
+
+2025-07-22 19:48:32 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta' al final: 01/05/2025
+2025-07-22 19:48:42 | WARNING  | nubox_rpa.parameter_config | Error configurando fecha 'Hasta': Message: no such element: Unable to locate element: {"method":"css selector","selector":"input[name='Hasta']"}
+  (Session info: chrome=138.0.7204.158); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001050ef570 cxxbridge1$str$ptr + 2731064
+1   chromedriver                        0x00000001050e7468 cxxbridge1$str$ptr + 2698032
+2   chromedriver                        0x0000000104c363f8 cxxbridge1$string$len + 90664
+3   chromedriver                        0x0000000104c7d71c cxxbridge1$string$len + 382284
+4   chromedriver                        0x0000000104cbeb1c cxxbridge1$string$len + 649548
+5   chromedriver                        0x0000000104c71a0c cxxbridge1$string$len + 333884
+6   chromedriver                        0x00000001050b25f4 cxxbridge1$str$ptr + 2481340
+7   chromedriver                        0x00000001050b585c cxxbridge1$str$ptr + 2494244
+8   chromedriver                        0x0000000105093248 cxxbridge1$str$ptr + 2353424
+9   chromedriver                        0x00000001050b6118 cxxbridge1$str$ptr + 2496480
+10  chromedriver                        0x00000001050842f8 cxxbridge1$str$ptr + 2292160
+11  chromedriver                        0x00000001050d600c cxxbridge1$str$ptr + 2627284
+12  chromedriver                        0x00000001050d6198 cxxbridge1$str$ptr + 2627680
+13  chromedriver                        0x00000001050e70a4 cxxbridge1$str$ptr + 2697068
+14  libsystem_pthread.dylib             0x0000000190292c0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x000000019028db80 thread_start + 8
+
+2025-07-22 19:48:42 | INFO     | nubox_rpa.parameter_config | Buscando botón para generar el reporte
+2025-07-22 19:48:45 | WARNING  | nubox_rpa.parameter_config | No se encontró botón Aceptar para generar el reporte
+2025-07-22 19:48:45 | WARNING  | nubox_rpa.report_extractor | Error configurando parámetros para 906,  SELYT SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 19:48:45 | INFO     | nubox_rpa.report_extractor | 💰 Procesando combinación 2/4: 906,  SELYT SPA - 4101-01 REMUNERACIONES
+2025-07-22 19:48:45 | INFO     | nubox_rpa.report_extractor | Configurando parámetros para: 906,  SELYT SPA - 4101-01 REMUNERACIONES
+2025-07-22 19:48:45 | INFO     | nubox_rpa.parameter_config | Iniciando configuración programática de parámetros
+2025-07-22 19:48:45 | INFO     | nubox_rpa.parameter_config | Configurando dropdowns antes que las fechas para evitar reversión
+2025-07-22 19:48:45 | INFO     | nubox_rpa.parameter_config | Configurando selecciones de dropdowns
+2025-07-22 19:48:45 | ERROR    | nubox_rpa.parameter_config | Error configurando dropdown 'Empresa': HTTPConnectionPool(host='localhost', port=51792): Max retries exceeded with url: /session/77b0f8f46425db26dc8c2054a76049b5/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1274d9430>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-22 19:48:45 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Empresa'
+2025-07-22 19:48:45 | ERROR    | nubox_rpa.parameter_config | Error configurando dropdown 'Tipo de Reporte': HTTPConnectionPool(host='localhost', port=51792): Max retries exceeded with url: /session/77b0f8f46425db26dc8c2054a76049b5/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1275b6e50>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-22 19:48:45 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Tipo de Reporte'
+2025-07-22 19:48:45 | ERROR    | nubox_rpa.parameter_config | Error configurando dropdown 'Formato de Salida': HTTPConnectionPool(host='localhost', port=51792): Max retries exceeded with url: /session/77b0f8f46425db26dc8c2054a76049b5/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1270cc6d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-22 19:48:45 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Formato de Salida'
+2025-07-22 19:48:45 | ERROR    | nubox_rpa.parameter_config | Error configurando dropdown 'Cuenta Contable': HTTPConnectionPool(host='localhost', port=51792): Max retries exceeded with url: /session/77b0f8f46425db26dc8c2054a76049b5/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1274d7f10>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-22 19:48:45 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Cuenta Contable'
+2025-07-22 19:48:45 | ERROR    | nubox_rpa.parameter_config | Error configurando dropdown 'Incluir Subcuentas': HTTPConnectionPool(host='localhost', port=51792): Max retries exceeded with url: /session/77b0f8f46425db26dc8c2054a76049b5/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1264e49a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-22 19:48:45 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Incluir Subcuentas'
+2025-07-22 19:48:45 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde' al final: 01/04/2025
+2025-07-22 19:48:45 | WARNING  | nubox_rpa.parameter_config | Error configurando fecha 'Desde': HTTPConnectionPool(host='localhost', port=51792): Max retries exceeded with url: /session/77b0f8f46425db26dc8c2054a76049b5/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1264ffa00>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-22 19:48:45 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta' al final: 01/05/2025
+2025-07-22 19:48:45 | WARNING  | nubox_rpa.parameter_config | Error configurando fecha 'Hasta': HTTPConnectionPool(host='localhost', port=51792): Max retries exceeded with url: /session/77b0f8f46425db26dc8c2054a76049b5/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1270dca30>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-22 19:48:45 | INFO     | nubox_rpa.parameter_config | Buscando botón para generar el reporte
+2025-07-22 19:48:45 | ERROR    | nubox_rpa.parameter_config | Error al buscar/hacer clic en botón Aceptar: HTTPConnectionPool(host='localhost', port=51792): Max retries exceeded with url: /session/77b0f8f46425db26dc8c2054a76049b5/screenshot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1270df2e0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-22 19:48:45 | WARNING  | nubox_rpa.report_extractor | Error configurando parámetros para 906,  SELYT SPA - 4101-01 REMUNERACIONES
+2025-07-22 19:48:45 | INFO     | nubox_rpa.report_extractor | 🎯 Extracción múltiple completada: 0 exitosas, 2 fallidas de 4 combinaciones

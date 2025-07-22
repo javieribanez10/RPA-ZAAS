@@ -1,0 +1,54 @@
+2025-07-22 15:24:30 | INFO     | nubox_rpa.service | NuboxService inicializado con arquitectura modular
+2025-07-22 15:24:30 | INFO     | nubox_rpa.authentication | Iniciando proceso de autenticación
+2025-07-22 15:24:30 | INFO     | nubox_rpa.browser_manager | Navegando a https://web.nubox.com/Login/Account/Login?ReturnUrl=%2FSistemaLogin
+2025-07-22 15:24:34 | INFO     | nubox_rpa.authentication | Ingresando credenciales
+2025-07-22 15:24:36 | INFO     | nubox_rpa.authentication | Botón de login encontrado con selector: input[value='Ingresar'][class*='nbx-form_btn_login']
+2025-07-22 15:24:36 | INFO     | nubox_rpa.authentication | Haciendo clic en el botón Ingresar
+2025-07-22 15:24:39 | INFO     | nubox_rpa.authentication | URL actual después del login: https://web.nubox.com/Login/?Pais=CL&ReturnUrl=%2FSistemaLogin
+2025-07-22 15:24:49 | INFO     | nubox_rpa.authentication | Login exitoso: URL cambió
+2025-07-22 15:24:49 | INFO     | nubox_rpa.navigation | Iniciando navegación a reportes contables
+2025-07-22 15:24:51 | INFO     | nubox_rpa.navigation | Navegando al módulo de Contabilidad
+2025-07-22 15:24:51 | INFO     | nubox_rpa.navigation | Intentando selector: //td[contains(@class, 'jqx-cell') and contains(@class, 'jqx-grid-cell')]//span[contains(text(), 'Contabilidad')]
+2025-07-22 15:25:02 | INFO     | nubox_rpa.navigation | Intentando selector: //span[contains(text(), 'Contabilidad') and contains(@class, 'jqx-tree-grid-title')]
+2025-07-22 15:25:12 | INFO     | nubox_rpa.navigation | Intentando selector: //span[contains(text(), 'Contabilidad')]
+2025-07-22 15:25:23 | ERROR    | nubox_rpa.navigation | No se pudo hacer clic en el módulo de Contabilidad
+2025-07-22 15:26:41 | INFO     | nubox_rpa.service | NuboxService inicializado con arquitectura modular
+2025-07-22 15:26:41 | INFO     | nubox_rpa.authentication | Iniciando proceso de autenticación
+2025-07-22 15:26:41 | INFO     | nubox_rpa.browser_manager | Navegando a https://web.nubox.com/Login/Account/Login?ReturnUrl=%2FSistemaLogin
+2025-07-22 15:26:47 | INFO     | nubox_rpa.authentication | Ingresando credenciales
+2025-07-22 15:26:48 | INFO     | nubox_rpa.authentication | Botón de login encontrado con selector: input[value='Ingresar'][class*='nbx-form_btn_login']
+2025-07-22 15:26:48 | INFO     | nubox_rpa.authentication | Haciendo clic en el botón Ingresar
+2025-07-22 15:26:52 | INFO     | nubox_rpa.authentication | URL actual después del login: https://web.nubox.com/SistemaLogin/
+2025-07-22 15:27:02 | INFO     | nubox_rpa.authentication | Login exitoso: URL cambió
+2025-07-22 15:27:02 | INFO     | nubox_rpa.navigation | Iniciando navegación a reportes contables
+2025-07-22 15:27:04 | INFO     | nubox_rpa.navigation | Navegando al módulo de Contabilidad
+2025-07-22 15:27:04 | INFO     | nubox_rpa.navigation | Intentando selector: //td[contains(@class, 'jqx-cell') and contains(@class, 'jqx-grid-cell')]//span[contains(text(), 'Contabilidad')]
+2025-07-22 15:27:04 | INFO     | nubox_rpa.navigation | Elementos encontrados: 1
+2025-07-22 15:27:04 | INFO     | nubox_rpa.navigation | Elemento de Contabilidad encontrado y visible
+2025-07-22 15:27:04 | INFO     | nubox_rpa.navigation | Clic exitoso en Contabilidad
+2025-07-22 15:27:08 | INFO     | nubox_rpa.navigation | Buscando el menú de Reportes
+2025-07-22 15:27:08 | INFO     | nubox_rpa.navigation | Buscando Reportes con selector: //a[@tabindex='-1' and contains(@onfocus, 'p_MenuEnfocar') and text()='Reportes']
+2025-07-22 15:27:08 | INFO     | nubox_rpa.navigation | Elementos de Reportes encontrados: 1
+2025-07-22 15:27:08 | INFO     | nubox_rpa.navigation | Elemento de Reportes encontrado y visible
+2025-07-22 15:27:08 | INFO     | nubox_rpa.navigation | Clic exitoso en Reportes
+2025-07-22 15:27:08 | INFO     | nubox_rpa.navigation | Buscando el menú de Libros Contables
+2025-07-22 15:27:09 | INFO     | nubox_rpa.navigation | Buscando Libros Contables con selector: //a[@tabindex='-1' and contains(@onfocus, 'p_SubMenuEnfocar') and contains(text(), 'Libros Contables')]
+2025-07-22 15:27:09 | INFO     | nubox_rpa.navigation | Elementos de Libros Contables encontrados: 1
+2025-07-22 15:27:09 | INFO     | nubox_rpa.navigation | Elemento de Libros Contables encontrado y visible
+2025-07-22 15:27:10 | INFO     | nubox_rpa.navigation | Clic exitoso en Libros Contables
+2025-07-22 15:27:10 | INFO     | nubox_rpa.navigation | Buscando el reporte Mayor
+2025-07-22 15:27:11 | INFO     | nubox_rpa.navigation | Buscando Mayor con selector: //a[@onclick="NbxAnalyticsTrackMenu('Mayor')" and @href='conReportesLibroMayorGenerar.asp']
+2025-07-22 15:27:11 | INFO     | nubox_rpa.navigation | Elementos de Mayor encontrados: 1
+2025-07-22 15:27:11 | INFO     | nubox_rpa.navigation | Elemento de Mayor encontrado y visible
+2025-07-22 15:27:11 | INFO     | nubox_rpa.navigation | Clic exitoso en Mayor
+2025-07-22 15:27:11 | INFO     | nubox_rpa.navigation | Navegación completada exitosamente
+2025-07-22 15:27:11 | INFO     | nubox_rpa.streamlit | Extrayendo opciones de dropdowns de la página de Nubox
+2025-07-22 15:27:11 | INFO     | nubox_rpa.ui_elements | Extrayendo opciones de dropdowns disponibles
+2025-07-22 15:27:52 | INFO     | nubox_rpa.ui_elements | Encontrados 7 elementos select
+2025-07-22 15:27:52 | INFO     | nubox_rpa.ui_elements | Dropdown 'Empresa': 19 opciones, seleccionado: '051,  VERSE CONSULTORES LTDA'
+2025-07-22 15:27:52 | INFO     | nubox_rpa.ui_elements | Dropdown 'Tipo de Reporte': 4 opciones, seleccionado: 'ANALISIS POR CUENTA'
+2025-07-22 15:27:52 | INFO     | nubox_rpa.ui_elements | Dropdown 'Formato de Salida': 2 opciones, seleccionado: 'PDF'
+2025-07-22 15:27:53 | INFO     | nubox_rpa.ui_elements | Dropdown 'Cuenta Contable': 158 opciones, seleccionado: '1101-01 CUENTA CAJA'
+2025-07-22 15:27:53 | INFO     | nubox_rpa.ui_elements | Dropdown 'Incluir Subcuentas': 2 opciones, seleccionado: 'NO'
+2025-07-22 15:27:53 | INFO     | nubox_rpa.ui_elements | Extraídas opciones de 5 dropdowns
+2025-07-22 15:27:53 | INFO     | nubox_rpa.streamlit | Opciones de dropdowns extraídas exitosamente: 5 dropdowns

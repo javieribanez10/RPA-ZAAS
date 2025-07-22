@@ -1,0 +1,10 @@
+{
+  "NUBOX_URL": "https://web.nubox.com/Login/Account/Login?ReturnUrl=%2FSistemaLogin",
+  "HEADLESS": false,
+  "TIMEOUT": 30,
+  "REPORT_TYPE": "mayor",
+  "REPORT_PARAMS": {
+    "fecha_inicio": "01/01/2025",
+    "fecha_fin": "01/02/2025"
+  }
+}

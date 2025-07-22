@@ -1,0 +1,411 @@
+2025-07-22 16:24:03 | INFO     | nubox_rpa.service | NuboxService inicializado con arquitectura modular
+2025-07-22 16:24:03 | INFO     | nubox_rpa.authentication | Iniciando proceso de autenticación
+2025-07-22 16:24:03 | INFO     | nubox_rpa.browser_manager | Navegando a https://web.nubox.com/Login/Account/Login?ReturnUrl=%2FSistemaLogin
+2025-07-22 16:24:07 | INFO     | nubox_rpa.authentication | Ingresando credenciales
+2025-07-22 16:24:09 | INFO     | nubox_rpa.authentication | Botón de login encontrado con selector: input[value='Ingresar'][class*='nbx-form_btn_login']
+2025-07-22 16:24:09 | INFO     | nubox_rpa.authentication | Haciendo clic en el botón Ingresar
+2025-07-22 16:24:12 | INFO     | nubox_rpa.authentication | URL actual después del login: https://web.nubox.com/SistemaLogin/
+2025-07-22 16:24:22 | INFO     | nubox_rpa.authentication | Login exitoso: URL cambió
+2025-07-22 16:24:22 | INFO     | nubox_rpa.navigation | Iniciando navegación a reportes contables
+2025-07-22 16:24:24 | INFO     | nubox_rpa.navigation | Navegando al módulo de Contabilidad
+2025-07-22 16:24:24 | INFO     | nubox_rpa.navigation | Intentando selector: //td[contains(@class, 'jqx-cell') and contains(@class, 'jqx-grid-cell')]//span[contains(text(), 'Contabilidad')]
+2025-07-22 16:24:24 | INFO     | nubox_rpa.navigation | Elementos encontrados: 1
+2025-07-22 16:24:24 | INFO     | nubox_rpa.navigation | Elemento de Contabilidad encontrado y visible
+2025-07-22 16:24:24 | INFO     | nubox_rpa.navigation | Clic exitoso en Contabilidad
+2025-07-22 16:24:27 | INFO     | nubox_rpa.navigation | Buscando el menú de Reportes
+2025-07-22 16:24:27 | INFO     | nubox_rpa.navigation | Buscando Reportes con selector: //a[@tabindex='-1' and contains(@onfocus, 'p_MenuEnfocar') and text()='Reportes']
+2025-07-22 16:24:27 | INFO     | nubox_rpa.navigation | Elementos de Reportes encontrados: 1
+2025-07-22 16:24:27 | INFO     | nubox_rpa.navigation | Elemento de Reportes encontrado y visible
+2025-07-22 16:24:27 | INFO     | nubox_rpa.navigation | Clic exitoso en Reportes
+2025-07-22 16:24:27 | INFO     | nubox_rpa.navigation | Buscando el menú de Libros Contables
+2025-07-22 16:24:28 | INFO     | nubox_rpa.navigation | Buscando Libros Contables con selector: //a[@tabindex='-1' and contains(@onfocus, 'p_SubMenuEnfocar') and contains(text(), 'Libros Contables')]
+2025-07-22 16:24:28 | INFO     | nubox_rpa.navigation | Elementos de Libros Contables encontrados: 1
+2025-07-22 16:24:28 | INFO     | nubox_rpa.navigation | Elemento de Libros Contables encontrado y visible
+2025-07-22 16:24:29 | INFO     | nubox_rpa.navigation | Clic exitoso en Libros Contables
+2025-07-22 16:24:29 | INFO     | nubox_rpa.navigation | Buscando el reporte Mayor
+2025-07-22 16:24:30 | INFO     | nubox_rpa.navigation | Buscando Mayor con selector: //a[@onclick="NbxAnalyticsTrackMenu('Mayor')" and @href='conReportesLibroMayorGenerar.asp']
+2025-07-22 16:24:30 | INFO     | nubox_rpa.navigation | Elementos de Mayor encontrados: 1
+2025-07-22 16:24:30 | INFO     | nubox_rpa.navigation | Elemento de Mayor encontrado y visible
+2025-07-22 16:24:30 | INFO     | nubox_rpa.navigation | Clic exitoso en Mayor
+2025-07-22 16:24:31 | INFO     | nubox_rpa.navigation | Navegación completada exitosamente
+2025-07-22 16:24:31 | INFO     | nubox_rpa.streamlit | Extrayendo opciones de dropdowns de la página de Nubox
+2025-07-22 16:24:31 | INFO     | nubox_rpa.ui_elements | Extrayendo opciones de dropdowns disponibles
+2025-07-22 16:25:11 | INFO     | nubox_rpa.ui_elements | Encontrados 7 elementos select
+2025-07-22 16:25:11 | INFO     | nubox_rpa.ui_elements | Dropdown 'Empresa': 19 opciones, seleccionado: '051,  VERSE CONSULTORES LTDA'
+2025-07-22 16:25:11 | INFO     | nubox_rpa.ui_elements | Dropdown 'Tipo de Reporte': 4 opciones, seleccionado: 'ANALISIS POR CUENTA'
+2025-07-22 16:25:11 | INFO     | nubox_rpa.ui_elements | Dropdown 'Formato de Salida': 2 opciones, seleccionado: 'PDF'
+2025-07-22 16:25:12 | INFO     | nubox_rpa.ui_elements | Dropdown 'Cuenta Contable': 158 opciones, seleccionado: '1101-01 CUENTA CAJA'
+2025-07-22 16:25:12 | INFO     | nubox_rpa.ui_elements | Dropdown 'Incluir Subcuentas': 2 opciones, seleccionado: 'NO'
+2025-07-22 16:25:12 | INFO     | nubox_rpa.ui_elements | Extraídas opciones de 5 dropdowns
+2025-07-22 16:25:12 | INFO     | nubox_rpa.streamlit | Opciones de dropdowns extraídas exitosamente: 5 dropdowns
+2025-07-22 16:26:04 | INFO     | nubox_rpa.report_extractor | Iniciando extracción múltiple para 4 combinaciones (4 empresas × 1 cuentas)
+2025-07-22 16:26:04 | INFO     | nubox_rpa.report_extractor | 🏢 Procesando empresa 1/4: 527,  PUNTO HUMANO SPA
+2025-07-22 16:26:04 | INFO     | nubox_rpa.report_extractor | 💰 Procesando combinación 1/4: 527,  PUNTO HUMANO SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:26:04 | INFO     | nubox_rpa.report_extractor | Configurando parámetros para: 527,  PUNTO HUMANO SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:26:04 | INFO     | nubox_rpa.parameter_config | Iniciando configuración programática de parámetros
+2025-07-22 16:26:14 | INFO     | nubox_rpa.parameter_config | iframes encontrados en la página: 0
+2025-07-22 16:26:14 | INFO     | nubox_rpa.parameter_config | Configurando dropdowns antes que las fechas para evitar reversión
+2025-07-22 16:26:14 | INFO     | nubox_rpa.parameter_config | Configurando selecciones de dropdowns
+2025-07-22 16:26:14 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Empresa'
+2025-07-22 16:26:25 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Empresa' configurado exitosamente
+2025-07-22 16:26:25 | INFO     | nubox_rpa.parameter_config | Dropdown 'Empresa' configurado: 527,  PUNTO HUMANO SPA
+2025-07-22 16:26:25 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Tipo de Reporte'
+2025-07-22 16:26:26 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Tipo de Reporte' configurado exitosamente
+2025-07-22 16:26:26 | INFO     | nubox_rpa.parameter_config | Dropdown 'Tipo de Reporte' configurado: ANALISIS POR CUENTA
+2025-07-22 16:26:26 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Formato de Salida'
+2025-07-22 16:26:26 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Formato de Salida' configurado exitosamente
+2025-07-22 16:26:26 | INFO     | nubox_rpa.parameter_config | Dropdown 'Formato de Salida' configurado: EXCEL
+2025-07-22 16:26:27 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Cuenta Contable'
+2025-07-22 16:26:39 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Cuenta Contable' configurado con método alternativo
+2025-07-22 16:26:39 | INFO     | nubox_rpa.parameter_config | Dropdown 'Cuenta Contable' configurado: 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:26:40 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Incluir Subcuentas'
+2025-07-22 16:26:40 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Incluir Subcuentas' configurado exitosamente
+2025-07-22 16:26:40 | INFO     | nubox_rpa.parameter_config | Dropdown 'Incluir Subcuentas' configurado: NO
+2025-07-22 16:26:40 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde' al final: 01/01/2025
+2025-07-22 16:26:40 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde': 01/01/2025
+2025-07-22 16:26:41 | INFO     | nubox_rpa.parameter_config | Fecha 'Desde' configurada: 01/01/2025
+2025-07-22 16:26:41 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta' al final: 01/02/2025
+2025-07-22 16:26:41 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta': 01/02/2025
+2025-07-22 16:26:42 | INFO     | nubox_rpa.parameter_config | Fecha 'Hasta' configurada: 01/02/2025
+2025-07-22 16:26:42 | INFO     | nubox_rpa.parameter_config | Buscando botón para generar el reporte
+2025-07-22 16:26:42 | INFO     | nubox_rpa.parameter_config | Haciendo clic en el botón Aceptar para generar el reporte
+2025-07-22 16:26:45 | INFO     | nubox_rpa.parameter_config | Clic con JavaScript en botón Aceptar exitoso
+2025-07-22 16:26:45 | INFO     | nubox_rpa.parameter_config | Esperando a que se genere el reporte...
+2025-07-22 16:26:53 | INFO     | nubox_rpa.report_extractor | Extrayendo datos para: 527,  PUNTO HUMANO SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:26:53 | INFO     | nubox_rpa.report_extractor | Iniciando extracción de reporte
+2025-07-22 16:27:33 | INFO     | nubox_rpa.report_extractor | Esperando a que se complete la descarga...
+2025-07-22 16:27:43 | INFO     | nubox_rpa.report_extractor | Archivo descargado encontrado: /Users/javie/Downloads/LIBRO MAYOR DESDE 01_01_2025 A 01_02_2025.xls
+2025-07-22 16:27:43 | INFO     | nubox_rpa.report_extractor | Validando archivo: /Users/javie/Downloads/LIBRO MAYOR DESDE 01_01_2025 A 01_02_2025.xls (tamaño: 2077 bytes)
+2025-07-22 16:27:43 | INFO     | nubox_rpa.report_extractor | Primeros 100 caracteres del archivo: <html xmlns:x="urn:schemas-microsoft-com:office:excel"><head><!--[if gte mso 9]><xml><x:ExcelWorkboo
+2025-07-22 16:27:43 | INFO     | nubox_rpa.report_extractor | ✅ DETECTADO: Archivo HTML-Excel válido de Nubox
+2025-07-22 16:27:43 | INFO     | nubox_rpa.report_extractor | ✅ Descarga exitosa. Preparando para siguiente cuenta...
+2025-07-22 16:27:43 | INFO     | nubox_rpa.report_extractor | 📋 Detectado formato HTML-Excel de Microsoft Office (Nubox)
+2025-07-22 16:27:43 | INFO     | nubox_rpa.report_extractor | 📋 Iniciando extracción de datos HTML-Excel...
+2025-07-22 16:27:43 | INFO     | nubox_rpa.report_extractor | 📋 Información de empresa extraída: {'Nombre': 'PUNTO HUMANO SPA', 'Rut': '76.558.527-9', 'Representante Legal': 'PAULO ALEJANDRO SUBIABRE CEPEDA', 'Giro Comercial': 'VENTAS AL POR MENOR A CAMBIO DE'}
+2025-07-22 16:27:43 | INFO     | nubox_rpa.report_extractor | 📋 Encabezados encontrados: ['FECHA', 'COMPROBANTE', 'GLOSA', 'DEBE', 'HABER', 'SALDO', 'C.C.']
+2025-07-22 16:27:43 | INFO     | nubox_rpa.report_extractor | 📊 Se extrajeron 2 filas de datos
+2025-07-22 16:27:43 | INFO     | nubox_rpa.report_extractor | ✅ Datos contables limpiados: 2 filas resultantes
+2025-07-22 16:27:43 | INFO     | nubox_rpa.report_extractor | ✅ DataFrame HTML-Excel creado exitosamente: 2 filas, 7 columnas
+2025-07-22 16:27:43 | INFO     | nubox_rpa.report_extractor | Columnas: ['FECHA', 'COMPROBANTE', 'GLOSA', 'DEBE', 'HABER', 'SALDO', 'C.C.']
+2025-07-22 16:27:43 | INFO     | nubox_rpa.report_extractor | ✅ Descarga exitosa para: 527,  PUNTO HUMANO SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:27:43 | INFO     | nubox_rpa.report_extractor | Navegando al formulario Mayor para siguiente combinación (2/4)
+2025-07-22 16:27:43 | INFO     | nubox_rpa.navigation | Navegando intencionalmente a SistemaLogin para empezar proceso limpio
+2025-07-22 16:27:43 | INFO     | nubox_rpa.navigation | 🔄 Navegando a https://web.nubox.com/SistemaLogin
+2025-07-22 16:27:46 | INFO     | nubox_rpa.navigation | URL actual después de navegación: https://web.nubox.com/SistemaLogin
+2025-07-22 16:27:47 | INFO     | nubox_rpa.navigation | 🚀 Iniciando navegación completa desde SistemaLogin para siguiente cuenta
+2025-07-22 16:27:47 | INFO     | nubox_rpa.navigation | Ejecutando proceso completo de navegación desde SistemaLogin
+2025-07-22 16:27:49 | INFO     | nubox_rpa.navigation | Navegando al módulo de Contabilidad
+2025-07-22 16:27:49 | INFO     | nubox_rpa.navigation | Intentando selector: //td[contains(@class, 'jqx-cell') and contains(@class, 'jqx-grid-cell')]//span[contains(text(), 'Contabilidad')]
+2025-07-22 16:27:49 | INFO     | nubox_rpa.navigation | Elementos encontrados: 1
+2025-07-22 16:27:49 | INFO     | nubox_rpa.navigation | Elemento de Contabilidad encontrado y visible
+2025-07-22 16:27:49 | INFO     | nubox_rpa.navigation | Clic exitoso en Contabilidad
+2025-07-22 16:27:51 | INFO     | nubox_rpa.navigation | Buscando el menú de Reportes
+2025-07-22 16:27:51 | INFO     | nubox_rpa.navigation | Buscando Reportes con selector: //a[@tabindex='-1' and contains(@onfocus, 'p_MenuEnfocar') and text()='Reportes']
+2025-07-22 16:27:51 | INFO     | nubox_rpa.navigation | Elementos de Reportes encontrados: 1
+2025-07-22 16:27:51 | INFO     | nubox_rpa.navigation | Elemento de Reportes encontrado y visible
+2025-07-22 16:27:52 | INFO     | nubox_rpa.navigation | Clic exitoso en Reportes
+2025-07-22 16:27:52 | INFO     | nubox_rpa.navigation | Buscando el menú de Libros Contables
+2025-07-22 16:27:53 | INFO     | nubox_rpa.navigation | Buscando Libros Contables con selector: //a[@tabindex='-1' and contains(@onfocus, 'p_SubMenuEnfocar') and contains(text(), 'Libros Contables')]
+2025-07-22 16:27:53 | INFO     | nubox_rpa.navigation | Elementos de Libros Contables encontrados: 1
+2025-07-22 16:27:53 | INFO     | nubox_rpa.navigation | Elemento de Libros Contables encontrado y visible
+2025-07-22 16:27:53 | INFO     | nubox_rpa.navigation | Clic exitoso en Libros Contables
+2025-07-22 16:27:53 | INFO     | nubox_rpa.navigation | Buscando el reporte Mayor
+2025-07-22 16:27:54 | INFO     | nubox_rpa.navigation | Buscando Mayor con selector: //a[@onclick="NbxAnalyticsTrackMenu('Mayor')" and @href='conReportesLibroMayorGenerar.asp']
+2025-07-22 16:27:54 | INFO     | nubox_rpa.navigation | Elementos de Mayor encontrados: 1
+2025-07-22 16:27:54 | INFO     | nubox_rpa.navigation | Elemento de Mayor encontrado y visible
+2025-07-22 16:27:55 | INFO     | nubox_rpa.navigation | Clic exitoso en Mayor
+2025-07-22 16:27:55 | INFO     | nubox_rpa.navigation | ✅ Navegación completa desde SistemaLogin exitosa
+2025-07-22 16:27:55 | INFO     | nubox_rpa.report_extractor | 🏢 Procesando empresa 2/4: 838,  SERV. ASESORIAS EMP. NRED SPA
+2025-07-22 16:27:55 | INFO     | nubox_rpa.report_extractor | 💰 Procesando combinación 2/4: 838,  SERV. ASESORIAS EMP. NRED SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:27:55 | INFO     | nubox_rpa.report_extractor | Configurando parámetros para: 838,  SERV. ASESORIAS EMP. NRED SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:27:55 | INFO     | nubox_rpa.parameter_config | Iniciando configuración programática de parámetros
+2025-07-22 16:27:55 | INFO     | nubox_rpa.parameter_config | iframes encontrados en la página: 11
+2025-07-22 16:27:55 | INFO     | nubox_rpa.parameter_config | iframe 0: name='iframe_0', src='sin_src'
+2025-07-22 16:28:05 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 0: 0
+2025-07-22 16:28:05 | INFO     | nubox_rpa.parameter_config | iframe 1: name='iframe_1', src='sin_src'
+2025-07-22 16:28:15 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 1: 0
+2025-07-22 16:28:15 | INFO     | nubox_rpa.parameter_config | iframe 2: name='iframe_2', src='sin_src'
+2025-07-22 16:28:25 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 2: 0
+2025-07-22 16:28:25 | INFO     | nubox_rpa.parameter_config | iframe 3: name='iframe_3', src='sin_src'
+2025-07-22 16:28:35 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 3: 0
+2025-07-22 16:28:35 | INFO     | nubox_rpa.parameter_config | iframe 4: name='Contenido', src='https://app.nubox.com/ServicontPlus/Asp/conPortadaContenido.asp'
+2025-07-22 16:28:35 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 4: 14
+2025-07-22 16:28:35 | INFO     | nubox_rpa.parameter_config | Usando iframe 4 que contiene 14 inputs
+2025-07-22 16:28:35 | INFO     | nubox_rpa.parameter_config | Configurando dropdowns antes que las fechas para evitar reversión
+2025-07-22 16:28:35 | INFO     | nubox_rpa.parameter_config | Configurando selecciones de dropdowns
+2025-07-22 16:28:35 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Empresa'
+2025-07-22 16:28:46 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Empresa' configurado exitosamente
+2025-07-22 16:28:46 | INFO     | nubox_rpa.parameter_config | Dropdown 'Empresa' configurado: 838,  SERV. ASESORIAS EMP. NRED SPA
+2025-07-22 16:28:46 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Tipo de Reporte'
+2025-07-22 16:28:47 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Tipo de Reporte' configurado exitosamente
+2025-07-22 16:28:47 | INFO     | nubox_rpa.parameter_config | Dropdown 'Tipo de Reporte' configurado: ANALISIS POR CUENTA
+2025-07-22 16:28:47 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Formato de Salida'
+2025-07-22 16:28:47 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Formato de Salida' configurado exitosamente
+2025-07-22 16:28:47 | INFO     | nubox_rpa.parameter_config | Dropdown 'Formato de Salida' configurado: EXCEL
+2025-07-22 16:28:48 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Cuenta Contable'
+2025-07-22 16:28:49 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Cuenta Contable' configurado exitosamente
+2025-07-22 16:28:49 | INFO     | nubox_rpa.parameter_config | Dropdown 'Cuenta Contable' configurado: 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:28:50 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Incluir Subcuentas'
+2025-07-22 16:28:51 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Incluir Subcuentas' configurado exitosamente
+2025-07-22 16:28:51 | INFO     | nubox_rpa.parameter_config | Dropdown 'Incluir Subcuentas' configurado: NO
+2025-07-22 16:28:51 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde' al final: 01/01/2025
+2025-07-22 16:28:51 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde': 01/01/2025
+2025-07-22 16:28:52 | INFO     | nubox_rpa.parameter_config | Fecha 'Desde' configurada: 01/01/2025
+2025-07-22 16:28:52 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta' al final: 01/02/2025
+2025-07-22 16:28:52 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta': 01/02/2025
+2025-07-22 16:28:53 | INFO     | nubox_rpa.parameter_config | Fecha 'Hasta' configurada: 01/02/2025
+2025-07-22 16:28:53 | INFO     | nubox_rpa.parameter_config | Buscando botón para generar el reporte
+2025-07-22 16:28:53 | INFO     | nubox_rpa.parameter_config | Haciendo clic en el botón Aceptar para generar el reporte
+2025-07-22 16:28:55 | INFO     | nubox_rpa.parameter_config | Clic con JavaScript en botón Aceptar exitoso
+2025-07-22 16:28:55 | INFO     | nubox_rpa.parameter_config | Esperando a que se genere el reporte...
+2025-07-22 16:29:03 | INFO     | nubox_rpa.report_extractor | Extrayendo datos para: 838,  SERV. ASESORIAS EMP. NRED SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:29:03 | INFO     | nubox_rpa.report_extractor | Iniciando extracción de reporte
+2025-07-22 16:29:43 | INFO     | nubox_rpa.report_extractor | Esperando a que se complete la descarga...
+2025-07-22 16:29:53 | INFO     | nubox_rpa.report_extractor | Archivo descargado encontrado: /Users/javie/Downloads/LIBRO MAYOR DESDE 01_01_2025 A 01_02_2025 (1).xls
+2025-07-22 16:29:53 | INFO     | nubox_rpa.report_extractor | Validando archivo: /Users/javie/Downloads/LIBRO MAYOR DESDE 01_01_2025 A 01_02_2025 (1).xls (tamaño: 1892 bytes)
+2025-07-22 16:29:53 | INFO     | nubox_rpa.report_extractor | Primeros 100 caracteres del archivo: <html xmlns:x="urn:schemas-microsoft-com:office:excel"><head><!--[if gte mso 9]><xml><x:ExcelWorkboo
+2025-07-22 16:29:53 | INFO     | nubox_rpa.report_extractor | ✅ DETECTADO: Archivo HTML-Excel válido de Nubox
+2025-07-22 16:29:53 | INFO     | nubox_rpa.report_extractor | ✅ Descarga exitosa. Preparando para siguiente cuenta...
+2025-07-22 16:29:53 | INFO     | nubox_rpa.report_extractor | 📋 Detectado formato HTML-Excel de Microsoft Office (Nubox)
+2025-07-22 16:29:53 | INFO     | nubox_rpa.report_extractor | 📋 Iniciando extracción de datos HTML-Excel...
+2025-07-22 16:29:53 | INFO     | nubox_rpa.report_extractor | 📋 Información de empresa extraída: {'Nombre': 'SERV. ASESORIAS EMP. NRED SPA', 'Rut': '76.350.838-2', 'Representante Legal': 'PAULO ALEJANDRO SUBIABRE CEPEDA', 'Giro Comercial': 'Asesorias Empresariales'}
+2025-07-22 16:29:53 | INFO     | nubox_rpa.report_extractor | 📋 Encabezados encontrados: ['FECHA', 'COMPROBANTE', 'GLOSA', 'DEBE', 'HABER', 'SALDO', 'C.C.']
+2025-07-22 16:29:53 | INFO     | nubox_rpa.report_extractor | 📊 Se extrajeron 1 filas de datos
+2025-07-22 16:29:53 | INFO     | nubox_rpa.report_extractor | ✅ Datos contables limpiados: 1 filas resultantes
+2025-07-22 16:29:53 | INFO     | nubox_rpa.report_extractor | ✅ DataFrame HTML-Excel creado exitosamente: 1 filas, 7 columnas
+2025-07-22 16:29:53 | INFO     | nubox_rpa.report_extractor | Columnas: ['FECHA', 'COMPROBANTE', 'GLOSA', 'DEBE', 'HABER', 'SALDO', 'C.C.']
+2025-07-22 16:29:53 | INFO     | nubox_rpa.report_extractor | ✅ Descarga exitosa para: 838,  SERV. ASESORIAS EMP. NRED SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:29:53 | INFO     | nubox_rpa.report_extractor | Navegando al formulario Mayor para siguiente combinación (3/4)
+2025-07-22 16:29:53 | INFO     | nubox_rpa.navigation | Navegando intencionalmente a SistemaLogin para empezar proceso limpio
+2025-07-22 16:29:53 | INFO     | nubox_rpa.navigation | 🔄 Navegando a https://web.nubox.com/SistemaLogin
+2025-07-22 16:29:57 | INFO     | nubox_rpa.navigation | URL actual después de navegación: https://web.nubox.com/SistemaLogin
+2025-07-22 16:29:57 | INFO     | nubox_rpa.navigation | 🚀 Iniciando navegación completa desde SistemaLogin para siguiente cuenta
+2025-07-22 16:29:57 | INFO     | nubox_rpa.navigation | Ejecutando proceso completo de navegación desde SistemaLogin
+2025-07-22 16:29:59 | INFO     | nubox_rpa.navigation | Navegando al módulo de Contabilidad
+2025-07-22 16:29:59 | INFO     | nubox_rpa.navigation | Intentando selector: //td[contains(@class, 'jqx-cell') and contains(@class, 'jqx-grid-cell')]//span[contains(text(), 'Contabilidad')]
+2025-07-22 16:29:59 | INFO     | nubox_rpa.navigation | Elementos encontrados: 1
+2025-07-22 16:29:59 | INFO     | nubox_rpa.navigation | Elemento de Contabilidad encontrado y visible
+2025-07-22 16:30:00 | INFO     | nubox_rpa.navigation | Clic exitoso en Contabilidad
+2025-07-22 16:30:05 | INFO     | nubox_rpa.navigation | Buscando el menú de Reportes
+2025-07-22 16:30:05 | INFO     | nubox_rpa.navigation | Buscando Reportes con selector: //a[@tabindex='-1' and contains(@onfocus, 'p_MenuEnfocar') and text()='Reportes']
+2025-07-22 16:30:05 | INFO     | nubox_rpa.navigation | Elementos de Reportes encontrados: 1
+2025-07-22 16:30:05 | INFO     | nubox_rpa.navigation | Elemento de Reportes encontrado y visible
+2025-07-22 16:30:05 | INFO     | nubox_rpa.navigation | Clic exitoso en Reportes
+2025-07-22 16:30:05 | INFO     | nubox_rpa.navigation | Buscando el menú de Libros Contables
+2025-07-22 16:30:06 | INFO     | nubox_rpa.navigation | Buscando Libros Contables con selector: //a[@tabindex='-1' and contains(@onfocus, 'p_SubMenuEnfocar') and contains(text(), 'Libros Contables')]
+2025-07-22 16:30:06 | INFO     | nubox_rpa.navigation | Elementos de Libros Contables encontrados: 1
+2025-07-22 16:30:06 | INFO     | nubox_rpa.navigation | Elemento de Libros Contables encontrado y visible
+2025-07-22 16:30:07 | INFO     | nubox_rpa.navigation | Clic exitoso en Libros Contables
+2025-07-22 16:30:07 | INFO     | nubox_rpa.navigation | Buscando el reporte Mayor
+2025-07-22 16:30:08 | INFO     | nubox_rpa.navigation | Buscando Mayor con selector: //a[@onclick="NbxAnalyticsTrackMenu('Mayor')" and @href='conReportesLibroMayorGenerar.asp']
+2025-07-22 16:30:08 | INFO     | nubox_rpa.navigation | Elementos de Mayor encontrados: 1
+2025-07-22 16:30:08 | INFO     | nubox_rpa.navigation | Elemento de Mayor encontrado y visible
+2025-07-22 16:30:08 | INFO     | nubox_rpa.navigation | Clic exitoso en Mayor
+2025-07-22 16:30:08 | INFO     | nubox_rpa.navigation | ✅ Navegación completa desde SistemaLogin exitosa
+2025-07-22 16:30:08 | INFO     | nubox_rpa.report_extractor | 🏢 Procesando empresa 3/4: 903,  COMERCIALIZADORA INSERT S.A.
+2025-07-22 16:30:08 | INFO     | nubox_rpa.report_extractor | 💰 Procesando combinación 3/4: 903,  COMERCIALIZADORA INSERT S.A. - 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:30:08 | INFO     | nubox_rpa.report_extractor | Configurando parámetros para: 903,  COMERCIALIZADORA INSERT S.A. - 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:30:08 | INFO     | nubox_rpa.parameter_config | Iniciando configuración programática de parámetros
+2025-07-22 16:30:08 | INFO     | nubox_rpa.parameter_config | iframes encontrados en la página: 11
+2025-07-22 16:30:08 | INFO     | nubox_rpa.parameter_config | iframe 0: name='iframe_0', src='sin_src'
+2025-07-22 16:30:18 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 0: 0
+2025-07-22 16:30:18 | INFO     | nubox_rpa.parameter_config | iframe 1: name='iframe_1', src='sin_src'
+2025-07-22 16:30:28 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 1: 0
+2025-07-22 16:30:28 | INFO     | nubox_rpa.parameter_config | iframe 2: name='iframe_2', src='sin_src'
+2025-07-22 16:30:39 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 2: 0
+2025-07-22 16:30:39 | INFO     | nubox_rpa.parameter_config | iframe 3: name='iframe_3', src='sin_src'
+2025-07-22 16:30:49 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 3: 0
+2025-07-22 16:30:49 | INFO     | nubox_rpa.parameter_config | iframe 4: name='Contenido', src='https://app.nubox.com/ServicontPlus/Asp/conPortadaContenido.asp'
+2025-07-22 16:30:49 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 4: 14
+2025-07-22 16:30:49 | INFO     | nubox_rpa.parameter_config | Usando iframe 4 que contiene 14 inputs
+2025-07-22 16:30:49 | INFO     | nubox_rpa.parameter_config | Configurando dropdowns antes que las fechas para evitar reversión
+2025-07-22 16:30:49 | INFO     | nubox_rpa.parameter_config | Configurando selecciones de dropdowns
+2025-07-22 16:30:49 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Empresa'
+2025-07-22 16:31:00 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Empresa' configurado exitosamente
+2025-07-22 16:31:00 | INFO     | nubox_rpa.parameter_config | Dropdown 'Empresa' configurado: 903,  COMERCIALIZADORA INSERT S.A.
+2025-07-22 16:31:00 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Tipo de Reporte'
+2025-07-22 16:31:01 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Tipo de Reporte' configurado exitosamente
+2025-07-22 16:31:01 | INFO     | nubox_rpa.parameter_config | Dropdown 'Tipo de Reporte' configurado: ANALISIS POR CUENTA
+2025-07-22 16:31:01 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Formato de Salida'
+2025-07-22 16:31:01 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Formato de Salida' configurado exitosamente
+2025-07-22 16:31:01 | INFO     | nubox_rpa.parameter_config | Dropdown 'Formato de Salida' configurado: EXCEL
+2025-07-22 16:31:02 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Cuenta Contable'
+2025-07-22 16:31:14 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Cuenta Contable' configurado con método alternativo
+2025-07-22 16:31:14 | INFO     | nubox_rpa.parameter_config | Dropdown 'Cuenta Contable' configurado: 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:31:15 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Incluir Subcuentas'
+2025-07-22 16:31:15 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Incluir Subcuentas' configurado exitosamente
+2025-07-22 16:31:15 | INFO     | nubox_rpa.parameter_config | Dropdown 'Incluir Subcuentas' configurado: NO
+2025-07-22 16:31:15 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde' al final: 01/01/2025
+2025-07-22 16:31:15 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde': 01/01/2025
+2025-07-22 16:31:16 | INFO     | nubox_rpa.parameter_config | Fecha 'Desde' configurada: 01/01/2025
+2025-07-22 16:31:16 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta' al final: 01/02/2025
+2025-07-22 16:31:16 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta': 01/02/2025
+2025-07-22 16:31:17 | INFO     | nubox_rpa.parameter_config | Fecha 'Hasta' configurada: 01/02/2025
+2025-07-22 16:31:17 | INFO     | nubox_rpa.parameter_config | Buscando botón para generar el reporte
+2025-07-22 16:31:17 | INFO     | nubox_rpa.parameter_config | Haciendo clic en el botón Aceptar para generar el reporte
+2025-07-22 16:31:20 | INFO     | nubox_rpa.parameter_config | Clic con JavaScript en botón Aceptar exitoso
+2025-07-22 16:31:20 | INFO     | nubox_rpa.parameter_config | Esperando a que se genere el reporte...
+2025-07-22 16:31:28 | INFO     | nubox_rpa.report_extractor | Extrayendo datos para: 903,  COMERCIALIZADORA INSERT S.A. - 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:31:28 | INFO     | nubox_rpa.report_extractor | Iniciando extracción de reporte
+2025-07-22 16:32:08 | INFO     | nubox_rpa.report_extractor | Esperando a que se complete la descarga...
+2025-07-22 16:32:18 | INFO     | nubox_rpa.report_extractor | Archivo descargado encontrado: /Users/javie/Downloads/LIBRO MAYOR DESDE 01_01_2025 A 01_02_2025 (2).xls
+2025-07-22 16:32:18 | INFO     | nubox_rpa.report_extractor | Validando archivo: /Users/javie/Downloads/LIBRO MAYOR DESDE 01_01_2025 A 01_02_2025 (2).xls (tamaño: 2283 bytes)
+2025-07-22 16:32:18 | INFO     | nubox_rpa.report_extractor | Primeros 100 caracteres del archivo: <html xmlns:x="urn:schemas-microsoft-com:office:excel"><head><!--[if gte mso 9]><xml><x:ExcelWorkboo
+2025-07-22 16:32:18 | INFO     | nubox_rpa.report_extractor | ✅ DETECTADO: Archivo HTML-Excel válido de Nubox
+2025-07-22 16:32:18 | INFO     | nubox_rpa.report_extractor | ✅ Descarga exitosa. Preparando para siguiente cuenta...
+2025-07-22 16:32:18 | INFO     | nubox_rpa.report_extractor | 📋 Detectado formato HTML-Excel de Microsoft Office (Nubox)
+2025-07-22 16:32:18 | INFO     | nubox_rpa.report_extractor | 📋 Iniciando extracción de datos HTML-Excel...
+2025-07-22 16:32:18 | INFO     | nubox_rpa.report_extractor | 📋 Información de empresa extraída: {'Nombre': 'COMERCIALIZADORA INSERT S.A.', 'Rut': '76.129.903-4', 'Representante Legal': 'PAULO ALEJANDRO SUBIABRE CEPEDA', 'Giro Comercial': 'VENTAS AL POR MENOR A CAMBIO DE'}
+2025-07-22 16:32:18 | INFO     | nubox_rpa.report_extractor | 📋 Encabezados encontrados: ['FECHA', 'COMPROBANTE', 'GLOSA', 'DEBE', 'HABER', 'SALDO', 'C.C.']
+2025-07-22 16:32:18 | INFO     | nubox_rpa.report_extractor | 📊 Se extrajeron 3 filas de datos
+2025-07-22 16:32:18 | INFO     | nubox_rpa.report_extractor | ✅ Datos contables limpiados: 3 filas resultantes
+2025-07-22 16:32:18 | INFO     | nubox_rpa.report_extractor | ✅ DataFrame HTML-Excel creado exitosamente: 3 filas, 7 columnas
+2025-07-22 16:32:18 | INFO     | nubox_rpa.report_extractor | Columnas: ['FECHA', 'COMPROBANTE', 'GLOSA', 'DEBE', 'HABER', 'SALDO', 'C.C.']
+2025-07-22 16:32:18 | INFO     | nubox_rpa.report_extractor | ✅ Descarga exitosa para: 903,  COMERCIALIZADORA INSERT S.A. - 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:32:18 | INFO     | nubox_rpa.report_extractor | Navegando al formulario Mayor para siguiente combinación (4/4)
+2025-07-22 16:32:18 | INFO     | nubox_rpa.navigation | Navegando intencionalmente a SistemaLogin para empezar proceso limpio
+2025-07-22 16:32:18 | INFO     | nubox_rpa.navigation | 🔄 Navegando a https://web.nubox.com/SistemaLogin
+2025-07-22 16:32:22 | INFO     | nubox_rpa.navigation | URL actual después de navegación: https://web.nubox.com/SistemaLogin
+2025-07-22 16:32:22 | INFO     | nubox_rpa.navigation | 🚀 Iniciando navegación completa desde SistemaLogin para siguiente cuenta
+2025-07-22 16:32:22 | INFO     | nubox_rpa.navigation | Ejecutando proceso completo de navegación desde SistemaLogin
+2025-07-22 16:32:24 | INFO     | nubox_rpa.navigation | Navegando al módulo de Contabilidad
+2025-07-22 16:32:24 | INFO     | nubox_rpa.navigation | Intentando selector: //td[contains(@class, 'jqx-cell') and contains(@class, 'jqx-grid-cell')]//span[contains(text(), 'Contabilidad')]
+2025-07-22 16:32:24 | INFO     | nubox_rpa.navigation | Elementos encontrados: 1
+2025-07-22 16:32:24 | INFO     | nubox_rpa.navigation | Elemento de Contabilidad encontrado y visible
+2025-07-22 16:32:24 | INFO     | nubox_rpa.navigation | Clic exitoso en Contabilidad
+2025-07-22 16:32:27 | INFO     | nubox_rpa.navigation | Buscando el menú de Reportes
+2025-07-22 16:32:27 | INFO     | nubox_rpa.navigation | Buscando Reportes con selector: //a[@tabindex='-1' and contains(@onfocus, 'p_MenuEnfocar') and text()='Reportes']
+2025-07-22 16:32:27 | INFO     | nubox_rpa.navigation | Elementos de Reportes encontrados: 1
+2025-07-22 16:32:27 | INFO     | nubox_rpa.navigation | Elemento de Reportes encontrado y visible
+2025-07-22 16:32:28 | INFO     | nubox_rpa.navigation | Clic exitoso en Reportes
+2025-07-22 16:32:28 | INFO     | nubox_rpa.navigation | Buscando el menú de Libros Contables
+2025-07-22 16:32:29 | INFO     | nubox_rpa.navigation | Buscando Libros Contables con selector: //a[@tabindex='-1' and contains(@onfocus, 'p_SubMenuEnfocar') and contains(text(), 'Libros Contables')]
+2025-07-22 16:32:29 | INFO     | nubox_rpa.navigation | Elementos de Libros Contables encontrados: 1
+2025-07-22 16:32:29 | INFO     | nubox_rpa.navigation | Elemento de Libros Contables encontrado y visible
+2025-07-22 16:32:30 | INFO     | nubox_rpa.navigation | Clic exitoso en Libros Contables
+2025-07-22 16:32:30 | INFO     | nubox_rpa.navigation | Buscando el reporte Mayor
+2025-07-22 16:32:31 | INFO     | nubox_rpa.navigation | Buscando Mayor con selector: //a[@onclick="NbxAnalyticsTrackMenu('Mayor')" and @href='conReportesLibroMayorGenerar.asp']
+2025-07-22 16:32:31 | INFO     | nubox_rpa.navigation | Elementos de Mayor encontrados: 1
+2025-07-22 16:32:31 | INFO     | nubox_rpa.navigation | Elemento de Mayor encontrado y visible
+2025-07-22 16:32:31 | INFO     | nubox_rpa.navigation | Clic exitoso en Mayor
+2025-07-22 16:32:31 | INFO     | nubox_rpa.navigation | ✅ Navegación completa desde SistemaLogin exitosa
+2025-07-22 16:32:31 | INFO     | nubox_rpa.report_extractor | 🏢 Procesando empresa 4/4: 906,  SELYT SPA
+2025-07-22 16:32:31 | INFO     | nubox_rpa.report_extractor | 💰 Procesando combinación 4/4: 906,  SELYT SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:32:31 | INFO     | nubox_rpa.report_extractor | Configurando parámetros para: 906,  SELYT SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:32:31 | INFO     | nubox_rpa.parameter_config | Iniciando configuración programática de parámetros
+2025-07-22 16:32:31 | INFO     | nubox_rpa.parameter_config | iframes encontrados en la página: 11
+2025-07-22 16:32:31 | INFO     | nubox_rpa.parameter_config | iframe 0: name='iframe_0', src='sin_src'
+2025-07-22 16:32:41 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 0: 0
+2025-07-22 16:32:41 | INFO     | nubox_rpa.parameter_config | iframe 1: name='iframe_1', src='sin_src'
+2025-07-22 16:32:51 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 1: 0
+2025-07-22 16:32:51 | INFO     | nubox_rpa.parameter_config | iframe 2: name='iframe_2', src='sin_src'
+2025-07-22 16:33:01 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 2: 0
+2025-07-22 16:33:01 | INFO     | nubox_rpa.parameter_config | iframe 3: name='iframe_3', src='sin_src'
+2025-07-22 16:33:11 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 3: 0
+2025-07-22 16:33:11 | INFO     | nubox_rpa.parameter_config | iframe 4: name='Contenido', src='https://app.nubox.com/ServicontPlus/Asp/conPortadaContenido.asp'
+2025-07-22 16:33:11 | INFO     | nubox_rpa.parameter_config | Inputs encontrados en iframe 4: 14
+2025-07-22 16:33:11 | INFO     | nubox_rpa.parameter_config | Usando iframe 4 que contiene 14 inputs
+2025-07-22 16:33:11 | INFO     | nubox_rpa.parameter_config | Configurando dropdowns antes que las fechas para evitar reversión
+2025-07-22 16:33:11 | INFO     | nubox_rpa.parameter_config | Configurando selecciones de dropdowns
+2025-07-22 16:33:12 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Empresa'
+2025-07-22 16:33:23 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Empresa' configurado exitosamente
+2025-07-22 16:33:23 | INFO     | nubox_rpa.parameter_config | Dropdown 'Empresa' configurado: 906,  SELYT SPA
+2025-07-22 16:33:23 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Tipo de Reporte'
+2025-07-22 16:33:24 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Tipo de Reporte' configurado exitosamente
+2025-07-22 16:33:24 | INFO     | nubox_rpa.parameter_config | Dropdown 'Tipo de Reporte' configurado: ANALISIS POR CUENTA
+2025-07-22 16:33:24 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Formato de Salida'
+2025-07-22 16:33:24 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Formato de Salida' configurado exitosamente
+2025-07-22 16:33:24 | INFO     | nubox_rpa.parameter_config | Dropdown 'Formato de Salida' configurado: EXCEL
+2025-07-22 16:33:25 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Cuenta Contable'
+2025-07-22 16:33:37 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Cuenta Contable' configurado con método alternativo
+2025-07-22 16:33:37 | INFO     | nubox_rpa.parameter_config | Dropdown 'Cuenta Contable' configurado: 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:33:38 | INFO     | nubox_rpa.parameter_config | Encontrado dropdown correcto: 'Incluir Subcuentas'
+2025-07-22 16:33:38 | INFO     | nubox_rpa.parameter_config | ✅ Dropdown 'Incluir Subcuentas' configurado exitosamente
+2025-07-22 16:33:38 | INFO     | nubox_rpa.parameter_config | Dropdown 'Incluir Subcuentas' configurado: NO
+2025-07-22 16:33:38 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde' al final: 01/01/2025
+2025-07-22 16:33:38 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde': 01/01/2025
+2025-07-22 16:33:39 | INFO     | nubox_rpa.parameter_config | Fecha 'Desde' configurada: 01/01/2025
+2025-07-22 16:33:39 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta' al final: 01/02/2025
+2025-07-22 16:33:39 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta': 01/02/2025
+2025-07-22 16:33:40 | INFO     | nubox_rpa.parameter_config | Fecha 'Hasta' configurada: 01/02/2025
+2025-07-22 16:33:40 | INFO     | nubox_rpa.parameter_config | Buscando botón para generar el reporte
+2025-07-22 16:33:40 | INFO     | nubox_rpa.parameter_config | Haciendo clic en el botón Aceptar para generar el reporte
+2025-07-22 16:33:43 | INFO     | nubox_rpa.parameter_config | Clic con JavaScript en botón Aceptar exitoso
+2025-07-22 16:33:43 | INFO     | nubox_rpa.parameter_config | Esperando a que se genere el reporte...
+2025-07-22 16:33:51 | INFO     | nubox_rpa.report_extractor | Extrayendo datos para: 906,  SELYT SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:33:51 | INFO     | nubox_rpa.report_extractor | Iniciando extracción de reporte
+2025-07-22 16:34:31 | INFO     | nubox_rpa.report_extractor | Esperando a que se complete la descarga...
+2025-07-22 16:34:41 | INFO     | nubox_rpa.report_extractor | Archivo descargado encontrado: /Users/javie/Downloads/LIBRO MAYOR DESDE 01_01_2025 A 01_02_2025 (3).xls
+2025-07-22 16:34:41 | INFO     | nubox_rpa.report_extractor | Validando archivo: /Users/javie/Downloads/LIBRO MAYOR DESDE 01_01_2025 A 01_02_2025 (3).xls (tamaño: 2074 bytes)
+2025-07-22 16:34:41 | INFO     | nubox_rpa.report_extractor | Primeros 100 caracteres del archivo: <html xmlns:x="urn:schemas-microsoft-com:office:excel"><head><!--[if gte mso 9]><xml><x:ExcelWorkboo
+2025-07-22 16:34:41 | INFO     | nubox_rpa.report_extractor | ✅ DETECTADO: Archivo HTML-Excel válido de Nubox
+2025-07-22 16:34:41 | INFO     | nubox_rpa.report_extractor | ✅ Descarga exitosa. Preparando para siguiente cuenta...
+2025-07-22 16:34:41 | INFO     | nubox_rpa.report_extractor | 📋 Detectado formato HTML-Excel de Microsoft Office (Nubox)
+2025-07-22 16:34:41 | INFO     | nubox_rpa.report_extractor | 📋 Iniciando extracción de datos HTML-Excel...
+2025-07-22 16:34:41 | INFO     | nubox_rpa.report_extractor | 📋 Información de empresa extraída: {'Nombre': 'SELYT SPA', 'Rut': '77.081.534-7', 'Representante Legal': 'PAULO ALEJANDRO SUBIABRE CEPEDA', 'Giro Comercial': 'SERVICIOS TECNOLOGICOS'}
+2025-07-22 16:34:41 | INFO     | nubox_rpa.report_extractor | 📋 Encabezados encontrados: ['FECHA', 'COMPROBANTE', 'GLOSA', 'DEBE', 'HABER', 'SALDO', 'C.C.']
+2025-07-22 16:34:41 | INFO     | nubox_rpa.report_extractor | 📊 Se extrajeron 2 filas de datos
+2025-07-22 16:34:41 | INFO     | nubox_rpa.report_extractor | ✅ Datos contables limpiados: 2 filas resultantes
+2025-07-22 16:34:41 | INFO     | nubox_rpa.report_extractor | ✅ DataFrame HTML-Excel creado exitosamente: 2 filas, 7 columnas
+2025-07-22 16:34:41 | INFO     | nubox_rpa.report_extractor | Columnas: ['FECHA', 'COMPROBANTE', 'GLOSA', 'DEBE', 'HABER', 'SALDO', 'C.C.']
+2025-07-22 16:34:41 | INFO     | nubox_rpa.report_extractor | ✅ Descarga exitosa para: 906,  SELYT SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:34:41 | INFO     | nubox_rpa.report_extractor | 🎯 Extracción múltiple completada: 4 exitosas, 0 fallidas de 4 combinaciones
+2025-07-22 16:34:42 | INFO     | nubox_rpa.mongodb | ✅ Conectado exitosamente a MongoDB Atlas - Base de datos: nubox-data
+2025-07-22 16:34:43 | INFO     | nubox_rpa.mongodb | ✅ Índices de Nubox creados exitosamente
+2025-07-22 16:34:43 | INFO     | nubox_rpa.mongodb | ✅ Reporte Nubox exportado exitosamente: 2 filas, ID: 687ff5e2c56fa0da83f2bce7
+2025-07-22 16:34:44 | INFO     | nubox_rpa.mongodb | ✅ Índices de Nubox creados exitosamente
+2025-07-22 16:34:44 | INFO     | nubox_rpa.mongodb | ✅ Reporte Nubox exportado exitosamente: 1 filas, ID: 687ff5e3c56fa0da83f2bce8
+2025-07-22 16:34:45 | INFO     | nubox_rpa.mongodb | ✅ Índices de Nubox creados exitosamente
+2025-07-22 16:34:45 | INFO     | nubox_rpa.mongodb | ✅ Reporte Nubox exportado exitosamente: 3 filas, ID: 687ff5e4c56fa0da83f2bce9
+2025-07-22 16:34:45 | INFO     | nubox_rpa.mongodb | ✅ Índices de Nubox creados exitosamente
+2025-07-22 16:34:45 | INFO     | nubox_rpa.mongodb | ✅ Reporte Nubox exportado exitosamente: 2 filas, ID: 687ff5e5c56fa0da83f2bcea
+2025-07-22 16:34:45 | INFO     | nubox_rpa.mongodb | 🔌 Desconectado de MongoDB Atlas
+2025-07-22 16:50:39 | INFO     | nubox_rpa.report_extractor | Iniciando extracción múltiple para 4 combinaciones (4 empresas × 1 cuentas)
+2025-07-22 16:50:39 | INFO     | nubox_rpa.report_extractor | 🏢 Procesando empresa 1/4: 527,  PUNTO HUMANO SPA
+2025-07-22 16:50:39 | INFO     | nubox_rpa.report_extractor | 💰 Procesando combinación 1/4: 527,  PUNTO HUMANO SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:50:39 | INFO     | nubox_rpa.report_extractor | Configurando parámetros para: 527,  PUNTO HUMANO SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:50:39 | INFO     | nubox_rpa.parameter_config | Iniciando configuración programática de parámetros
+2025-07-22 16:50:49 | INFO     | nubox_rpa.parameter_config | iframes encontrados en la página: 0
+2025-07-22 16:50:49 | INFO     | nubox_rpa.parameter_config | Configurando dropdowns antes que las fechas para evitar reversión
+2025-07-22 16:50:49 | INFO     | nubox_rpa.parameter_config | Configurando selecciones de dropdowns
+2025-07-22 16:50:59 | WARNING  | nubox_rpa.parameter_config | ❌ No se encontró dropdown con nombre 'Empresa'
+2025-07-22 16:50:59 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Empresa'
+2025-07-22 16:51:03 | ERROR    | nubox_rpa.parameter_config | Error configurando dropdown 'Tipo de Reporte': ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-07-22 16:51:03 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Tipo de Reporte'
+2025-07-22 16:51:03 | ERROR    | nubox_rpa.parameter_config | Error configurando dropdown 'Formato de Salida': HTTPConnectionPool(host='localhost', port=51875): Max retries exceeded with url: /session/3e70aec50f4026d6e42c4ba97dc9d5b6/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x14f9d0820>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-22 16:51:03 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Formato de Salida'
+2025-07-22 16:51:03 | ERROR    | nubox_rpa.parameter_config | Error configurando dropdown 'Cuenta Contable': HTTPConnectionPool(host='localhost', port=51875): Max retries exceeded with url: /session/3e70aec50f4026d6e42c4ba97dc9d5b6/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x168039f40>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-22 16:51:03 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Cuenta Contable'
+2025-07-22 16:51:03 | ERROR    | nubox_rpa.parameter_config | Error configurando dropdown 'Incluir Subcuentas': HTTPConnectionPool(host='localhost', port=51875): Max retries exceeded with url: /session/3e70aec50f4026d6e42c4ba97dc9d5b6/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x168007700>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-22 16:51:03 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Incluir Subcuentas'
+2025-07-22 16:51:03 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde' al final: 01/01/2025
+2025-07-22 16:51:03 | WARNING  | nubox_rpa.parameter_config | Error configurando fecha 'Desde': HTTPConnectionPool(host='localhost', port=51875): Max retries exceeded with url: /session/3e70aec50f4026d6e42c4ba97dc9d5b6/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x14fff8d00>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-22 16:51:03 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta' al final: 01/02/2025
+2025-07-22 16:51:03 | WARNING  | nubox_rpa.parameter_config | Error configurando fecha 'Hasta': HTTPConnectionPool(host='localhost', port=51875): Max retries exceeded with url: /session/3e70aec50f4026d6e42c4ba97dc9d5b6/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x14fff7640>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-22 16:51:03 | INFO     | nubox_rpa.parameter_config | Buscando botón para generar el reporte
+2025-07-22 16:51:03 | ERROR    | nubox_rpa.parameter_config | Error al buscar/hacer clic en botón Aceptar: HTTPConnectionPool(host='localhost', port=51875): Max retries exceeded with url: /session/3e70aec50f4026d6e42c4ba97dc9d5b6/screenshot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10509d5b0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-22 16:51:03 | WARNING  | nubox_rpa.report_extractor | Error configurando parámetros para 527,  PUNTO HUMANO SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:51:03 | INFO     | nubox_rpa.report_extractor | 🏢 Procesando empresa 2/4: 838,  SERV. ASESORIAS EMP. NRED SPA
+2025-07-22 16:51:03 | INFO     | nubox_rpa.report_extractor | 💰 Procesando combinación 2/4: 838,  SERV. ASESORIAS EMP. NRED SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:51:03 | INFO     | nubox_rpa.report_extractor | Configurando parámetros para: 838,  SERV. ASESORIAS EMP. NRED SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:51:03 | INFO     | nubox_rpa.parameter_config | Iniciando configuración programática de parámetros
+2025-07-22 16:51:03 | INFO     | nubox_rpa.parameter_config | Configurando dropdowns antes que las fechas para evitar reversión
+2025-07-22 16:51:03 | INFO     | nubox_rpa.parameter_config | Configurando selecciones de dropdowns
+2025-07-22 16:51:03 | ERROR    | nubox_rpa.parameter_config | Error configurando dropdown 'Empresa': HTTPConnectionPool(host='localhost', port=51875): Max retries exceeded with url: /session/3e70aec50f4026d6e42c4ba97dc9d5b6/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x14ff12ca0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-22 16:51:03 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Empresa'
+2025-07-22 16:51:03 | ERROR    | nubox_rpa.parameter_config | Error configurando dropdown 'Tipo de Reporte': HTTPConnectionPool(host='localhost', port=51875): Max retries exceeded with url: /session/3e70aec50f4026d6e42c4ba97dc9d5b6/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104fa8af0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-22 16:51:03 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Tipo de Reporte'
+2025-07-22 16:51:03 | ERROR    | nubox_rpa.parameter_config | Error configurando dropdown 'Formato de Salida': HTTPConnectionPool(host='localhost', port=51875): Max retries exceeded with url: /session/3e70aec50f4026d6e42c4ba97dc9d5b6/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1680390a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-22 16:51:03 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Formato de Salida'
+2025-07-22 16:51:03 | ERROR    | nubox_rpa.parameter_config | Error configurando dropdown 'Cuenta Contable': HTTPConnectionPool(host='localhost', port=51875): Max retries exceeded with url: /session/3e70aec50f4026d6e42c4ba97dc9d5b6/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x168f8fbe0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-22 16:51:03 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Cuenta Contable'
+2025-07-22 16:51:03 | ERROR    | nubox_rpa.parameter_config | Error configurando dropdown 'Incluir Subcuentas': HTTPConnectionPool(host='localhost', port=51875): Max retries exceeded with url: /session/3e70aec50f4026d6e42c4ba97dc9d5b6/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x168fd52e0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-22 16:51:03 | WARNING  | nubox_rpa.parameter_config | No se pudo configurar dropdown 'Incluir Subcuentas'
+2025-07-22 16:51:03 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Desde' al final: 01/01/2025
+2025-07-22 16:51:03 | WARNING  | nubox_rpa.parameter_config | Error configurando fecha 'Desde': HTTPConnectionPool(host='localhost', port=51875): Max retries exceeded with url: /session/3e70aec50f4026d6e42c4ba97dc9d5b6/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x14fd366d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-22 16:51:03 | INFO     | nubox_rpa.parameter_config | Configurando fecha 'Hasta' al final: 01/02/2025
+2025-07-22 16:51:03 | WARNING  | nubox_rpa.parameter_config | Error configurando fecha 'Hasta': HTTPConnectionPool(host='localhost', port=51875): Max retries exceeded with url: /session/3e70aec50f4026d6e42c4ba97dc9d5b6/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1680391c0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-22 16:51:03 | INFO     | nubox_rpa.parameter_config | Buscando botón para generar el reporte
+2025-07-22 16:51:03 | ERROR    | nubox_rpa.parameter_config | Error al buscar/hacer clic en botón Aceptar: HTTPConnectionPool(host='localhost', port=51875): Max retries exceeded with url: /session/3e70aec50f4026d6e42c4ba97dc9d5b6/screenshot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104fa8af0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-22 16:51:03 | WARNING  | nubox_rpa.report_extractor | Error configurando parámetros para 838,  SERV. ASESORIAS EMP. NRED SPA - 5101-01 VENTAS POR SERVICIO
+2025-07-22 16:51:03 | INFO     | nubox_rpa.report_extractor | 🎯 Extracción múltiple completada: 0 exitosas, 2 fallidas de 4 combinaciones
