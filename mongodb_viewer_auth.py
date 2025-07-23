@@ -1026,7 +1026,7 @@ def main():
     user_data = require_authentication()
     
     # Título con indicador de autenticación
-    st.markdown('<h1 class="main-header">🔐 MongoDB Viewer - Reportes Nubox</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header">Reportes Nubox</h1>', unsafe_allow_html=True)
     st.markdown('<p style="text-align: center; color: #666; font-size: 1.2rem;">Acceso Autenticado - Sistema RPA Integrado</p>', unsafe_allow_html=True)
     
     # Inicializar estado
