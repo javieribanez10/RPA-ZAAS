@@ -4,6 +4,7 @@
 """
 Administrador del navegador web para la automatización de Nubox.
 Responsable únicamente de la configuración y gestión del driver de Selenium.
+OPTIMIZADO para máximo rendimiento y velocidad.
 """
 
 import logging
@@ -11,6 +12,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from utils.performance_monitor import measure_performance, measure_step
 
 logger = logging.getLogger("nubox_rpa.browser_manager")
 
@@ -18,23 +20,25 @@ class BrowserManager:
     """
     Administra la configuración y ciclo de vida del navegador web.
     Principio de Responsabilidad Única: Solo maneja el navegador.
+    OPTIMIZADO para rendimiento máximo.
     """
     
-    def __init__(self, headless=True, timeout=30):
+    def __init__(self, headless=True, timeout=15):
         """
-        Inicializa el administrador del navegador.
+        Inicializa el administrador del navegador con configuración optimizada.
         
         Args:
             headless (bool): Si True, el navegador se ejecuta sin interfaz gráfica
-            timeout (int): Tiempo máximo de espera para operaciones (segundos)
+            timeout (int): Tiempo máximo de espera para operaciones (segundos) - reducido de 30 a 15
         """
         self.timeout = timeout
         self.driver = None
-        self._setup_driver(headless)
+        with measure_step("Browser initialization"):
+            self._setup_driver(headless)
     
     def _setup_driver(self, headless=True):
         """
-        Configura el driver de Selenium con las opciones optimizadas.
+        Configura el driver de Selenium con las opciones optimizadas para máximo rendimiento.
         
         Args:
             headless (bool): Si True, el navegador se ejecuta sin interfaz gráfica
@@ -42,22 +46,57 @@ class BrowserManager:
         options = webdriver.ChromeOptions()
         
         if headless:
-            options.add_argument("--headless")
+            options.add_argument("--headless=new")  # Usar nuevo modo headless más rápido
             
-        # Configuraciones adicionales para mejorar la estabilidad
+        # Configuraciones de rendimiento máximo
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
         options.add_argument("--disable-gpu")
+        options.add_argument("--disable-web-security")
+        options.add_argument("--disable-features=VizDisplayCompositor")
         options.add_argument("--window-size=1920,1080")
+        
+        # Optimizaciones de velocidad
+        options.add_argument("--disable-extensions")
+        options.add_argument("--disable-plugins")
+        options.add_argument("--disable-images")  # Deshabilitar carga de imágenes
+        options.add_argument("--disable-javascript")  # Deshabilitar JS innecesario donde sea posible
+        options.add_argument("--disable-background-timer-throttling")
+        options.add_argument("--disable-backgrounding-occluded-windows")
+        options.add_argument("--disable-renderer-backgrounding")
+        options.add_argument("--disable-background-networking")
+        
+        # Configuraciones de red para velocidad
+        options.add_argument("--aggressive-cache-discard")
+        options.add_argument("--memory-pressure-off")
+        options.add_argument("--max_old_space_size=4096")
         
         # Prevenir detección de automatización
         options.add_experimental_option("excludeSwitches", ["enable-automation"])
         options.add_experimental_option("useAutomationExtension", False)
         
-        self.driver = webdriver.Chrome(options=options)
-        self.driver.implicitly_wait(10)
+        # Configurar preferencias para rendimiento
+        prefs = {
+            "profile.default_content_setting_values": {
+                "images": 2,  # Bloquear imágenes
+                "plugins": 2,  # Bloquear plugins
+                "popups": 2,  # Bloquear popups
+                "media_stream": 2,  # Bloquear media stream
+            },
+            "profile.managed_default_content_settings": {
+                "images": 2
+            }
+        }
+        options.add_experimental_option("prefs", prefs)
         
-        logger.debug("Driver de Chrome inicializado")
+        self.driver = webdriver.Chrome(options=options)
+        
+        # Configurar timeouts optimizados
+        self.driver.implicitly_wait(2)  # Reducido de 10 a 2 segundos
+        self.driver.set_page_load_timeout(15)  # Timeout de carga de página
+        self.driver.set_script_timeout(10)  # Timeout de scripts
+        
+        logger.info("🚀 Driver de Chrome inicializado con configuración de alto rendimiento")
     
     def navigate_to(self, url):
         """
