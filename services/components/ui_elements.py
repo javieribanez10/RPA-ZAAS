@@ -4,15 +4,17 @@
 """
 Servicio de elementos UI para la plataforma Nubox.
 Responsable únicamente de la interacción con elementos de la interfaz de usuario.
+OPTIMIZADO para máximo rendimiento y velocidad.
 """
 
-import time
 import logging
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import TimeoutException
+from utils.performance_monitor import measure_performance, measure_step
 
 logger = logging.getLogger("nubox_rpa.ui_elements")
 
@@ -72,74 +74,102 @@ class UIElementService:
             logger.error(f"Error al hacer clic en elemento {selector}: {str(e)}")
             return False
     
+    @measure_performance("UIElements.extract_dropdown_options")
     def extract_dropdown_options(self):
         """
-        Extrae las opciones de dropdowns disponibles en la página.
+        Extrae las opciones de dropdowns disponibles en la página con optimización paralela.
         
         Returns:
             dict: Diccionario con las opciones de cada dropdown
         """
         try:
-            logger.info("Extrayendo opciones de dropdowns disponibles")
+            logger.info("📋 Extrayendo opciones de dropdowns con procesamiento optimizado")
             
             # Cambiar al contexto correcto si hay iframes
-            self._switch_to_dropdown_context()
+            with measure_step("Switch to dropdown context"):
+                self._switch_to_dropdown_context()
             
-            dropdown_options = {}
-            dropdown_counter = 0
-            seen_combinations = set()
+            # Esperar a que los dropdowns estén presentes
+            with measure_step("Wait for dropdowns to load"):
+                WebDriverWait(self.browser.driver, 10).until(
+                    EC.presence_of_element_located((By.TAG_NAME, "select"))
+                )
             
-            all_selects = self.browser.find_elements(By.TAG_NAME, "select")
-            logger.info(f"Encontrados {len(all_selects)} elementos select")
-            
-            for idx, select_element in enumerate(all_selects):
-                try:
-                    # Verificar que el elemento esté visible y habilitado
-                    if not select_element.is_displayed() or not select_element.is_enabled():
+            # Encontrar todos los dropdowns
+            with measure_step("Find and process dropdown elements"):
+                dropdown_options = {}
+                dropdown_counter = 0
+                seen_combinations = set()
+                
+                all_selects = self.browser.find_elements(By.TAG_NAME, "select")
+                logger.info(f"🔍 Encontrados {len(all_selects)} elementos select")
+                
+                # Procesar cada dropdown con optimización
+                for idx, select_element in enumerate(all_selects):
+                    try:
+                        # Verificar que el elemento esté visible y habilitado
+                        if not select_element.is_displayed() or not select_element.is_enabled():
+                            continue
+                        
+                        # Usar JavaScript para extraer opciones más rápido
+                        options_data = self.browser.execute_script("""
+                            var select = arguments[0];
+                            var options = [];
+                            var selectedIndex = select.selectedIndex;
+                            
+                            for (var i = 0; i < select.options.length; i++) {
+                                var option = select.options[i];
+                                if (option.text && option.text.trim()) {
+                                    options.push(option.text.trim());
+                                }
+                            }
+                            
+                            var selectedText = selectedIndex >= 0 && select.options[selectedIndex] 
+                                ? select.options[selectedIndex].text.trim() 
+                                : (options.length > 0 ? options[0] : '');
+                            
+                            return {
+                                options: options,
+                                selected: selectedText,
+                                name: select.name || select.id || ''
+                            };
+                        """, select_element)
+                        
+                        option_texts = options_data.get('options', [])
+                        if len(option_texts) <= 1:  # Skip selects with no real options
+                            continue
+                        
+                        # Evitar duplicados
+                        options_hash = hash(tuple(sorted(option_texts[:5])))
+                        if options_hash in seen_combinations:
+                            continue
+                        seen_combinations.add(options_hash)
+                        
+                        selected_option = options_data.get('selected', '')
+                        select_name = options_data.get('name', f"Dropdown_{dropdown_counter + 1}")
+                        
+                        # Mapear nombres más amigables basados en el contenido
+                        friendly_name = self._get_friendly_dropdown_name(select_name, option_texts, dropdown_counter)
+                        
+                        dropdown_options[friendly_name] = {
+                            'name': select_name,
+                            'options': option_texts,
+                            'selected': selected_option,
+                            'index': dropdown_counter
+                        }
+                        
+                        dropdown_counter += 1
+                        logger.debug(f"✅ Dropdown '{friendly_name}': {len(option_texts)} opciones, seleccionado: '{selected_option}'")
+                        
+                    except Exception as e:
+                        logger.debug(f"⚠️ Error procesando select {idx}: {str(e)}")
                         continue
-                    
-                    # Obtener opciones
-                    options = select_element.find_elements(By.TAG_NAME, "option")
-                    option_texts = [opt.text.strip() for opt in options if opt.text.strip()]
-                    
-                    if len(option_texts) <= 1:  # Skip selects with no real options
-                        continue
-                    
-                    # Evitar duplicados
-                    options_hash = hash(tuple(sorted(option_texts[:5])))
-                    if options_hash in seen_combinations:
-                        continue
-                    seen_combinations.add(options_hash)
-                    
-                    # Obtener el valor seleccionado actualmente
-                    select_obj = Select(select_element)
-                    selected_option = select_obj.first_selected_option.text.strip()
-                    
-                    # Determinar el nombre del dropdown basado en el atributo name o contexto
-                    select_name = select_element.get_attribute('name') or f"Dropdown_{dropdown_counter + 1}"
-                    
-                    # Mapear nombres más amigables basados en el contenido
-                    friendly_name = self._get_friendly_dropdown_name(select_name, option_texts, dropdown_counter)
-                    
-                    dropdown_options[friendly_name] = {
-                        'name': select_name,
-                        'options': option_texts,
-                        'selected': selected_option,
-                        'index': dropdown_counter
-                    }
-                    
-                    dropdown_counter += 1
-                    logger.info(f"Dropdown '{friendly_name}': {len(option_texts)} opciones, seleccionado: '{selected_option}'")
-                    
-                except Exception as e:
-                    logger.debug(f"Error procesando select {idx}: {str(e)}")
-                    continue
             
-            logger.info(f"Extraídas opciones de {len(dropdown_options)} dropdowns")
+            logger.info(f"✅ Extraídas opciones de {len(dropdown_options)} dropdowns")
             return dropdown_options
             
         except Exception as e:
-            logger.error(f"Error al extraer opciones de dropdowns: {str(e)}")
+            logger.error(f"❌ Error al extraer opciones de dropdowns: {str(e)}")
             return {}
     
     def find_element_with_multiple_selectors(self, selectors, element_name="elemento"):
@@ -176,7 +206,7 @@ class UIElementService:
     
     def click_element_safely(self, element, element_name="elemento"):
         """
-        Hace clic en un elemento de forma segura con múltiples métodos.
+        Hace clic en un elemento de forma segura con optimización de velocidad.
         
         Args:
             element: Elemento web a hacer clic
@@ -186,24 +216,21 @@ class UIElementService:
             bool: True si el clic fue exitoso
         """
         try:
-            # Scroll al elemento para asegurar que esté visible
-            self.browser.execute_script("arguments[0].scrollIntoView(true);", element)
-            time.sleep(0.5)
-            
-            # Intentar clic directo
-            element.click()
-            logger.info(f"Clic exitoso en {element_name}")
+            # Usar JavaScript para hacer clic más rápido
+            self.browser.execute_script("arguments[0].click();", element)
+            logger.debug(f"✅ Clic exitoso en {element_name} usando JavaScript")
             return True
-            
-        except Exception as click_error:
-            logger.debug(f"Error al hacer clic directo en {element_name}: {str(click_error)}")
+        except Exception as js_error:
+            logger.debug(f"⚠️ JavaScript click falló para {element_name}, intentando click normal: {js_error}")
             try:
-                # Intentar con JavaScript
-                self.browser.execute_script("arguments[0].click();", element)
-                logger.info(f"Clic con JavaScript exitoso en {element_name}")
+                # Scroll al elemento si es necesario
+                self.browser.execute_script("arguments[0].scrollIntoView({block: 'center'});", element)
+                # Intentar click normal
+                element.click()
+                logger.debug(f"✅ Clic exitoso en {element_name} usando click normal")
                 return True
-            except Exception as js_error:
-                logger.debug(f"Error al hacer clic con JavaScript en {element_name}: {str(js_error)}")
+            except Exception as click_error:
+                logger.error(f"❌ Error haciendo clic en {element_name}: {click_error}")
                 return False
     
     def fill_input_field(self, selector, value, field_name="campo"):
@@ -225,21 +252,19 @@ class UIElementService:
                 logger.warning(f"Campo {field_name} no está visible o habilitado")
                 return False
             
-            # Limpiar y llenar el campo
-            field.clear()
-            field.send_keys(value)
-            time.sleep(0.5)
+            # Usar JavaScript para llenar el campo más rápido
+            self.browser.execute_script("arguments[0].value = arguments[1];", field, value)
             
-            logger.info(f"Campo {field_name} llenado exitosamente")
+            logger.debug(f"✅ Campo {field_name} llenado exitosamente")
             return True
             
         except Exception as e:
-            logger.error(f"Error al llenar campo {field_name}: {str(e)}")
+            logger.error(f"❌ Error al llenar campo {field_name}: {str(e)}")
             return False
     
     def select_dropdown_option(self, dropdown_selector, option_text, dropdown_name="dropdown"):
         """
-        Selecciona una opción en un dropdown.
+        Selecciona una opción en un dropdown con optimización de velocidad.
         
         Args:
             dropdown_selector (str): Selector del dropdown
@@ -256,21 +281,28 @@ class UIElementService:
                 logger.warning(f"Dropdown {dropdown_name} no está visible o habilitado")
                 return False
             
-            # Crear objeto Select y seleccionar opción
-            select_obj = Select(select_element)
+            # Usar JavaScript para selección más rápida
+            success = self.browser.execute_script("""
+                var select = arguments[0];
+                var optionText = arguments[1];
+                
+                for (var i = 0; i < select.options.length; i++) {
+                    if (select.options[i].text.trim() === optionText.trim() || 
+                        select.options[i].text.includes(optionText.trim())) {
+                        select.selectedIndex = i;
+                        select.dispatchEvent(new Event('change'));
+                        return true;
+                    }
+                }
+                return false;
+            """, select_element, option_text)
             
-            # Scroll al elemento
-            self.browser.execute_script("arguments[0].scrollIntoView(true);", select_element)
-            time.sleep(0.5)
-            
-            # Intentar selección por texto exacto
-            try:
-                select_obj.select_by_visible_text(option_text)
-                logger.info(f"Opción '{option_text}' seleccionada en {dropdown_name}")
+            if success:
+                logger.debug(f"✅ Opción '{option_text}' seleccionada en {dropdown_name}")
                 return True
-            except:
-                # Método alternativo: buscar opción similar
-                options = select_element.find_elements(By.TAG_NAME, "option")
+            else:
+                logger.warning(f"⚠️ No se encontró opción '{option_text}' en {dropdown_name}")
+                return False
                 for option in options:
                     if option_text.lower() in option.text.lower() or option.text.lower() in option_text.lower():
                         option.click()

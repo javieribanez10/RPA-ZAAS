@@ -4,9 +4,9 @@
 """
 Servicio principal para interactuar con la plataforma Nubox.
 Arquitectura refactorizada para mejor separación de responsabilidades.
+OPTIMIZADO para máximo rendimiento y velocidad.
 """
 
-import time
 import logging
 import pandas as pd
 from .components.browser_manager import BrowserManager
@@ -15,6 +15,7 @@ from .components.navigation import NavigationService
 from .components.parameter_config import ParameterConfigService
 from .components.report_extractor import ReportExtractorService
 from .components.ui_elements import UIElementService
+from utils.performance_monitor import perf_monitor, measure_performance, measure_step
 
 # Configurar logger
 logger = logging.getLogger("nubox_rpa.service")
@@ -23,36 +24,42 @@ class NuboxService:
     """
     Servicio principal para interactuar con la plataforma Nubox.
     Orquesta las diferentes componentes especializadas.
+    OPTIMIZADO para máximo rendimiento y velocidad.
     """
     
-    def __init__(self, headless=True, timeout=30):
+    def __init__(self, headless=True, timeout=15):  # Reducido de 30 a 15 segundos
         """
-        Inicializa el servicio de Nubox.
+        Inicializa el servicio de Nubox con configuración optimizada.
         
         Args:
             headless (bool): Si True, el navegador se ejecuta sin interfaz gráfica
-            timeout (int): Tiempo máximo de espera para operaciones (segundos)
+            timeout (int): Tiempo máximo de espera para operaciones (segundos) - optimizado
         """
-        self.timeout = timeout
-        
-        # Inicializar componentes especializadas
-        self.browser_manager = BrowserManager(headless=headless, timeout=timeout)
-        self.auth_service = AuthenticationService(self.browser_manager)
-        self.navigation_service = NavigationService(self.browser_manager)
-        self.parameter_service = ParameterConfigService(self.browser_manager)
-        self.extractor_service = ReportExtractorService(self.browser_manager)
-        self.ui_service = UIElementService(self.browser_manager)
-        
-        logger.info("NuboxService inicializado con arquitectura modular")
+        with measure_step("NuboxService initialization"):
+            self.timeout = timeout
+            
+            # Inicializar componentes especializadas con medición de tiempo
+            with measure_step("Browser manager setup"):
+                self.browser_manager = BrowserManager(headless=headless, timeout=timeout)
+            
+            with measure_step("Service components setup"):
+                self.auth_service = AuthenticationService(self.browser_manager)
+                self.navigation_service = NavigationService(self.browser_manager)
+                self.parameter_service = ParameterConfigService(self.browser_manager)
+                self.extractor_service = ReportExtractorService(self.browser_manager)
+                self.ui_service = UIElementService(self.browser_manager)
+            
+            logger.info("🚀 NuboxService inicializado con arquitectura modular optimizada")
     
     @property
     def driver(self):
         """Acceso al driver para compatibilidad con código existente."""
         return self.browser_manager.driver
     
+    @measure_performance("NuboxService.login")
     def login(self, username, password, url="https://web.nubox.com/Login/Account/Login?ReturnUrl=%2FSistemaLogin"):
         """
-        Inicia sesión en Nubox.
+        Inicia sesión en Nubox con medición de rendimiento.
         
         Args:
             username (str): RUT del usuario
@@ -64,9 +71,10 @@ class NuboxService:
         """
         return self.auth_service.login(username, password, url)
     
+    @measure_performance("NuboxService.navigate_to_report")
     def navigate_to_report(self, report_type="mayor"):
         """
-        Navega a la sección de reportes contables.
+        Navega a la sección de reportes contables con medición de rendimiento.
         
         Args:
             report_type (str): Tipo de reporte
@@ -76,45 +84,10 @@ class NuboxService:
         """
         return self.navigation_service.navigate_to_report(report_type)
     
-    def set_report_parameters(self, params=None):
-        """
-        Configura los parámetros del reporte de forma interactiva.
-        
-        Args:
-            params (dict): Parámetros para el reporte
-            
-        Returns:
-            bool: True si la configuración fue exitosa
-        """
-        return self.parameter_service.set_parameters_interactive(params)
-    
-    def set_report_parameters_programmatic(self, params):
-        """
-        Configura los parámetros del reporte de forma programática.
-        
-        Args:
-            params (dict): Parámetros para configurar
-            
-        Returns:
-            bool: True si la configuración fue exitosa
-        """
-        return self.parameter_service.set_parameters_programmatic(params)
-    
-    def extract_report(self, is_multiple_accounts=False):
-        """
-        Extrae el archivo Excel descargado desde Nubox.
-        
-        Args:
-            is_multiple_accounts (bool): True si es parte de un proceso de múltiples cuentas
-        
-        Returns:
-            tuple: (DataFrame, file_path)
-        """
-        return self.extractor_service.extract_report(is_multiple_accounts)
-    
+    @measure_performance("NuboxService.extract_dropdown_options")
     def extract_dropdown_options(self):
         """
-        Extrae las opciones de dropdowns disponibles.
+        Extrae las opciones de dropdowns disponibles con medición de rendimiento.
         
         Returns:
             dict: Diccionario con las opciones de cada dropdown

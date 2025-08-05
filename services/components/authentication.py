@@ -4,11 +4,15 @@
 """
 Servicio de autenticación para la plataforma Nubox.
 Responsable únicamente del proceso de login.
+OPTIMIZADO para máximo rendimiento y velocidad.
 """
 
-import time
 import logging
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
+from utils.performance_monitor import measure_performance, measure_step
 
 logger = logging.getLogger("nubox_rpa.authentication")
 
@@ -27,9 +31,10 @@ class AuthenticationService:
         """
         self.browser = browser_manager
     
+    @measure_performance("Authentication.login")
     def login(self, username, password, url="https://web.nubox.com/Login/Account/Login?ReturnUrl=%2FSistemaLogin"):
         """
-        Inicia sesión en Nubox.
+        Inicia sesión en Nubox con optimización de velocidad.
         
         Args:
             username (str): RUT del usuario
@@ -40,33 +45,37 @@ class AuthenticationService:
             bool: True si el login fue exitoso
         """
         try:
-            logger.info("Iniciando proceso de autenticación")
+            logger.info("🔐 Iniciando proceso de autenticación optimizado")
             
             # Navegar a la página de login
-            self.browser.navigate_to(url)
-            time.sleep(2)
-            
-            # Tomar captura inicial
-            self.browser.take_screenshot(f"login_page_{int(time.time())}.png")
+            with measure_step("Navigate to login page"):
+                self.browser.navigate_to(url)
+                # Esperar a que la página esté completamente cargada
+                WebDriverWait(self.browser.driver, 10).until(
+                    EC.presence_of_element_located((By.TAG_NAME, "body"))
+                )
             
             # Buscar y llenar campos de credenciales
-            if not self._fill_credentials(username, password):
-                return False
+            with measure_step("Fill credentials"):
+                if not self._fill_credentials_optimized(username, password):
+                    return False
             
             # Buscar y hacer clic en el botón de login
-            if not self._click_login_button():
-                return False
+            with measure_step("Click login button"):
+                if not self._click_login_button_optimized():
+                    return False
             
             # Verificar si el login fue exitoso
-            return self._verify_login_success(url)
+            with measure_step("Verify login success"):
+                return self._verify_login_success_optimized(url)
             
         except Exception as e:
-            logger.error(f"Error durante el login: {str(e)}")
+            logger.error(f"❌ Error durante el login: {str(e)}")
             return False
     
-    def _fill_credentials(self, username, password):
+    def _fill_credentials_optimized(self, username, password):
         """
-        Llena los campos de usuario y contraseña.
+        Llena los campos de usuario y contraseña con optimización de velocidad.
         
         Args:
             username (str): RUT del usuario
@@ -76,199 +85,174 @@ class AuthenticationService:
             bool: True si se llenaron exitosamente
         """
         try:
-            # Buscar campo de RUT
-            rut_field = self._find_rut_field()
+            # Buscar campo de RUT con wait explícito
+            rut_field = self._find_rut_field_optimized()
             if not rut_field:
-                logger.error("No se encontró el campo de RUT")
+                logger.error("❌ No se encontró el campo de RUT")
                 return False
             
-            # Buscar campo de contraseña
-            password_field = self._find_password_field()
+            # Buscar campo de contraseña con wait explícito
+            password_field = self._find_password_field_optimized()
             if not password_field:
-                logger.error("No se encontró el campo de contraseña")
+                logger.error("❌ No se encontró el campo de contraseña")
                 return False
             
-            # Llenar credenciales
-            logger.info("Ingresando credenciales")
-            rut_field.clear()
-            rut_field.send_keys(username)
-            time.sleep(0.5)
-            
-            password_field.clear()
-            password_field.send_keys(password)
-            time.sleep(0.5)
+            # Llenar credenciales usando JavaScript para mayor velocidad
+            logger.info("📝 Ingresando credenciales")
+            self.browser.execute_script(
+                "arguments[0].value = arguments[1];", 
+                rut_field, username
+            )
+            self.browser.execute_script(
+                "arguments[0].value = arguments[1];", 
+                password_field, password
+            )
             
             return True
             
         except Exception as e:
-            logger.error(f"Error al llenar credenciales: {str(e)}")
+            logger.error(f"❌ Error al llenar credenciales: {str(e)}")
             return False
     
-    def _find_rut_field(self):
+    def _find_rut_field_optimized(self):
         """
-        Busca el campo de RUT usando múltiples selectores.
+        Busca el campo de RUT usando múltiples selectores con wait explícito.
         
         Returns:
             WebElement: Campo de RUT encontrado o None
         """
         rut_selectors = [
-            "input[placeholder='Ingresa tu rut']",
+            "input[placeholder*='rut' i]",
             "input[name='RUT']",
-            "input[id*='rut']",
-            "input[type='text']"
+            "input[id*='rut' i]",
+            "input[type='text']:first-of-type"
         ]
         
         for selector in rut_selectors:
             try:
-                field = self.browser.find_element(By.CSS_SELECTOR, selector)
-                if field.is_displayed() and field.is_enabled():
-                    logger.debug(f"Campo RUT encontrado con selector: {selector}")
-                    return field
-            except:
+                element = WebDriverWait(self.browser.driver, 5).until(
+                    EC.element_to_be_clickable((By.CSS_SELECTOR, selector))
+                )
+                logger.debug(f"✅ Campo RUT encontrado con selector: {selector}")
+                return element
+            except TimeoutException:
                 continue
         
-        # Buscar el primer input de texto visible como fallback
-        try:
-            text_inputs = self.browser.find_elements(By.CSS_SELECTOR, "input[type='text']")
-            for inp in text_inputs:
-                if inp.is_displayed() and inp.is_enabled():
-                    logger.debug("Campo RUT encontrado como primer input de texto")
-                    return inp
-        except:
-            pass
+        logger.warning("⚠️ Campo RUT no encontrado con selectores CSS, intentando XPath")
+        xpath_selectors = [
+            "//input[contains(@placeholder, 'rut') or contains(@placeholder, 'RUT')]",
+            "//input[@name='RUT']",
+            "//input[contains(@id, 'rut') or contains(@id, 'RUT')]"
+        ]
+        
+        for xpath in xpath_selectors:
+            try:
+                element = WebDriverWait(self.browser.driver, 3).until(
+                    EC.element_to_be_clickable((By.XPATH, xpath))
+                )
+                logger.debug(f"✅ Campo RUT encontrado con XPath: {xpath}")
+                return element
+            except TimeoutException:
+                continue
         
         return None
     
-    def _find_password_field(self):
+    def _find_password_field_optimized(self):
         """
-        Busca el campo de contraseña usando múltiples selectores.
+        Busca el campo de contraseña usando múltiples selectores con wait explícito.
         
         Returns:
             WebElement: Campo de contraseña encontrado o None
         """
         password_selectors = [
-            "input[placeholder='Ingresa tu contraseña']",
-            "input[name='Password']",
-            "input[type='password']"
+            "input[type='password']",
+            "input[placeholder*='contraseña' i]",
+            "input[placeholder*='password' i]",
+            "input[name*='password' i]"
         ]
         
         for selector in password_selectors:
             try:
-                field = self.browser.find_element(By.CSS_SELECTOR, selector)
-                if field.is_displayed() and field.is_enabled():
-                    logger.debug(f"Campo contraseña encontrado con selector: {selector}")
-                    return field
-            except:
+                element = WebDriverWait(self.browser.driver, 5).until(
+                    EC.element_to_be_clickable((By.CSS_SELECTOR, selector))
+                )
+                logger.debug(f"✅ Campo contraseña encontrado con selector: {selector}")
+                return element
+            except TimeoutException:
                 continue
         
-        return None
     
-    def _click_login_button(self):
+    def _click_login_button_optimized(self):
         """
-        Busca y hace clic en el botón de login.
+        Busca y hace clic en el botón de login con optimización de velocidad.
         
         Returns:
             bool: True si se hizo clic exitosamente
         """
         try:
-            # Tomar captura antes de buscar el botón
-            self.browser.take_screenshot(f"before_button_search_{int(time.time())}.png")
-            
-            login_button = self._find_login_button()
+            login_button = self._find_login_button_optimized()
             if not login_button:
-                logger.error("No se pudo encontrar el botón de login")
+                logger.error("❌ No se pudo encontrar el botón de login")
                 return False
             
-            # Hacer clic en el botón
-            logger.info("Haciendo clic en el botón Ingresar")
-            login_button.click()
-            time.sleep(3)
-            
-            # Tomar captura después del clic
-            self.browser.take_screenshot(f"post_login_{int(time.time())}.png")
+            # Hacer clic en el botón usando JavaScript para mayor velocidad
+            logger.info("🚀 Haciendo clic en el botón Ingresar")
+            self.browser.execute_script("arguments[0].click();", login_button)
             
             return True
             
         except Exception as e:
-            logger.error(f"Error al hacer clic en botón de login: {str(e)}")
+            logger.error(f"❌ Error al hacer clic en el botón de login: {str(e)}")
             return False
     
-    def _find_login_button(self):
+    def _find_login_button_optimized(self):
         """
-        Busca el botón de login usando múltiples estrategias.
+        Busca el botón de login usando múltiples selectores con wait explícito.
         
         Returns:
             WebElement: Botón de login encontrado o None
         """
-        login_button_selectors = [
-            "input[value='Ingresar'][class*='nbx-form_btn_login']",
-            "input[value='Ingresar'][class*='btn-login']",
-            "input[type='button'][value='Ingresar']",
-            "input.nbx-form_btn_login",
-            "input.btn-login",
-            "input[onclick*='EnviarSolicitudFormulario']"
+        login_selectors = [
+            "input[value*='Ingresar' i]",
+            "button[type='submit']",
+            "input[type='submit']",
+            "button:contains('Ingresar')",
+            "*[onclick*='login' i]"
         ]
         
-        for selector in login_button_selectors:
+        for selector in login_selectors:
             try:
-                elements = self.browser.find_elements(By.CSS_SELECTOR, selector)
-                logger.debug(f"Selector '{selector}' encontró {len(elements)} elementos")
-                
-                for element in elements:
-                    if element.is_displayed():
-                        # Verificar si el botón está deshabilitado y habilitarlo
-                        is_disabled = element.get_attribute("disabled")
-                        if is_disabled:
-                            logger.info("El botón está deshabilitado, intentando habilitarlo...")
-                            self.browser.execute_script("arguments[0].removeAttribute('disabled');", element)
-                            time.sleep(0.5)
-                        
-                        logger.info(f"Botón de login encontrado con selector: {selector}")
-                        return element
-            except Exception as e:
-                logger.debug(f"Error con selector {selector}: {str(e)}")
+                element = WebDriverWait(self.browser.driver, 5).until(
+                    EC.element_to_be_clickable((By.CSS_SELECTOR, selector))
+                )
+                logger.debug(f"✅ Botón login encontrado con selector: {selector}")
+                return element
+            except TimeoutException:
                 continue
         
-        # Intentar con JavaScript como último recurso
-        return self._find_login_button_with_javascript()
-    
-    def _find_login_button_with_javascript(self):
-        """
-        Busca el botón de login usando JavaScript.
+        # Intentar con XPath si CSS no funciona
+        xpath_selectors = [
+            "//input[@value='Ingresar' or @value='INGRESAR']",
+            "//button[contains(text(), 'Ingresar')]",
+            "//input[@type='submit']",
+            "//button[@type='submit']"
+        ]
         
-        Returns:
-            WebElement: Botón encontrado o None
-        """
-        try:
-            logger.info("Usando JavaScript para buscar y habilitar el botón")
-            login_button = self.browser.execute_script("""
-                // Buscar el botón de login
-                var button = document.querySelector('input[value="Ingresar"]') ||
-                            document.querySelector('input.nbx-form_btn_login') ||
-                            document.querySelector('input.btn-login') ||
-                            document.querySelector('input[onclick*="EnviarSolicitudFormulario"]');
-                
-                if (button) {
-                    // Habilitar el botón si está deshabilitado
-                    button.removeAttribute('disabled');
-                    button.disabled = false;
-                    return button;
-                }
-                return null;
-            """)
-            
-            if login_button:
-                logger.info("Botón encontrado y habilitado usando JavaScript")
-                return login_button
-                
-        except Exception as e:
-            logger.debug(f"Error al buscar con JavaScript: {str(e)}")
+        for xpath in xpath_selectors:
+            try:
+                element = WebDriverWait(self.browser.driver, 3).until(
+                    EC.element_to_be_clickable((By.XPATH, xpath))
+                )
+                logger.debug(f"✅ Botón login encontrado con XPath: {xpath}")
+                return element
+            except TimeoutException:
+                continue
         
         return None
     
-    def _verify_login_success(self, original_url):
+    def _verify_login_success_optimized(self, original_url):
         """
-        Verifica si el login fue exitoso.
+        Verifica si el login fue exitoso usando condiciones explícitas.
         
         Args:
             original_url (str): URL original de login
@@ -277,36 +261,83 @@ class AuthenticationService:
             bool: True si el login fue exitoso
         """
         try:
+            # Esperar a que el navegador redirija o cambie la página
+            WebDriverWait(self.browser.driver, 10).until(
+                lambda driver: driver.current_url != original_url
+            )
+            
             current_url = self.browser.current_url
-            logger.info(f"URL actual después del login: {current_url}")
+            logger.info(f"📍 URL después del login: {current_url}")
             
-            # Verificación inmediata del login exitoso
-            if "login" not in current_url.lower() and "account" not in current_url.lower():
-                logger.info("Login exitoso: URL cambió y no contiene 'login'")
+            # Verificar si no estamos en la página de login
+            login_indicators = [
+                "login", "signin", "account/login"
+            ]
+            
+            is_still_login = any(indicator in current_url.lower() for indicator in login_indicators)
+            
+            if is_still_login:
+                logger.warning("⚠️ Todavía en página de login, verificando elementos...")
+                
+                # Buscar elementos que indiquen login fallido
+                error_selectors = [
+                    ".error", ".alert-danger", "[class*='error']",
+                    "*[contains(text(), 'incorrecto')]", "*[contains(text(), 'error')]"
+                ]
+                
+                for selector in error_selectors:
+                    try:
+                        error_element = WebDriverWait(self.browser.driver, 2).until(
+                            EC.presence_of_element_located((By.CSS_SELECTOR, selector))
+                        )
+                        if error_element.is_displayed():
+                            logger.error("❌ Error de login detectado")
+                            return False
+                    except TimeoutException:
+                        continue
+                
+                # Si no hay errores visibles, asumir que el login está en progreso
+                logger.info("⏳ No se detectaron errores, esperando redirección...")
+                try:
+                    WebDriverWait(self.browser.driver, 5).until(
+                        lambda driver: not any(indicator in driver.current_url.lower() 
+                                             for indicator in login_indicators)
+                    )
+                except TimeoutException:
+                    logger.error("❌ Timeout esperando redirección después del login")
+                    return False
+            
+            # Verificar elementos que indican login exitoso
+            success_indicators = [
+                "dashboard", "main", "home", "sistema"
+            ]
+            
+            final_url = self.browser.current_url
+            login_success = any(indicator in final_url.lower() for indicator in success_indicators)
+            
+            if login_success:
+                logger.info("✅ Login exitoso - redirección detectada")
                 return True
             
-            # Verificar errores de login
-            try:
-                error_elements = self.browser.find_elements(
-                    By.CSS_SELECTOR, 
-                    ".validation-summary-errors, .field-validation-error"
-                )
-                for element in error_elements:
-                    if element.is_displayed() and element.text.strip():
-                        logger.error(f"Error de login detectado: {element.text}")
-                        return False
-            except:
-                pass
+            # Como alternativa, buscar elementos típicos de dashboard
+            dashboard_selectors = [
+                ".main-content", "#main", ".dashboard", 
+                "*[class*='menu']", "*[class*='nav']"
+            ]
             
-            # Si la URL cambió, asumir login exitoso
-            if current_url != original_url:
-                logger.info("Login exitoso: URL cambió")
-                return True
+            for selector in dashboard_selectors:
+                try:
+                    WebDriverWait(self.browser.driver, 3).until(
+                        EC.presence_of_element_located((By.CSS_SELECTOR, selector))
+                    )
+                    logger.info("✅ Login exitoso - elementos de dashboard detectados")
+                    return True
+                except TimeoutException:
+                    continue
             
-            # Por defecto, asumir éxito
-            logger.info("Login exitoso: Verificación completada")
-            return True
+            logger.warning(f"⚠️ Login status incierto. URL final: {final_url}")
+            return True  # Asumir éxito si no hay indicadores claros de fallo
             
         except Exception as e:
-            logger.error(f"Error al verificar login: {str(e)}")
+            logger.error(f"❌ Error verificando el éxito del login: {str(e)}")
             return False
